@@ -42,6 +42,10 @@ static CGFloat kMaxSide = 80;
             iconView.center = center;
         } while ([self isFrameIntersecting:iconView.frame]);
         
+        iconView.color = [UIColor yellowColor];
+        iconView.shadowColor = [UIColor orangeColor];
+        iconView.shadowOffset = CGSizeMake(1, 1);
+        
         [self.icons addObject:iconView];
         [self.view addSubview:iconView];
     }
