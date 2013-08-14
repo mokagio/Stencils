@@ -11,7 +11,7 @@
 		3F1EE02617BB7518008322B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1EE02517BB7518008322B4 /* UIKit.framework */; };
 		3F1EE02817BB7518008322B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1EE02717BB7518008322B4 /* Foundation.framework */; };
 		3F1EE02E17BB7518008322B4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3F1EE02C17BB7518008322B4 /* InfoPlist.strings */; };
-		3F1EE03117BB7518008322B4 /* MTFontIconTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1EE03017BB7518008322B4 /* MTFontIconTests.m */; };
+		3F1EE03817BB794D008322B4 /* MTFontIconParserConstantsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1EE03717BB794D008322B4 /* MTFontIconParserConstantsSpec.m */; };
 		B2C4F738A6BE4FBF91F6F72D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79DA94BADA764E1983DCA61A /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -22,9 +22,8 @@
 		3F1EE02717BB7518008322B4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		3F1EE02B17BB7518008322B4 /* MTFontIconTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MTFontIconTests-Info.plist"; sourceTree = "<group>"; };
 		3F1EE02D17BB7518008322B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		3F1EE02F17BB7518008322B4 /* MTFontIconTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTFontIconTests.h; sourceTree = "<group>"; };
-		3F1EE03017BB7518008322B4 /* MTFontIconTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTFontIconTests.m; sourceTree = "<group>"; };
 		3F1EE03217BB7518008322B4 /* MTFontIconTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MTFontIconTests-Prefix.pch"; sourceTree = "<group>"; };
+		3F1EE03717BB794D008322B4 /* MTFontIconParserConstantsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTFontIconParserConstantsSpec.m; sourceTree = "<group>"; };
 		79DA94BADA764E1983DCA61A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E51A59A0BCF4566BB589EB0 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -76,9 +75,8 @@
 		3F1EE02917BB7518008322B4 /* MTFontIconTests */ = {
 			isa = PBXGroup;
 			children = (
-				3F1EE02F17BB7518008322B4 /* MTFontIconTests.h */,
-				3F1EE03017BB7518008322B4 /* MTFontIconTests.m */,
 				3F1EE02A17BB7518008322B4 /* Supporting Files */,
+				3F1EE03717BB794D008322B4 /* MTFontIconParserConstantsSpec.m */,
 			);
 			path = MTFontIconTests;
 			sourceTree = "<group>";
@@ -203,7 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F1EE03117BB7518008322B4 /* MTFontIconTests.m in Sources */,
+				3F1EE03817BB794D008322B4 /* MTFontIconParserConstantsSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
