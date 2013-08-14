@@ -10,6 +10,9 @@
 #import "MTFontIconParser.h"
 #import "NSString+Unicode.h"
 
+static const CGFloat kWorkaroundOffset = -1;
+static const CGFloat kWorkaroundScale = .95;
+
 
 @interface MTFontIconView ()
 - (id)initWithFrame:(CGRect)frame fontName:(NSString *)fontName iconString:(NSString *)iconString;
@@ -63,12 +66,20 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+        CGFloat side = frame.size.width;
+        self.backgroundColor = [UIColor redColor];
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0,
+                                                                   kWorkaroundOffset,
+                                                                   side,
+                                                                   side)];
         label.backgroundColor = [UIColor clearColor];
         label.textAlignment = NSTextAlignmentCenter;
         label.textColor = [UIColor whiteColor];
-        label.font = [UIFont fontWithName:fontName size:self.frame.size.height];
+        label.font = [UIFont fontWithName:fontName size:self.frame.size.height * kWorkaroundScale];
         label.text = iconString;
+        
+        label.numberOfLines = 0;
+        label.lineBreakMode = NSLineBreakByWordWrapping;
         
         [self addSubview:label];
     }
