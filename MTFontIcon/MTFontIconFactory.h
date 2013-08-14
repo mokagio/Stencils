@@ -10,6 +10,9 @@
 
 // TODO maybe move in it's own file?
 @interface MTFontIconView : UIView
+@property (nonatomic, strong) UIColor *color;
+@property (nonatomic, strong) UIColor *shadowColor;
+@property (nonatomic, assign) CGSize shadowOffset;
 @end
 
 @interface MTFontIconFactory : NSObject

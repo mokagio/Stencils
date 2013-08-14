@@ -17,6 +17,7 @@ static NSString * const kFontName = @"icomoon";
 
 
 @interface MTFontIconView ()
+@property (nonatomic, strong) UILabel *label;
 - (id)initWithFrame:(CGRect)frame fontName:(NSString *)fontName iconString:(NSString *)iconString;
 @end
 
@@ -69,22 +70,47 @@ static NSString * const kFontName = @"icomoon";
     self = [super initWithFrame:frame];
     if (self) {
         CGFloat side = frame.size.width;
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0,
-                                                                   kWorkaroundOffset,
-                                                                   side,
-                                                                   side)];
-        label.backgroundColor = [UIColor clearColor];
-        label.textAlignment = NSTextAlignmentCenter;
-        label.textColor = [UIColor whiteColor];
-        label.font = [UIFont fontWithName:fontName size:self.frame.size.height * kWorkaroundScale];
-        label.text = iconString;
+        self.label = [[UILabel alloc] initWithFrame:CGRectMake(0,
+                                                               kWorkaroundOffset,
+                                                               side,
+                                                               side)];
         
-        label.numberOfLines = 0;
-        label.lineBreakMode = NSLineBreakByWordWrapping;
+        self.label.textAlignment = NSTextAlignmentCenter;
+        self.label.numberOfLines = 0;
+        self.label.lineBreakMode = NSLineBreakByWordWrapping;
+
+        self.label.font = [UIFont fontWithName:fontName size:self.frame.size.height * kWorkaroundScale];
+        self.label.text = iconString;
         
-        [self addSubview:label];
+        self.label.backgroundColor = [UIColor clearColor];
+        
+        [self addSubview:self.label];
+        
+        self.color = [UIColor whiteColor];
+        self.shadowOffset = CGSizeZero;
+        self.shadowColor = [UIColor clearColor];
     }
     return self;
+}
+
+#pragma mark - Properties Overrides
+
+- (void)setColor:(UIColor *)color
+{
+    _color = color;
+    self.label.textColor = color;
+}
+
+- (void)setShadowColor:(UIColor *)shadowColor
+{
+    _shadowColor = shadowColor;
+    self.label.shadowColor = shadowColor;
+}
+
+- (void)setShadowOffset:(CGSize)shadowOffset
+{
+    _shadowOffset = shadowOffset;
+    self.label.shadowOffset = shadowOffset;
 }
 
 @end
