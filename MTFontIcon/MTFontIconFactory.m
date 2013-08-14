@@ -67,7 +67,6 @@ static const CGFloat kWorkaroundScale = .95;
     self = [super initWithFrame:frame];
     if (self) {
         CGFloat side = frame.size.width;
-        self.backgroundColor = [UIColor redColor];
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0,
                                                                    kWorkaroundOffset,
                                                                    side,
