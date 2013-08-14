@@ -17,7 +17,6 @@
 
 - (NSUInteger)hexStringToInteger
 {
-    NSLog(@"self: %@", self);
     NSUInteger length = [self length];
     NSUInteger intValue = 0;
     for (int i = 0; i < length; i++) {
