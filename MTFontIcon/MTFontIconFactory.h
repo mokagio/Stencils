@@ -13,4 +13,6 @@
 - (NSString *)charForIcon:(NSString *)icon;
 - (UIFont *)iconFontOfSize:(CGFloat)size;
 
+- (UIView *)iconViewForIconNamed:(NSString *)iconName withSide:(CGFloat)side;
+
 @end

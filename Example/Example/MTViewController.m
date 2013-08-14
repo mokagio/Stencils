@@ -29,32 +29,21 @@ static CGFloat kMaxSide = 80;
     self.view.backgroundColor = [UIColor blackColor];
     
     MTFontIconFactory *iconFactory = [[MTFontIconFactory alloc] init];
+    NSArray *names = @[@"apple", @"pacman", @"bug", @"smile"];
     
     self.icons = [NSMutableArray arrayWithCapacity:kNumberOfIcons];
     for (int i = 0; i < kNumberOfIcons; i++) {
-        CGRect frame = CGRectZero;
+        CGFloat side = [self randomSide];
+        UIView *iconView = [iconFactory iconViewForIconNamed:names[arc4random() % [names count]]
+                                                    withSide:side];
+        CGPoint center = CGPointZero;
         do {
-            frame.size = [self randomSize];
-            frame.origin = [self randomOriginWithSize:frame.size];
-        } while ([self isFrameIntersecting:frame]);
+            center = [self randomCenterWithSide:side];
+            iconView.center = center;
+        } while ([self isFrameIntersecting:iconView.frame]);
         
-        UIView *icon = [[UIView alloc] initWithFrame:frame];
-        CGRect iconFrame = icon.frame;
-        iconFrame.origin = CGPointZero;
-        
-        UILabel *dummyIcon = [[UILabel alloc] initWithFrame:iconFrame];
-        dummyIcon.backgroundColor = [UIColor clearColor];
-        dummyIcon.textAlignment = NSTextAlignmentCenter;
-        dummyIcon.textColor = [UIColor whiteColor];
-        dummyIcon.font = [iconFactory iconFontOfSize:icon.frame.size.height];
-        NSArray *names = @[@"apple", @"pacman", @"bug", @"smile"];
-        NSString *hexString = [iconFactory charForIcon:names[arc4random() % [names count]]];
-        dummyIcon.text = [NSString stringWithUnicodeDecimalValue:[hexString hexStringToInteger]];
-        
-        [icon addSubview:dummyIcon];
-        
-        [self.icons addObject:icon];
-        [self.view addSubview:icon];
+        [self.icons addObject:iconView];
+        [self.view addSubview:iconView];
     }
 }
 
@@ -73,10 +62,25 @@ static CGFloat kMaxSide = 80;
     return CGPointMake(x, y);
 }
 
-- (CGSize)randomSize
+- (CGPoint)randomCenterWithSide:(CGFloat)side
+{
+    CGFloat x = 0;
+    do {
+        x = arc4random() % (int)(self.view.frame.size.width - 2 * kPadding - side) + kPadding + side / 2;
+    } while (x + side / 2 > self.view.frame.size.width - kPadding);
+    
+    CGFloat y = 0;
+    do {
+        y = arc4random() % (int)(self.view.frame.size.height - 2 * kPadding - side) + kPadding + side / 2;
+    } while (y + side / 2 > self.view.frame.size.height - kPadding);
+    
+    return CGPointMake(x, y);
+}
+
+- (CGFloat)randomSide
 {
     CGFloat side = arc4random() % (int)(kMaxSide - kMinSide) + kMinSide;
-    return CGSizeMake(side, side);
+    return side;
 }
 
 - (BOOL)isFrameIntersecting:(CGRect)frame

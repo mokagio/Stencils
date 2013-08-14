@@ -8,7 +8,7 @@
 
 #import "MTFontIconFactory.h"
 #import "MTFontIconParser.h"
-
+#import "NSString+Unicode.h"
 
 @interface MTFontIconFactory ()
 @property (nonatomic, strong) NSDictionary *icons;
@@ -41,6 +41,19 @@
 {
     // TODO - fix the fontname!
     return [UIFont fontWithName:@"icomoon" size:size];
+}
+
+- (UIView *)iconViewForIconNamed:(NSString *)iconName withSide:(CGFloat)side
+{
+    UILabel *view = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, side, side)];
+    view.backgroundColor = [UIColor clearColor];
+    view.textAlignment = NSTextAlignmentCenter;
+    view.textColor = [UIColor whiteColor];
+    view.font = [self iconFontOfSize:side];
+    NSString *hexString = [self charForIcon:iconName];
+    view.text = [NSString stringWithUnicodeDecimalValue:[hexString hexStringToInteger]];
+    
+    return view;
 }
 
 @end
