@@ -13,6 +13,8 @@
 static const CGFloat kWorkaroundOffset = -1;
 static const CGFloat kWorkaroundScale = .95;
 
+static NSString * const kFontName = @"icomoon";
+
 
 @interface MTFontIconView ()
 - (id)initWithFrame:(CGRect)frame fontName:(NSString *)fontName iconString:(NSString *)iconString;
@@ -53,7 +55,7 @@ static const CGFloat kWorkaroundScale = .95;
  
     // TODO fix font name
     return [[MTFontIconView alloc] initWithFrame:CGRectMake(0, 0, side, side)
-                                        fontName:@"icomoon"
+                                        fontName:kFontName
                                       iconString:iconString];
 }
 
