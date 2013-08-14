@@ -10,6 +10,12 @@
 #import "MTFontIconParser.h"
 #import "NSString+Unicode.h"
 
+
+@interface MTFontIconView ()
+- (id)initWithFrame:(CGRect)frame fontName:(NSString *)fontName iconString:(NSString *)iconString;
+@end
+
+
 @interface MTFontIconFactory ()
 @property (nonatomic, strong) NSDictionary *icons;
 @property (nonatomic, strong) UIFont *font;
@@ -43,17 +49,35 @@
     return [UIFont fontWithName:@"icomoon" size:size];
 }
 
-- (UIView *)iconViewForIconNamed:(NSString *)iconName withSide:(CGFloat)side
+- (MTFontIconView *)iconViewForIconNamed:(NSString *)iconName withSide:(CGFloat)side
 {
-    UILabel *view = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, side, side)];
-    view.backgroundColor = [UIColor clearColor];
-    view.textAlignment = NSTextAlignmentCenter;
-    view.textColor = [UIColor whiteColor];
-    view.font = [self iconFontOfSize:side];
     NSString *hexString = [self charForIcon:iconName];
-    view.text = [NSString stringWithUnicodeDecimalValue:[hexString hexStringToInteger]];
+    NSString *iconString = [NSString stringWithUnicodeDecimalValue:[hexString hexStringToInteger]];
     
-    return view;
+    return [[MTFontIconView alloc] initWithFrame:CGRectMake(0, 0, side, side)
+                                        fontName:@"icomoon"
+                                      iconString:iconString];
+}
+
+@end
+
+
+@implementation MTFontIconView
+
+- (id)initWithFrame:(CGRect)frame fontName:(NSString *)fontName iconString:(NSString *)iconString
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+        label.backgroundColor = [UIColor clearColor];
+        label.textAlignment = NSTextAlignmentCenter;
+        label.textColor = [UIColor whiteColor];
+        label.font = [UIFont fontWithName:@"icomoon" size:self.frame.size.height];
+        label.text = iconString;
+        
+        [self addSubview:label];
+    }
+    return self;
 }
 
 @end

@@ -34,8 +34,8 @@ static CGFloat kMaxSide = 80;
     self.icons = [NSMutableArray arrayWithCapacity:kNumberOfIcons];
     for (int i = 0; i < kNumberOfIcons; i++) {
         CGFloat side = [self randomSide];
-        UIView *iconView = [iconFactory iconViewForIconNamed:names[arc4random() % [names count]]
-                                                    withSide:side];
+        MTFontIconView *iconView = [iconFactory iconViewForIconNamed:names[arc4random() % [names count]]
+                                                            withSide:side];
         CGPoint center = CGPointZero;
         do {
             center = [self randomCenterWithSide:side];

@@ -8,11 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+// TODO maybe move in it's own file?
+@interface MTFontIconView : UIView
+@end
+
 @interface MTFontIconFactory : NSObject
 
 - (NSString *)charForIcon:(NSString *)icon;
 - (UIFont *)iconFontOfSize:(CGFloat)size;
 
-- (UIView *)iconViewForIconNamed:(NSString *)iconName withSide:(CGFloat)side;
+- (MTFontIconView *)iconViewForIconNamed:(NSString *)iconName withSide:(CGFloat)side;
 
 @end
