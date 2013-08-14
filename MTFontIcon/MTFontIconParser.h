@@ -15,6 +15,8 @@ extern NSString *MTFontIconIconCodeKey;
 
 @interface MTFontIconParser : NSObject
 
++ (NSDictionary *)parseFontIcons;
+
 // Better in an Internals/Private category
 + (NSDictionary *)parseFontIconsFromArray:(NSArray *)array;
 

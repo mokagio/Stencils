@@ -1,11 +1,47 @@
+//
+//  MTFontIconFactory.m
+//  
+//
+//  Created by Gio on 14/08/2013.
+//
+//
 
 #import "MTFontIconFactory.h"
+#import "MTFontIconParser.h"
+
+
+@interface MTFontIconFactory ()
+@property (nonatomic, strong) NSDictionary *icons;
+@property (nonatomic, strong) UIFont *font;
+@end
+
 
 @implementation MTFontIconFactory
 
-- (void)dummyMethod
+- (id)init
 {
-	NSLog(@"Dummy Method!");
+    self = [super init];
+    if (self) {
+        [self setupIcons];
+    }
+    return self;
+}
+
+- (void)setupIcons
+{
+    self.icons = [MTFontIconParser parseFontIcons];
+}
+
+- (NSString *)charForIcon:(NSString *)icon
+{
+    //    return self.icons[icon];
+    return @"A";
+}
+
+- (UIFont *)iconFontOfSize:(CGFloat)size
+{
+    // TODO - fix the fontname!
+    return [UIFont fontWithName:@"icomoon" size:size];
 }
 
 @end
