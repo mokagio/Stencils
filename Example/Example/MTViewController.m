@@ -8,6 +8,7 @@
 
 #import "MTViewController.h"
 #import "MTFontIconFactory.h"
+#import "NSString+Unicode.h"
 
 static NSUInteger kNumberOfIcons = 7;
 static CGFloat kPadding = 30;
@@ -48,24 +49,7 @@ static CGFloat kMaxSide = 80;
         dummyIcon.font = [iconFactory iconFontOfSize:icon.frame.size.height];
         NSArray *names = @[@"apple", @"pacman", @"bug", @"smile"];
         NSString *hexString = [iconFactory charForIcon:names[arc4random() % [names count]]];
-
-        NSUInteger hexValue = 0;
-        for (int i = 0; i < [hexString length]; i++) {
-            char c = [hexString characterAtIndex:i];
-            int number = (int)c;
-            int realNumber = 0;
-            NSUInteger numericShift = 48;
-            NSUInteger charShift = 97;
-            if (number >= numericShift && number <= numericShift + 9) {
-                realNumber = number - numericShift;
-            }
-            else if (number >= charShift && number <= charShift + 4) {
-                realNumber = 10 + number - charShift;
-            }
-            hexValue += pow(16, [hexString length] - 1 - i) * realNumber;
-        }
-        NSString *str = [NSString stringWithFormat:@"%C", (unichar)hexValue];
-        dummyIcon.text = str;
+        dummyIcon.text = [NSString stringWithUnicodeDecimalValue:[hexString hexStringToInteger]];
         
         [icon addSubview:dummyIcon];
         
