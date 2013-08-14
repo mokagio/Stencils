@@ -21,12 +21,8 @@ GANDALF =
           '---'  '---'"
 
 namespace :test do
-  task :prepare do
-    system(%Q{mkdir -p "Tests/#{test_project}.xcodeproj/xcshareddata/xcschemes" && cp Tests/Schemes/*.xcscheme "Tests/#{test_project}.xcodeproj/xcshareddata/xcschemes/"})
-  end
-
   desc "Run the #{name} Tests for iOS"
-  task :ios => :prepare do
+  task :ios do
     $ios_success = system("xctool -workspace #{name}.xcworkspace -scheme '#{scheme}' -sdk iphonesimulator -configuration Release test -test-sdk iphonesimulator")
   end
 
