@@ -1,0 +1,292 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3F1EE02417BB7518008322B4 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1EE02317BB7518008322B4 /* SenTestingKit.framework */; };
+		3F1EE02617BB7518008322B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1EE02517BB7518008322B4 /* UIKit.framework */; };
+		3F1EE02817BB7518008322B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1EE02717BB7518008322B4 /* Foundation.framework */; };
+		3F1EE02E17BB7518008322B4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3F1EE02C17BB7518008322B4 /* InfoPlist.strings */; };
+		3F1EE03117BB7518008322B4 /* MTFontIconTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1EE03017BB7518008322B4 /* MTFontIconTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3F1EE02017BB7518008322B4 /* MTFontIconTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MTFontIconTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F1EE02317BB7518008322B4 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		3F1EE02517BB7518008322B4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		3F1EE02717BB7518008322B4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3F1EE02B17BB7518008322B4 /* MTFontIconTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MTFontIconTests-Info.plist"; sourceTree = "<group>"; };
+		3F1EE02D17BB7518008322B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3F1EE02F17BB7518008322B4 /* MTFontIconTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTFontIconTests.h; sourceTree = "<group>"; };
+		3F1EE03017BB7518008322B4 /* MTFontIconTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTFontIconTests.m; sourceTree = "<group>"; };
+		3F1EE03217BB7518008322B4 /* MTFontIconTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MTFontIconTests-Prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3F1EE01C17BB7518008322B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F1EE02417BB7518008322B4 /* SenTestingKit.framework in Frameworks */,
+				3F1EE02617BB7518008322B4 /* UIKit.framework in Frameworks */,
+				3F1EE02817BB7518008322B4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3F1EE01417BB74FD008322B4 = {
+			isa = PBXGroup;
+			children = (
+				3F1EE02917BB7518008322B4 /* MTFontIconTests */,
+				3F1EE02217BB7518008322B4 /* Frameworks */,
+				3F1EE02117BB7518008322B4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3F1EE02117BB7518008322B4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3F1EE02017BB7518008322B4 /* MTFontIconTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3F1EE02217BB7518008322B4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F1EE02317BB7518008322B4 /* SenTestingKit.framework */,
+				3F1EE02517BB7518008322B4 /* UIKit.framework */,
+				3F1EE02717BB7518008322B4 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3F1EE02917BB7518008322B4 /* MTFontIconTests */ = {
+			isa = PBXGroup;
+			children = (
+				3F1EE02F17BB7518008322B4 /* MTFontIconTests.h */,
+				3F1EE03017BB7518008322B4 /* MTFontIconTests.m */,
+				3F1EE02A17BB7518008322B4 /* Supporting Files */,
+			);
+			path = MTFontIconTests;
+			sourceTree = "<group>";
+		};
+		3F1EE02A17BB7518008322B4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3F1EE02B17BB7518008322B4 /* MTFontIconTests-Info.plist */,
+				3F1EE02C17BB7518008322B4 /* InfoPlist.strings */,
+				3F1EE03217BB7518008322B4 /* MTFontIconTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3F1EE01F17BB7518008322B4 /* MTFontIconTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F1EE03317BB7518008322B4 /* Build configuration list for PBXNativeTarget "MTFontIconTests" */;
+			buildPhases = (
+				3F1EE01B17BB7518008322B4 /* Sources */,
+				3F1EE01C17BB7518008322B4 /* Frameworks */,
+				3F1EE01D17BB7518008322B4 /* Resources */,
+				3F1EE01E17BB7518008322B4 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MTFontIconTests;
+			productName = MTFontIconTests;
+			productReference = 3F1EE02017BB7518008322B4 /* MTFontIconTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3F1EE01517BB74FD008322B4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+			};
+			buildConfigurationList = 3F1EE01817BB74FD008322B4 /* Build configuration list for PBXProject "Tests" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3F1EE01417BB74FD008322B4;
+			productRefGroup = 3F1EE02117BB7518008322B4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3F1EE01F17BB7518008322B4 /* MTFontIconTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3F1EE01D17BB7518008322B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F1EE02E17BB7518008322B4 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3F1EE01E17BB7518008322B4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3F1EE01B17BB7518008322B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F1EE03117BB7518008322B4 /* MTFontIconTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3F1EE02C17BB7518008322B4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F1EE02D17BB7518008322B4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3F1EE01917BB74FD008322B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		3F1EE01A17BB74FD008322B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		3F1EE03417BB7518008322B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MTFontIconTests/MTFontIconTests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "MTFontIconTests/MTFontIconTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		3F1EE03517BB7518008322B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MTFontIconTests/MTFontIconTests-Prefix.pch";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "MTFontIconTests/MTFontIconTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3F1EE01817BB74FD008322B4 /* Build configuration list for PBXProject "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F1EE01917BB74FD008322B4 /* Debug */,
+				3F1EE01A17BB74FD008322B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F1EE03317BB7518008322B4 /* Build configuration list for PBXNativeTarget "MTFontIconTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F1EE03417BB7518008322B4 /* Debug */,
+				3F1EE03517BB7518008322B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3F1EE01517BB74FD008322B4 /* Project object */;
+}
