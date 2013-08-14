@@ -7,9 +7,7 @@
 //
 
 #import "MTViewController.h"
-
 #import "MTFontIconFactory.h"
-
 
 static NSUInteger kNumberOfIcons = 7;
 static CGFloat kPadding = 30;
@@ -29,6 +27,8 @@ static CGFloat kMaxSide = 80;
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor blackColor];
     
+    MTFontIconFactory *iconFactory = [[MTFontIconFactory alloc] init];
+    
     self.icons = [NSMutableArray arrayWithCapacity:kNumberOfIcons];
     for (int i = 0; i < kNumberOfIcons; i++) {
         CGRect frame = CGRectZero;
@@ -38,8 +38,17 @@ static CGFloat kMaxSide = 80;
         } while ([self isFrameIntersecting:frame]);
         
         UIView *icon = [[UIView alloc] initWithFrame:frame];
-        icon.backgroundColor = [UIColor whiteColor];
-
+        CGRect iconFrame = icon.frame;
+        iconFrame.origin = CGPointZero;
+        
+        UILabel *dummyIcon = [[UILabel alloc] initWithFrame:iconFrame];
+        dummyIcon.backgroundColor = [UIColor clearColor];
+        dummyIcon.textAlignment = NSTextAlignmentCenter;
+        dummyIcon.textColor = [UIColor whiteColor];
+        dummyIcon.font = [iconFactory iconFontOfSize:icon.frame.size.height];
+        dummyIcon.text = @"\ue000";
+        [icon addSubview:dummyIcon];
+        
         [self.icons addObject:icon];
         [self.view addSubview:icon];
     }
