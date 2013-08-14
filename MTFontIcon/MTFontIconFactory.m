@@ -87,7 +87,7 @@ static NSString * const kFontName = @"icomoon";
         [self addSubview:self.label];
         
         self.color = [UIColor whiteColor];
-        self.shadowOffset = CGSizeZero;
+        self.shadowOffset = CGSizeMake(0, 0);
         self.shadowColor = [UIColor clearColor];
     }
     return self;
