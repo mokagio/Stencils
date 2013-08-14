@@ -13,8 +13,8 @@ NSString *MTFontIconIconsKey = @"font-icons";
 NSString *MTFontIconIconNameKey = @"icon-name";
 NSString *MTFontIconIconCodeKey = @"icon-code";
 
-static NSString const * kFileName = @"MTFontIcon";
-static NSString const * kFileExtension = @"plist";
+static NSString *kFileName = @"MTFontIcon";
+static NSString *kFileExtension = @"plist";
 
 @implementation MTFontIconParser
 

@@ -46,13 +46,32 @@ static CGFloat kMaxSide = 80;
         dummyIcon.textAlignment = NSTextAlignmentCenter;
         dummyIcon.textColor = [UIColor whiteColor];
         dummyIcon.font = [iconFactory iconFontOfSize:icon.frame.size.height];
-        dummyIcon.text = @"\ue000";
+        NSArray *names = @[@"apple", @"pacman", @"bug", @"smile"];
+        NSString *hexString = [iconFactory charForIcon:names[arc4random() % [names count]]];
+
+        NSUInteger hexValue = 0;
+        for (int i = 0; i < [hexString length]; i++) {
+            char c = [hexString characterAtIndex:i];
+            int number = (int)c;
+            int realNumber = 0;
+            NSUInteger numericShift = 48;
+            NSUInteger charShift = 97;
+            if (number >= numericShift && number <= numericShift + 9) {
+                realNumber = number - numericShift;
+            }
+            else if (number >= charShift && number <= charShift + 4) {
+                realNumber = 10 + number - charShift;
+            }
+            hexValue += pow(16, [hexString length] - 1 - i) * realNumber;
+        }
+        NSString *str = [NSString stringWithFormat:@"%C", (unichar)hexValue];
+        dummyIcon.text = str;
+        
         [icon addSubview:dummyIcon];
         
         [self.icons addObject:icon];
         [self.view addSubview:icon];
     }
-    
 }
 
 - (CGPoint)randomOriginWithSize:(CGSize)size

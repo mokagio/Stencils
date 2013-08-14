@@ -22,6 +22,7 @@
 		3F03FE3617BB9FA6001BF43F /* MTFontIconFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F03FE3317BB9FA6001BF43F /* MTFontIconFactory.m */; };
 		3F03FE3717BB9FA6001BF43F /* MTFontIconParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F03FE3517BB9FA6001BF43F /* MTFontIconParser.m */; };
 		3F03FE3B17BBA015001BF43F /* font-icon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F03FE3A17BBA015001BF43F /* font-icon.ttf */; };
+		3F03FE3D17BBAC81001BF43F /* MTFontIcon.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F03FE3C17BBAC81001BF43F /* MTFontIcon.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		3F03FE3417BB9FA6001BF43F /* MTFontIconParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTFontIconParser.h; sourceTree = "<group>"; };
 		3F03FE3517BB9FA6001BF43F /* MTFontIconParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTFontIconParser.m; sourceTree = "<group>"; };
 		3F03FE3A17BBA015001BF43F /* font-icon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "font-icon.ttf"; sourceTree = "<group>"; };
+		3F03FE3C17BBAC81001BF43F /* MTFontIcon.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MTFontIcon.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				3F03FE3A17BBA015001BF43F /* font-icon.ttf */,
+				3F03FE3C17BBAC81001BF43F /* MTFontIcon.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				3F03FE2717BB9F0F001BF43F /* MTViewController_iPhone.xib in Resources */,
 				3F03FE2A17BB9F0F001BF43F /* MTViewController_iPad.xib in Resources */,
 				3F03FE3B17BBA015001BF43F /* font-icon.ttf in Resources */,
+				3F03FE3D17BBAC81001BF43F /* MTFontIcon.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

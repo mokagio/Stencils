@@ -34,8 +34,7 @@
 
 - (NSString *)charForIcon:(NSString *)icon
 {
-    //    return self.icons[icon];
-    return @"A";
+    return self.icons[icon];
 }
 
 - (UIFont *)iconFontOfSize:(CGFloat)size
