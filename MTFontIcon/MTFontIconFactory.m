@@ -43,17 +43,12 @@
     return self.icons[icon];
 }
 
-- (UIFont *)iconFontOfSize:(CGFloat)size
-{
-    // TODO - fix the fontname!
-    return [UIFont fontWithName:@"icomoon" size:size];
-}
-
 - (MTFontIconView *)iconViewForIconNamed:(NSString *)iconName withSide:(CGFloat)side
 {
     NSString *hexString = [self charForIcon:iconName];
     NSString *iconString = [NSString stringWithUnicodeDecimalValue:[hexString hexStringToInteger]];
-    
+ 
+    // TODO fix font name
     return [[MTFontIconView alloc] initWithFrame:CGRectMake(0, 0, side, side)
                                         fontName:@"icomoon"
                                       iconString:iconString];
@@ -72,7 +67,7 @@
         label.backgroundColor = [UIColor clearColor];
         label.textAlignment = NSTextAlignmentCenter;
         label.textColor = [UIColor whiteColor];
-        label.font = [UIFont fontWithName:@"icomoon" size:self.frame.size.height];
+        label.font = [UIFont fontWithName:fontName size:self.frame.size.height];
         label.text = iconString;
         
         [self addSubview:label];

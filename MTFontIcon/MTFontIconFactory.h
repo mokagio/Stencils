@@ -14,9 +14,6 @@
 
 @interface MTFontIconFactory : NSObject
 
-- (NSString *)charForIcon:(NSString *)icon;
-- (UIFont *)iconFontOfSize:(CGFloat)size;
-
 - (MTFontIconView *)iconViewForIconNamed:(NSString *)iconName withSide:(CGFloat)side;
 
 @end
