@@ -12,6 +12,7 @@
 		3F1EE02817BB7518008322B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1EE02717BB7518008322B4 /* Foundation.framework */; };
 		3F1EE02E17BB7518008322B4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3F1EE02C17BB7518008322B4 /* InfoPlist.strings */; };
 		3F1EE03117BB7518008322B4 /* MTFontIconTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1EE03017BB7518008322B4 /* MTFontIconTests.m */; };
+		B2C4F738A6BE4FBF91F6F72D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79DA94BADA764E1983DCA61A /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,8 @@
 		3F1EE02F17BB7518008322B4 /* MTFontIconTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTFontIconTests.h; sourceTree = "<group>"; };
 		3F1EE03017BB7518008322B4 /* MTFontIconTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTFontIconTests.m; sourceTree = "<group>"; };
 		3F1EE03217BB7518008322B4 /* MTFontIconTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MTFontIconTests-Prefix.pch"; sourceTree = "<group>"; };
+		79DA94BADA764E1983DCA61A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E51A59A0BCF4566BB589EB0 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +37,7 @@
 				3F1EE02417BB7518008322B4 /* SenTestingKit.framework in Frameworks */,
 				3F1EE02617BB7518008322B4 /* UIKit.framework in Frameworks */,
 				3F1EE02817BB7518008322B4 /* Foundation.framework in Frameworks */,
+				B2C4F738A6BE4FBF91F6F72D /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +50,7 @@
 				3F1EE02917BB7518008322B4 /* MTFontIconTests */,
 				3F1EE02217BB7518008322B4 /* Frameworks */,
 				3F1EE02117BB7518008322B4 /* Products */,
+				8E51A59A0BCF4566BB589EB0 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +68,7 @@
 				3F1EE02317BB7518008322B4 /* SenTestingKit.framework */,
 				3F1EE02517BB7518008322B4 /* UIKit.framework */,
 				3F1EE02717BB7518008322B4 /* Foundation.framework */,
+				79DA94BADA764E1983DCA61A /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -94,10 +100,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F1EE03317BB7518008322B4 /* Build configuration list for PBXNativeTarget "MTFontIconTests" */;
 			buildPhases = (
+				5B231B9F1D6A43FF97D5BA6B /* Check Pods Manifest.lock */,
 				3F1EE01B17BB7518008322B4 /* Sources */,
 				3F1EE01C17BB7518008322B4 /* Frameworks */,
 				3F1EE01D17BB7518008322B4 /* Resources */,
 				3F1EE01E17BB7518008322B4 /* ShellScript */,
+				8D312D00C7B1437BBEE64003 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -158,6 +166,36 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
+		5B231B9F1D6A43FF97D5BA6B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8D312D00C7B1437BBEE64003 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -197,6 +235,7 @@
 		};
 		3F1EE03417BB7518008322B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E51A59A0BCF4566BB589EB0 /* Pods.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -228,6 +267,12 @@
 				INFOPLIST_FILE = "MTFontIconTests/MTFontIconTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-framework",
+					SenTestingKit,
+					"$(inherited)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = octest;
@@ -236,6 +281,7 @@
 		};
 		3F1EE03517BB7518008322B4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E51A59A0BCF4566BB589EB0 /* Pods.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -259,6 +305,12 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "MTFontIconTests/MTFontIconTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-framework",
+					SenTestingKit,
+					"$(inherited)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -285,6 +337,7 @@
 				3F1EE03517BB7518008322B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
