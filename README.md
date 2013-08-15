@@ -14,7 +14,9 @@ See 0.0.1 milestone (_link needed_) for the current WIP tasks or click on the st
 
 ###How to install the pod
 
-_TODO_
+`MTFontIcon` isn't ready to be a published as a pod yet. But if you really want to use it, as your own risk, just add this line to your `Podfile`
+
+	pod 'MTFontIcon', :git => 'git@github.com:mokagio/MTFontIcon.git'
 
 
 <hr/>
