@@ -33,7 +33,9 @@ task :test => ['test:ios'] do
   if $ios_success
     puts "\033[0;32m** All tests executed successfully **"
   else
-    puts "\033[0;31m#{GANDALF}"
+    GANDALF.lines.each do |line|
+      puts "\033[0;31m#{line}"
+    end
     puts "\n"
     puts "\033[0;31m** Tests failed **"
     exit(-1)

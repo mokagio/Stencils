@@ -2,6 +2,8 @@ MTFontIcon
 ==========
 
 [![Stories in Ready](https://badge.waffle.io/mokagio/MTFontIcon.png)](http://waffle.io/mokagio/MTFontIcon)
+<br/>
+[![Build Status](https://travis-ci.org/mokagio/MTFontIcon.png)](https://travis-ci.org/mokagio/MTFontIcon.png)
 
 > Speedup iOS app development with font based icons!
 
