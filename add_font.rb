@@ -4,11 +4,11 @@
 #
 # Usage: ruby add_font.rb project_name path_to_font
 #
-# if no path given exit
+# [done] if no path given exit
 # [done] if no project given exit
 # [done] if no project.pbxproj given exit
-# if no project info-plist exit
-# copy font in Resources/ (create if no folder exists)
+# [done] if no project info-plist exit
+# [done] copy font in Resources/ (create if no folder exists)
 # add font to Resources group (create if none exists) xcs + thor
 # add custom font to Info.plist
 # generate MTFontIcon.plist
@@ -16,10 +16,14 @@
 
 # print instructions to complete the setup
 
+require 'fileutils'
+
 usage = "Usage: add_font.rb project_name path_to_font"
 
 project_suffix = ".xcodeproj/project.pbxproj"
 project_info_plist_suffix = "-Info.plist"
+
+font_folder = "/Resources/FontIcon"
 
 # Project
 #
@@ -68,3 +72,9 @@ if not File.extname(font_path) or File.extname(font_path) != '.ttf'
 	puts "The given font is not a supported font. Only .tff supported at the moment"
 	exit(-1)
 end
+
+# 1 - Copy font in the Resources/FontIcon folder
+
+font_folder = "#{project_name}/#{font_folder}"
+FileUtils.mkdir_p font_folder
+FileUtils.cp font_path, font_folder
