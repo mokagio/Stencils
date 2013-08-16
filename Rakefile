@@ -2,6 +2,7 @@ name = "MTFontIcon"
 test_project = "Tests"
 scheme = "MTFontIconTests"
 
+# Gandalf by kind concession of Mr. Tancredi Trugenberger
 GANDALF =
 "  _   _        |          .
   \\ . /    \\      /      / \\
