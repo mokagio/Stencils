@@ -18,6 +18,4 @@ DerivedData
 .idea/
 
 Pods
-
-# Created by Rakefile
-Tests/MTFontIconTests.xcodeproj/xcshareddata/xcschemes/
+Tests/Tests.xcodeproj/xcshareddata/xcschemes/

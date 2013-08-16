@@ -1,7 +1,8 @@
 name = "MTFontIcon"
-test_project = "MTFontIconTests"
+test_project = "Tests"
 scheme = "MTFontIconTests"
 
+# Gandalf by kind concession of Mr. Tancredi Trugenberger
 GANDALF =
 "  _   _        |          .
   \\ . /    \\      /      / \\
@@ -21,13 +22,19 @@ GANDALF =
           '---'  '---'"
 
 namespace :test do
+  
   task :prepare do
     system(%Q{mkdir -p "Tests/#{test_project}.xcodeproj/xcshareddata/xcschemes" && cp Tests/Schemes/*.xcscheme "Tests/#{test_project}.xcodeproj/xcshareddata/xcschemes/"})
   end
 
   desc "Run the #{name} Tests for iOS"
   task :ios => :prepare do
-    $ios_success = system("xctool -workspace #{name}.xcworkspace -scheme '#{scheme}' -sdk iphonesimulator -configuration Release test -test-sdk iphonesimulator")
+    $ios_success = system("xctool \
+      -workspace #{name}.xcworkspace \
+      -scheme '#{scheme}' \
+      -sdk iphonesimulator \
+      -configuration Debug \
+      test -test-sdk iphonesimulator")
   end
 
 end
