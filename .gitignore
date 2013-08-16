@@ -18,3 +18,4 @@ DerivedData
 .idea/
 
 Pods
+Tests/Tests.xcodeproj/xcshareddata/xcschemes/

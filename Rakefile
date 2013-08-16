@@ -27,7 +27,7 @@ namespace :test do
   end
 
   desc "Run the #{name} Tests for iOS"
-  task :ios do
+  task :ios => :prepare do
     $ios_success = system("xctool -workspace #{name}.xcworkspace -scheme '#{scheme}' -sdk iphonesimulator -configuration Release test -test-sdk iphonesimulator")
   end
 
