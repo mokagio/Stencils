@@ -9,7 +9,7 @@
 # [done] if no project.pbxproj given exit
 # [done] if no project info-plist exit
 # [done] copy font in Resources/ (create if no folder exists)
-# add font to Resources group (create if none exists) xcs + thor
+# [done] add font to Resources group (create if none exists) xcs + thor
 # add custom font to Info.plist
 # generate MTFontIcon.plist
 # add MTFontIcon.plist to project
@@ -17,13 +17,15 @@
 # print instructions to complete the setup
 
 require 'fileutils'
+require 'xcoder'
+require 'xcode/file_reference'
 
 usage = "Usage: add_font.rb project_name path_to_font"
 
 project_suffix = ".xcodeproj/project.pbxproj"
 project_info_plist_suffix = "-Info.plist"
 
-font_folder = "/Resources/FontIcon"
+font_folder = "Resources/FontIcon"
 
 # Project
 #
@@ -74,7 +76,17 @@ if not File.extname(font_path) or File.extname(font_path) != '.ttf'
 end
 
 # 1 - Copy font in the Resources/FontIcon folder
-
 font_folder = "#{project_name}/#{font_folder}"
-FileUtils.mkdir_p font_folder
-FileUtils.cp font_path, font_folder
+FileUtils.cp_r font_path, font_folder
+
+# 2 - Create and traverse to the group FontIcons within the Resources folder
+project = Xcode.project(project_name)
+project.group("#{project_name}/Resources/FontIcons") do
+	font_name = File.basename font_path
+	path =  "#{Dir.pwd}/#{font_folder}/#{font_name}"
+	file_ref = create_file 'name' => font_name, 'path' => path
+	project.target(project_name).resources_build_phase do
+	  	add_build_file file_ref
+	end
+end
+project.save!
