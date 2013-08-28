@@ -105,3 +105,8 @@ if plist
 else
 	# TODO - handle missing plist case
 end
+
+# 4 - Generate the MTFontIcon.plist
+font_plist_name = "MTFontIcon.plist"
+font_dict = {'font-icons' => [{'icon-name' => 'your-icon-name', 'icon-code' => 'e000'}]}
+Plist::Emit::save_plist(font_dict, "#{project_name}/Resources/#{font_plist_name}")
