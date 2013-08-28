@@ -97,7 +97,7 @@ plist_file_name = "#{project_name}/#{project_name}-Info.plist"
 plist = Plist::parse_xml(plist_file_name)
 if plist
 	if plist['UIAppFonts']
-		plist['UIAppFonts'].push font_name
+		plist['UIAppFonts'].push font_name unless plist['UIAppFonts'].include? font_name
 	else
 		plist['UIAppFonts'] = [font_name]
 	end
