@@ -10,13 +10,14 @@
 # [done] if no project info-plist exit
 # [done] copy font in Resources/ (create if no folder exists)
 # [done] add font to Resources group (create if none exists) xcs + thor
-# add custom font to Info.plist
+# [done] add custom font to Info.plist
 # generate MTFontIcon.plist
 # add MTFontIcon.plist to project
 
 # print instructions to complete the setup
 
 require 'fileutils'
+require 'plist'
 require 'xcoder'
 require 'xcode/file_reference'
 
@@ -78,11 +79,11 @@ end
 # 1 - Copy font in the Resources/FontIcon folder
 font_folder = "#{project_name}/#{font_folder}"
 FileUtils.cp_r font_path, font_folder
+font_name = File.basename font_path
 
 # 2 - Create and traverse to the group FontIcons within the Resources folder
 project = Xcode.project(project_name)
 project.group("#{project_name}/Resources/FontIcons") do
-	font_name = File.basename font_path
 	path =  "#{Dir.pwd}/#{font_folder}/#{font_name}"
 	file_ref = create_file 'name' => font_name, 'path' => path
 	project.target(project_name).resources_build_phase do
@@ -90,3 +91,17 @@ project.group("#{project_name}/Resources/FontIcons") do
 	end
 end
 project.save!
+
+# 3 - Add the font to the apps custom FontIcons
+plist_file_name = "#{project_name}/#{project_name}-Info.plist"
+plist = Plist::parse_xml(plist_file_name)
+if plist
+	if plist['UIAppFonts']
+		plist['UIAppFonts'].push font_name
+	else
+		plist['UIAppFonts'] = [font_name]
+	end
+	plist.save_plist plist_file_name
+else
+	# TODO - handle missing plist case
+end
