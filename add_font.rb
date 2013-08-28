@@ -11,7 +11,7 @@
 # [done] copy font in Resources/ (create if no folder exists)
 # [done] add font to Resources group (create if none exists) xcs + thor
 # [done] add custom font to Info.plist
-# generate MTFontIcon.plist
+# [done] generate MTFontIcon.plist
 # add MTFontIcon.plist to project
 
 # print instructions to complete the setup
@@ -106,7 +106,17 @@ else
 	# TODO - handle missing plist case
 end
 
-# 4 - Generate the MTFontIcon.plist
+# 4 - Generate the font configuration plist
 font_plist_name = "MTFontIcon.plist"
+font_plist_path = "#{Dir.pwd}/#{font_folder}/#{font_plist_name}"
 font_dict = {'font-icons' => [{'icon-name' => 'your-icon-name', 'icon-code' => 'e000'}]}
-Plist::Emit::save_plist(font_dict, "#{project_name}/Resources/#{font_plist_name}")
+Plist::Emit::save_plist font_dict, font_plist_path
+
+# 6 - Add the plist to the porject
+project.group("#{project_name}/Resources/FontIcons") do
+	file_ref = create_file 'name' => font_plist_name, 'path' => font_plist_path
+	project.target(project_name).resources_build_phase do
+	  	add_build_file file_ref
+	end
+end
+project.save!
