@@ -57,7 +57,7 @@ Nothing else to say. Just generate your file, add it to the app and follow the i
 * Test with other font icon generators, such as [Font Custom](http://fontcustom.com/).
 * Free file name, not fixed to `font-icon.ttf`.
 * Improve `MTFontIconView` using [Core Text](https://developer.apple.com/library/ios/documentation/StringsTextFonts/Conceptual/CoreText_Programming/Introduction/Introduction.html)
-* Helper, Ruby script/gem, to completely automate the setup.
+* Helper, Ruby script/gem, to completely automate the setup. See `add_font.rb`, still WIP.
 * Helper to speedup the `MTFontIcon.plist` configuration. _Single page webapp?_
 
 ##Contribute
