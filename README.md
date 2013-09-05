@@ -7,12 +7,6 @@ MTFontIcon
 
 > Speedup iOS app development with font based icons!
 
-##Important
-The project is still a **WIP**! It's intended to become a public pod asap, but only when considered stable enough.
-
-See 0.0.1 milestone (_link needed_) for the current WIP tasks or click on the stories badge above to see how the work is going.
-
-
 ##Install
 
 Via [CocoaPods](http://cocoapods.org).
@@ -25,9 +19,9 @@ or
 
 ##Usage
 
-Add your `.ttf` file to the project.
+Add your `.ttf` file to the project, naming it `font-icon.ttf`
 
-Configure the icons-unicode matches in the `MTFontIcon.plist`
+Configure the icons-unicode matches in the `MTFontIcon.plist`, which is structured like this
 
 	{
 		'font-icons': [
@@ -59,18 +53,17 @@ You can customize your icon like this:
 	pod 'MTFontIcon', :git => 'git@github.com:mokagio/MTFontIcon.git'
 
 ###Usage with IcoMoon
-_TODO_
 
-###Usage with Font Custom
-_TODO_
+[icomoon.io](http://icomoon.io) is a really cool service that lets you aggregate font icons form different sets and your custom SVG as well, all in a single `.ttf`
 
-###Roadmap
-_TODO_
+Nothing else to say. Just generate your file, add it to the app and follow the instructions at the beginning of this section.
 
 ###Contribute
-_TODO_
 
-<hr/>
+1. Fork the repo
+2. Checkout a new branch `username/feature_name`
+3. Pull Request
 
+===
 
 Made with &#x2665; by [@LiquidImage_](https://twitter.com/liquidimage_/) and [@mokagio](https://twitter.com/mokagio)
