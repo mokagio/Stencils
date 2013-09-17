@@ -13,6 +13,7 @@
 		3F1EE02E17BB7518008322B4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3F1EE02C17BB7518008322B4 /* InfoPlist.strings */; };
 		3F1EE03817BB794D008322B4 /* MTFontIconParserConstantsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1EE03717BB794D008322B4 /* MTFontIconParserConstantsSpec.m */; };
 		3F1EE03B17BB83B8008322B4 /* MTFontIconParseSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1EE03A17BB83B8008322B4 /* MTFontIconParseSpec.m */; };
+		3FAC82BC17E906EB00A2CBB2 /* NSStringPlusUnicodeSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC82BB17E906EB00A2CBB2 /* NSStringPlusUnicodeSpec.m */; };
 		B2C4F738A6BE4FBF91F6F72D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79DA94BADA764E1983DCA61A /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		3F1EE03217BB7518008322B4 /* MTFontIconTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MTFontIconTests-Prefix.pch"; sourceTree = "<group>"; };
 		3F1EE03717BB794D008322B4 /* MTFontIconParserConstantsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTFontIconParserConstantsSpec.m; sourceTree = "<group>"; };
 		3F1EE03A17BB83B8008322B4 /* MTFontIconParseSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTFontIconParseSpec.m; sourceTree = "<group>"; };
+		3FAC82BB17E906EB00A2CBB2 /* NSStringPlusUnicodeSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringPlusUnicodeSpec.m; sourceTree = "<group>"; };
 		79DA94BADA764E1983DCA61A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E51A59A0BCF4566BB589EB0 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -80,6 +82,7 @@
 				3F1EE02A17BB7518008322B4 /* Supporting Files */,
 				3F1EE03717BB794D008322B4 /* MTFontIconParserConstantsSpec.m */,
 				3F1EE03A17BB83B8008322B4 /* MTFontIconParseSpec.m */,
+				3FAC82BB17E906EB00A2CBB2 /* NSStringPlusUnicodeSpec.m */,
 			);
 			path = MTFontIconTests;
 			sourceTree = "<group>";
@@ -123,7 +126,7 @@
 		3F1EE01517BB74FD008322B4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0500;
 			};
 			buildConfigurationList = 3F1EE01817BB74FD008322B4 /* Build configuration list for PBXProject "Tests" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -204,6 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FAC82BC17E906EB00A2CBB2 /* NSStringPlusUnicodeSpec.m in Sources */,
 				3F1EE03817BB794D008322B4 /* MTFontIconParserConstantsSpec.m in Sources */,
 				3F1EE03B17BB83B8008322B4 /* MTFontIconParseSpec.m in Sources */,
 			);
@@ -226,6 +230,7 @@
 		3F1EE01917BB74FD008322B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Debug;
 		};

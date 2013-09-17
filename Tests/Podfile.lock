@@ -1,6 +1,6 @@
 PODS:
   - Kiwi (2.0.6)
-  - MTFontIcon (0.0.1)
+  - MTFontIcon (1.0.0)
   - OCMock (2.1.1)
 
 DEPENDENCIES:
@@ -14,7 +14,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Kiwi: 56082a80f942de4d10423d8d8a599ab30cf50228
-  MTFontIcon: 136f9fdd463e2e3d86073aa0c4833edd85ad45a2
+  MTFontIcon: 6d32a1bfe7b2fae5ce59e61ba5dc2b19c028f1d6
   OCMock: 79212e5e328378af5cfd6edb5feacfd6c49cd8a3
 
-COCOAPODS: 0.22.3
+COCOAPODS: 0.24.0

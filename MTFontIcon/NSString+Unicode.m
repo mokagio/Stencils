@@ -25,10 +25,16 @@
         int realNumber = 0;
         NSUInteger numericShift = 48;
         NSUInteger charShift = 97;
-        if (number >= numericShift && number <= numericShift + 9) {
+        
+        BOOL isDigit = number >= numericShift && number <= (numericShift + 9);
+        // Allowed chars = a...f
+        // => 5 positions
+        BOOL isAllowedChar = number >= charShift && number <= (charShift + 5);
+        
+        if (isDigit) {
             realNumber = number - numericShift;
         }
-        else if (number >= charShift && number <= charShift + 4) {
+        else if (isAllowedChar) {
             realNumber = 10 + number - charShift;
         }
         intValue += pow(16, length - 1 - i) * realNumber;
