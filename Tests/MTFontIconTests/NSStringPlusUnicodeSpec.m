@@ -21,6 +21,15 @@ describe(@"NSString+Unicode Category", ^{
         NSUInteger intValue = [@"ffff" hexStringToInteger];
         [[theValue(intValue) should] equal:theValue(65535)];
     });
+    
+    it(@"works with upper case strings aswell", ^{
+        NSArray *options = @[@"A", @"B", @"C", @"D", @"E", @"F"];
+        NSUInteger idx = arc4random() % [options count];
+        NSString *hex = options[idx];
+        NSUInteger expected = 10 + idx;
+        NSUInteger intValue = [hex hexStringToInteger];
+        [[theValue(intValue) should] equal:theValue(expected)];
+    });
 });
 
 SPEC_END
