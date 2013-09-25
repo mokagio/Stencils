@@ -4,6 +4,14 @@ MTFontIcon
 [![Stories in Ready](https://badge.waffle.io/mokagio/MTFontIcon.png)](http://waffle.io/mokagio/MTFontIcon)
 <br/>
 [![Build Status](https://travis-ci.org/mokagio/MTFontIcon.png)](https://travis-ci.org/mokagio/MTFontIcon.png)
+<br/>
+[![Pod Version](http://cocoapod-badges.herokuapp.com/v/MTFontIcon/badge.png
+)](http://cocoapod-badges.herokuapp.com/v/$PODNAME/badge.png
+)
+<br/>
+[![Pod Version](http://cocoapod-badges.herokuapp.com/p/MTFontIcon/badge.png
+)](http://cocoapod-badges.herokuapp.com/p/$PODNAME/badge.png
+)
 
 > Speedup iOS app development with font based icons!
 
@@ -15,7 +23,11 @@ Via [CocoaPods](http://cocoapods.org).
 
 or
 
-	pod 'MTFontIcon', ~> '1.0.0'
+	pod 'MTFontIcon', ~> 'x.x.x'
+	
+where `x.x.x` is the version number you want. Latest stable is [![Pod Version](http://cocoapod-badges.herokuapp.com/v/MTFontIcon/badge.png
+)](http://cocoapod-badges.herokuapp.com/v/$PODNAME/badge.png
+)
 
 ##Usage
 
