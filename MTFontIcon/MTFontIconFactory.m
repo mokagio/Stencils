@@ -10,6 +10,7 @@
 #import "MTFontIconModel.h"
 #import "MTFontIconParser.h"
 #import "NSString+Unicode.h"
+#import <CoreText/CoreText.h>
 
 static const CGFloat kWorkaroundOffset = -1;
 static const CGFloat kWorkaroundScale = .95;
@@ -87,6 +88,28 @@ static const CGFloat kWorkaroundScale = .95;
         self.label.numberOfLines = 0;
         self.label.lineBreakMode = NSLineBreakByWordWrapping;
 
+        CGFloat size = self.frame.size.height * kWorkaroundScale;
+        UIFont *font = [UIFont fontWithName:fontName size:size];
+        if (!font) {
+            NSURL *url = [[NSBundle mainBundle] URLForResource:fontName withExtension:@"ttf"];
+            // Awesome snippet!
+            //http://www.marco.org/2012/12/21/ios-dynamic-font-loading
+            NSData *fontData = [NSData dataWithContentsOfURL:url];
+            if (fontData) {
+                CFErrorRef error;
+                CGDataProviderRef provider = CGDataProviderCreateWithCFData((CFDataRef)fontData);
+                CGFontRef font = CGFontCreateWithDataProvider(provider);
+                if (!CTFontManagerRegisterGraphicsFont(font, &error)) {
+                    CFStringRef errorDescription = CFErrorCopyDescription(error);
+                    NSLog(@"Failed to load font: %@", errorDescription);
+                    CFRelease(errorDescription);
+                }
+                CFRelease(font);
+                CFRelease(provider);
+            }
+            font = [UIFont fontWithName:fontName size:size];
+        }
+        
         self.label.font = [UIFont fontWithName:fontName size:self.frame.size.height * kWorkaroundScale];
         self.label.text = iconString;
         

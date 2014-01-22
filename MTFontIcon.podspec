@@ -9,4 +9,5 @@ Pod::Spec.new do |s|
   s.source_files = 'MTFontIcon'
   s.platform     = :ios
   s.requires_arc = true
+  s.frameworks   = 'CoreText'
 end
