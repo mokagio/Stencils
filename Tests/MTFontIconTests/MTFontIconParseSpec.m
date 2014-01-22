@@ -12,26 +12,40 @@
 SPEC_BEGIN(MTFontIconParserSpec)
 
 describe(@"MTFontIconParser", ^{
-   
-    it(@"should parse am array of dictionaries in the standard format into a 'name:code' dictionary", ^{
-        NSString *anyIconName = @"an-icon";
-        NSString *anyIconCode = @"\ue000";
-        NSDictionary *anIconDict = @{MTFontIconIconNameKey: anyIconName,
-                                     MTFontIconIconCodeKey: anyIconCode};
-        NSString *anyIconName1 = @"another-icon";
-        NSString *anyIconCode1 = @"\ue001";
-        NSDictionary *anIconDict1 = @{MTFontIconIconNameKey: anyIconName1,
-                                      MTFontIconIconCodeKey: anyIconCode1};
-        NSArray *settings = @[anIconDict, anIconDict1];
-        
-        NSDictionary *iconsDictionary = [MTFontIconParser parseFontIconsFromArray:settings];
-        
-        [[theValue([iconsDictionary count]) should] equal:theValue([settings count])];
-        
-        [[iconsDictionary[anyIconName] should] equal:anyIconCode];
-        [[iconsDictionary[anyIconName1] should] equal:anyIconCode1];
+    
+    __block NSString *anyIconName = @"an-icon";
+    __block NSString *anyIconCode = @"\ue000";
+    __block NSString *anyFontFileName = @"a-font-file-name";
+    __block NSDictionary *anIconDict = @{
+                                         MTFontIconParserFontKey: anyFontFileName,
+                                         MTFontIconIconNameKey: anyIconName,
+                                         MTFontIconIconCodeKey: anyIconCode
+                                         };
+    __block NSArray *settings = @[ anIconDict ];
+    
+    __block NSDictionary *icons;
+    
+    beforeAll(^{
+        icons = [MTFontIconParser parseFontIconsFromArray:settings];
     });
     
+    it(@"should parse an array of dictionaries into a dictionary of MTFontIconModel instances", ^{
+        
+        [icons enumerateKeysAndObjectsUsingBlock:^(NSString *key, id obj, BOOL *stop) {
+            BOOL isExpectedClass = [obj isKindOfClass:[MTFontIconModel class]];
+            [[theValue(isExpectedClass) should] beTrue];
+        }];
+    });
+    
+    it(@"should return a MTFontIconModel with the correct fontName prorperty", ^{
+        MTFontIconModel *model = icons[anyIconName];
+        [[model.fontName should] equal:anyFontFileName];
+    });
+    
+    it(@"should return a MTFontIconModel with the correct code prorperty", ^{
+        MTFontIconModel *model = icons[anyIconName];
+        [[model.code should] equal:anyIconCode];
+    });
 });
 
 SPEC_END

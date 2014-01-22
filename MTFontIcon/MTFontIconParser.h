@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MTFontIconModel.h"
 
 extern NSString *MTFontIconParserFontKey;
 extern NSString *MTFontIconIconsKey;

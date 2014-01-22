@@ -1,0 +1,21 @@
+PODS:
+  - Kiwi/ARC (2.2.3)
+  - Kiwi/NonARC (2.2.3)
+  - Kiwi/XCTest (2.2.3):
+    - Kiwi/ARC
+    - Kiwi/NonARC
+  - MTFontIcon (1.0.1)
+
+DEPENDENCIES:
+  - Kiwi/XCTest
+  - MTFontIcon (from `.`)
+
+EXTERNAL SOURCES:
+  MTFontIcon:
+    :path: .
+
+SPEC CHECKSUMS:
+  Kiwi: 04c51e880831d291748ec702d42c4101f7eb95c9
+  MTFontIcon: 3204b6001cb7644552b2955a6fe1a8b05ea68f2d
+
+COCOAPODS: 0.29.0
