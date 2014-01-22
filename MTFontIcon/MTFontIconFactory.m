@@ -7,14 +7,12 @@
 //
 
 #import "MTFontIconFactory.h"
+#import "MTFontIconModel.h"
 #import "MTFontIconParser.h"
 #import "NSString+Unicode.h"
 
 static const CGFloat kWorkaroundOffset = -1;
 static const CGFloat kWorkaroundScale = .95;
-
-static NSString * const kFontName = @"icomoon";
-
 
 @interface MTFontIconView ()
 @property (nonatomic, strong) UILabel *label;
@@ -46,17 +44,27 @@ static NSString * const kFontName = @"icomoon";
 
 - (NSString *)charForIcon:(NSString *)icon
 {
-    return self.icons[icon];
+    MTFontIconModel *model = self.icons[icon];
+    NSString *charForIcon = model.code;
+    return charForIcon;
+}
+
+- (NSString *)fontNameForIcon:(NSString *)icon
+{
+    MTFontIconModel *model = self.icons[icon];
+    NSString *fontName = model.fontName;
+    return fontName;
 }
 
 - (MTFontIconView *)iconViewForIconNamed:(NSString *)iconName withSide:(CGFloat)side
 {
+    NSString *fontName = [self fontNameForIcon:iconName];
     NSString *hexString = [self charForIcon:iconName];
     NSString *iconString = [NSString stringWithUnicodeDecimalValue:[hexString hexStringToInteger]];
  
     // TODO fix font name
     return [[MTFontIconView alloc] initWithFrame:CGRectMake(0, 0, side, side)
-                                        fontName:kFontName
+                                        fontName:fontName
                                       iconString:iconString];
 }
 

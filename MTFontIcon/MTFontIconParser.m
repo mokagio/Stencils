@@ -7,6 +7,7 @@
 //
 
 #import "MTFontIconParser.h"
+#import "MTFontIconModel.h"
 
 NSString *MTFontIconParserFontKey = @"font-name";
 NSString *MTFontIconIconsKey = @"font-icons";
@@ -27,9 +28,12 @@ static NSString *kFileExtension = @"plist";
 {
     NSMutableDictionary *iconsDict = [[NSMutableDictionary alloc] init];
     [array enumerateObjectsUsingBlock:^(NSDictionary *dataDict, NSUInteger idx, BOOL *stop) {
+        MTFontIconModel *model = [[MTFontIconModel alloc] init];
         NSString *name = dataDict[MTFontIconIconNameKey];
-        NSString *code = dataDict[MTFontIconIconCodeKey];
-        [iconsDict setValue:code forKey:name];
+        model.name = name;
+        model.code = dataDict[MTFontIconIconCodeKey];
+        model.fontName = dataDict[MTFontIconParserFontKey];
+        iconsDict[name] = model;
     }];
     return [NSDictionary dictionaryWithDictionary:iconsDict];
 }
