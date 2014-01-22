@@ -1,0 +1,14 @@
+PODS:
+  - MTFontIcon (1.0.1)
+
+DEPENDENCIES:
+  - MTFontIcon (from `../`)
+
+EXTERNAL SOURCES:
+  MTFontIcon:
+    :path: ../
+
+SPEC CHECKSUMS:
+  MTFontIcon: b018d48865755f43fcc15085d893c5b79ff78774
+
+COCOAPODS: 0.29.0

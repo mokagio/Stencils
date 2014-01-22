@@ -1,0 +1,5 @@
+
+target "Example" do
+  pod 'MTFontIcon', :path => '../'
+end
+
