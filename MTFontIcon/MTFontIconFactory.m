@@ -12,12 +12,13 @@
 #import "NSString+Unicode.h"
 #import <CoreText/CoreText.h>
 
-static const CGFloat kWorkaroundOffset = -1;
-static const CGFloat kWorkaroundScale = .95;
-
 @interface MTFontIconView ()
+
 @property (nonatomic, strong) UILabel *label;
-- (id)initWithFrame:(CGRect)frame fontName:(NSString *)fontName iconString:(NSString *)iconString;
+@property (nonatomic, strong) MTFontIconModel *model;
+
+- (id)initWithFrame:(CGRect)frame model:(MTFontIconModel *)model;
+
 @end
 
 
@@ -43,30 +44,12 @@ static const CGFloat kWorkaroundScale = .95;
     self.icons = [MTFontIconParser parseFontIcons];
 }
 
-- (NSString *)charForIcon:(NSString *)icon
-{
-    MTFontIconModel *model = self.icons[icon];
-    NSString *charForIcon = model.code;
-    return charForIcon;
-}
-
-- (NSString *)fontNameForIcon:(NSString *)icon
-{
-    MTFontIconModel *model = self.icons[icon];
-    NSString *fontName = model.fontName;
-    return fontName;
-}
-
 - (MTFontIconView *)iconViewForIconNamed:(NSString *)iconName withSide:(CGFloat)side
 {
-    NSString *fontName = [self fontNameForIcon:iconName];
-    NSString *hexString = [self charForIcon:iconName];
-    NSString *iconString = [NSString stringWithUnicodeDecimalValue:[hexString hexStringToInteger]];
- 
-    // TODO fix font name
-    return [[MTFontIconView alloc] initWithFrame:CGRectMake(0, 0, side, side)
-                                        fontName:fontName
-                                      iconString:iconString];
+    MTFontIconModel *model = self.icons[iconName];
+    MTFontIconView *iconView = [[MTFontIconView alloc] initWithFrame:CGRectMake(0, 0, side, side)
+                                                               model:model];
+    return iconView;
 }
 
 @end
@@ -74,24 +57,20 @@ static const CGFloat kWorkaroundScale = .95;
 
 @implementation MTFontIconView
 
-- (id)initWithFrame:(CGRect)frame fontName:(NSString *)fontName iconString:(NSString *)iconString
+- (id)initWithFrame:(CGRect)frame model:(MTFontIconModel *)model
 {
     self = [super initWithFrame:frame];
     if (self) {
-        CGFloat side = frame.size.width;
-        self.label = [[UILabel alloc] initWithFrame:CGRectMake(0,
-                                                               kWorkaroundOffset,
-                                                               side,
-                                                               side)];
+        self.model = model;
         
+        self.label = [[UILabel alloc] initWithFrame:CGRectZero];
         self.label.textAlignment = NSTextAlignmentCenter;
         self.label.numberOfLines = 0;
         self.label.lineBreakMode = NSLineBreakByWordWrapping;
 
-        CGFloat size = self.frame.size.height * kWorkaroundScale;
-        UIFont *font = [UIFont fontWithName:fontName size:size];
+        UIFont *font = [UIFont fontWithName:model.fontName size:1];
         if (!font) {
-            NSURL *url = [[NSBundle mainBundle] URLForResource:fontName withExtension:@"ttf"];
+            NSURL *url = [[NSBundle mainBundle] URLForResource:model.fontName withExtension:@"ttf"];
             // Awesome snippet!
             //http://www.marco.org/2012/12/21/ios-dynamic-font-loading
             NSData *fontData = [NSData dataWithContentsOfURL:url];
@@ -107,10 +86,11 @@ static const CGFloat kWorkaroundScale = .95;
                 CFRelease(font);
                 CFRelease(provider);
             }
-            font = [UIFont fontWithName:fontName size:size];
+            font = [UIFont fontWithName:model.fontName size:1];
         }
-        
-        self.label.font = [UIFont fontWithName:fontName size:self.frame.size.height * kWorkaroundScale];
+        self.label.font = font;
+
+        NSString *iconString = [NSString stringWithUnicodeDecimalValue:[self.model.code hexStringToInteger]];
         self.label.text = iconString;
         
         self.label.backgroundColor = [UIColor clearColor];
@@ -128,12 +108,14 @@ static const CGFloat kWorkaroundScale = .95;
 {
     [super layoutSubviews];
     
+    CGFloat scaleAdjustement = self.model.scaleAdjustement;
     self.label.frame = CGRectMake(0,
-                                  kWorkaroundOffset,
+                                  - (self.frame.size.height * self.model.baselineAdjustement - self.frame.size.height),
                                   self.frame.size.width,
-                                  self.frame.size.height);
+                                  self.frame.size.height * self.model.baselineAdjustement);
+    self.label.transform = CGAffineTransformMakeScale(scaleAdjustement, scaleAdjustement);
     self.label.font = [UIFont fontWithName:self.label.font.fontName
-                                      size:self.frame.size.height * kWorkaroundScale];
+                                      size:self.frame.size.height];
 }
 
 #pragma mark - Properties Overrides
