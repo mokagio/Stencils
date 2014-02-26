@@ -13,8 +13,8 @@ extern NSString *MTFontIconParserFontKey;
 extern NSString *MTFontIconIconsKey;
 extern NSString *MTFontIconIconNameKey;
 extern NSString *MTFontIconIconCodeKey;
-extern NSString *MTFontIconPaddingLeftKey;
-extern NSString *MTFontIconPaddingTopKey;
+extern NSString *MTFontIconBaselineAdjustementKey;
+extern NSString *MTFontIconScaleAdjustementKey;
 
 @interface MTFontIconParser : NSObject
 

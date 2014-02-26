@@ -14,8 +14,8 @@ NSString *MTFontIconIconsKey = @"font-icons";
 NSString *MTFontIconParserFontKey = @"font-name";
 NSString *MTFontIconIconNameKey = @"icon-name";
 NSString *MTFontIconIconCodeKey = @"icon-code";
-NSString *MTFontIconPaddingLeftKey = @"padding-left";
-NSString *MTFontIconPaddingTopKey = @"padding-top";
+NSString *MTFontIconBaselineAdjustementKey = @"baseline-adjustement";
+NSString *MTFontIconScaleAdjustementKey = @"scale-adjustement";
 
 static NSString *kFileName = @"MTFontIcon";
 static NSString *kFileExtension = @"plist";
@@ -36,8 +36,12 @@ static NSString *kFileExtension = @"plist";
         model.name = name;
         model.code = dataDict[MTFontIconIconCodeKey];
         model.fontName = dataDict[MTFontIconParserFontKey];
-        model.paddingLeft = [dataDict[MTFontIconPaddingLeftKey] floatValue];
-        model.paddingTop = [dataDict[MTFontIconPaddingTopKey] floatValue];
+        if (dataDict[MTFontIconBaselineAdjustementKey]) {
+            model.baselineAdjustement = [dataDict[MTFontIconBaselineAdjustementKey] floatValue];
+        }
+        if (dataDict[MTFontIconScaleAdjustementKey]) {
+            model.scaleAdjustement = [dataDict[MTFontIconScaleAdjustementKey] floatValue];
+        }
         iconsDict[name] = model;
     }];
     return [NSDictionary dictionaryWithDictionary:iconsDict];

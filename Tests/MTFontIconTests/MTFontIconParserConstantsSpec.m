@@ -29,12 +29,12 @@ describe(@"MTFontIconParser Constants", ^{
         [[MTFontIconIconCodeKey should] equal:@"icon-code"];
     });
     
-    it(@"should have the icon padding left key equal to 'padding-left'", ^{
-        [[MTFontIconPaddingLeftKey should] equal:@"padding-left"];
+    it(@"should have the icon padding left key equal to 'baseline-adjustement'", ^{
+        [[MTFontIconBaselineAdjustementKey should] equal:@"baseline-adjustement"];
     });
     
-    it(@"should have the icon padding left key equal to 'padding-top'", ^{
-        [[MTFontIconPaddingTopKey should] equal:@"padding-top"];
+    it(@"should have the icon padding left key equal to 'scale-adjustement'", ^{
+        [[MTFontIconScaleAdjustementKey should] equal:@"scale-adjustement"];
     });
 });
 

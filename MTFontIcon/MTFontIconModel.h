@@ -15,21 +15,25 @@
 @property (nonatomic, copy) NSString *fontName;
 
 /**
- *  Padding the actual font icon should have from the left the view bounds.
- *  Use it to handle those cases where the font is not rendered as expected because of the values of
- *  ascender or descender.
+ *  Optional adjustement value to compensate an eventual offset of the custom font from the baseline.
+ *  This value is multiplied with the requested size of the icon to get the actual size the icon
+ *  should have to avoid croppings.
+ *  Usually used in combination with `scaleAdjustement`.
  *
- *  Default is 0
+ *  Default is 1.
+ *
+ *  @see scaleAdjustement
  */
-@property (nonatomic, assign) CGFloat paddingLeft;
+@property (nonatomic, assign) CGFloat baselineAdjustement;
 
 /**
- *  Padding the actual font icon should have from the top the view bounds.
- *  Use it to handle those cases where the font is not rendered as expected because of the values of
- *  ascender or descender.
+ *  Optional scale factor for the view. Usually used in combination with `baselineAdjustement` to
+ *  compensate an eventual offset of the custom font from the baseline.
  *
- *  Default is 0
+ *  Default is 1.
+ *
+ *  @see baselineAdjustement
  */
-@property (nonatomic, assign) CGFloat paddingTop;
+@property (nonatomic, assign) CGFloat scaleAdjustement;
 
 @end

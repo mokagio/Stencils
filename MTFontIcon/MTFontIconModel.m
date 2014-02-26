@@ -15,8 +15,8 @@
     self = [super init];
     if (!self) { return nil; }
     
-    self.paddingLeft = 0;
-    self.paddingTop = 0;
+    self.baselineAdjustement = 1;
+    self.scaleAdjustement = 1;
     
     return self;
 }

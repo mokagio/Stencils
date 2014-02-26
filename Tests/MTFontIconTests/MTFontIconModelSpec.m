@@ -5,14 +5,14 @@
 SPEC_BEGIN(MTFontIconModelSpec)
 
 describe(@"MTFontIconModel", ^{
-    it(@"should init with a paddingLeft of 0", ^{
+    it(@"should init with a paddingLeft of 1", ^{
         MTFontIconModel *model = [[MTFontIconModel alloc] init];
-        [[theValue(model.paddingLeft) should] equal:theValue(0)];
+        [[theValue(model.baselineAdjustement) should] equal:theValue(1)];
     });
     
-    it(@"should init with a paddingTop of 0", ^{
+    it(@"should init with a paddingTop of 1", ^{
         MTFontIconModel *model = [[MTFontIconModel alloc] init];
-        [[theValue(model.paddingTop) should] equal:theValue(0)];
+        [[theValue(model.scaleAdjustement) should] equal:theValue(1)];
     });
 });
 

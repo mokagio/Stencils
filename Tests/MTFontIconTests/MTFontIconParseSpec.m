@@ -15,14 +15,14 @@ describe(@"MTFontIconParser", ^{
     __block NSString *anyIconName = @"an-icon";
     __block NSString *anyIconCode = @"\ue000";
     __block NSString *anyFontFileName = @"a-font-file-name";
-    __block CGFloat anyLeftValue = 1.1;
-    __block CGFloat anyTopValue = 2.2;
+    __block CGFloat anyBaselineValue = 1.1;
+    __block CGFloat anyScaleValue = 2.2;
     __block NSDictionary *anIconDict = @{
                                          MTFontIconParserFontKey: anyFontFileName,
                                          MTFontIconIconNameKey: anyIconName,
                                          MTFontIconIconCodeKey: anyIconCode,
-                                         MTFontIconPaddingLeftKey: @(anyLeftValue),
-                                         MTFontIconPaddingTopKey: @(anyTopValue),
+                                         MTFontIconBaselineAdjustementKey: @(anyBaselineValue),
+                                         MTFontIconScaleAdjustementKey: @(anyScaleValue),
                                          };
     __block NSArray *settings = @[ anIconDict ];
     
@@ -49,12 +49,12 @@ describe(@"MTFontIconParser", ^{
         [[model.code should] equal:anyIconCode];
     });
     
-    it(@"should return a MTFontIconModel with the correct paddingLeft prorperty", ^{
-        [[theValue(model.paddingLeft) should] equal:theValue(anyLeftValue)];
+    it(@"should return a MTFontIconModel with the correct baselineAdjustement prorperty", ^{
+        [[theValue(model.baselineAdjustement) should] equal:theValue(anyBaselineValue)];
     });
     
-    it(@"should return a MTFontIconModel with the correct paddingTop prorperty", ^{
-        [[theValue(model.paddingTop) should] equal:theValue(anyTopValue)];
+    it(@"should return a MTFontIconModel with the correct baselineAdjustement prorperty", ^{
+        [[theValue(model.scaleAdjustement) should] equal:theValue(anyScaleValue)];
     });
     
     describe(@"when parsing an icon dictionary without the optional values", ^{
@@ -69,12 +69,12 @@ describe(@"MTFontIconParser", ^{
             model = [MTFontIconParser parseFontIconsFromArray:@[anIconDictWithoutOptionalValues]][anyIconName];
         });
         
-        it(@"should return a MTFontIconModel with the default paddingLeft prorperty", ^{
-            [[theValue(model.paddingLeft) should] equal:theValue(defaultModel.paddingLeft)];
+        it(@"should return a MTFontIconModel with the default baselineAdjustement prorperty", ^{
+            [[theValue(model.baselineAdjustement) should] equal:theValue(defaultModel.baselineAdjustement)];
         });
         
-        it(@"should return a MTFontIconModel with the defauld paddingTop prorperty", ^{
-            [[theValue(model.paddingTop) should] equal:theValue(defaultModel.paddingTop)];
+        it(@"should return a MTFontIconModel with the defauld baselineAdjustement prorperty", ^{
+            [[theValue(model.scaleAdjustement) should] equal:theValue(defaultModel.scaleAdjustement)];
         });
     });
     
