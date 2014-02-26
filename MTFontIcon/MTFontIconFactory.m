@@ -124,6 +124,18 @@ static const CGFloat kWorkaroundScale = .95;
     return self;
 }
 
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    self.label.frame = CGRectMake(0,
+                                  kWorkaroundOffset,
+                                  self.frame.size.width,
+                                  self.frame.size.height);
+    self.label.font = [UIFont fontWithName:self.label.font.fontName
+                                      size:self.frame.size.height * kWorkaroundScale];
+}
+
 #pragma mark - Properties Overrides
 
 - (void)setColor:(UIColor *)color
