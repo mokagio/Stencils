@@ -14,6 +14,7 @@
 		3F3B64F418908B350010712D /* MTFontIconParserConstantsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F3B64F118908B350010712D /* MTFontIconParserConstantsSpec.m */; };
 		3F3B64F518908B350010712D /* MTFontIconParseSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F3B64F218908B350010712D /* MTFontIconParseSpec.m */; };
 		3F3B64F618908B350010712D /* NSStringPlusUnicodeSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F3B64F318908B350010712D /* NSStringPlusUnicodeSpec.m */; };
+		3FB6E7F418BE8E5F00E20681 /* MTFontIconModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB6E7F318BE8E5F00E20681 /* MTFontIconModelSpec.m */; };
 		A37706D9846D4AECA90567CA /* libPods-MTFontIconTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1747F2FB4A654A09AEA36C7F /* libPods-MTFontIconTests.a */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		3F3B64F118908B350010712D /* MTFontIconParserConstantsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTFontIconParserConstantsSpec.m; sourceTree = "<group>"; };
 		3F3B64F218908B350010712D /* MTFontIconParseSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTFontIconParseSpec.m; sourceTree = "<group>"; };
 		3F3B64F318908B350010712D /* NSStringPlusUnicodeSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringPlusUnicodeSpec.m; sourceTree = "<group>"; };
+		3FB6E7F318BE8E5F00E20681 /* MTFontIconModelSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTFontIconModelSpec.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				3F3B64E1189084DE0010712D /* MTFontIconTests-Info.plist */,
 				3F3B64E2189084DE0010712D /* InfoPlist.strings */,
 				3F3B64E7189084DE0010712D /* MTFontIconTests-Prefix.pch */,
+				3FB6E7F318BE8E5F00E20681 /* MTFontIconModelSpec.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F3B64F618908B350010712D /* NSStringPlusUnicodeSpec.m in Sources */,
+				3FB6E7F418BE8E5F00E20681 /* MTFontIconModelSpec.m in Sources */,
 				3F3B64F418908B350010712D /* MTFontIconParserConstantsSpec.m in Sources */,
 				3F3B64F518908B350010712D /* MTFontIconParseSpec.m in Sources */,
 			);

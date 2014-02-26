@@ -22,7 +22,7 @@ describe(@"NSString+Unicode Category", ^{
         [[theValue(intValue) should] equal:theValue(65535)];
     });
     
-    it(@"works with upper case strings aswell", ^{
+    it(@"works with upper case strings as well", ^{
         NSArray *options = @[@"A", @"B", @"C", @"D", @"E", @"F"];
         NSUInteger idx = arc4random() % [options count];
         NSString *hex = options[idx];
