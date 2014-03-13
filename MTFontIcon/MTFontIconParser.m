@@ -17,14 +17,11 @@ NSString *MTFontIconIconCodeKey = @"icon-code";
 NSString *MTFontIconBaselineAdjustementKey = @"baseline-adjustement";
 NSString *MTFontIconScaleAdjustementKey = @"scale-adjustement";
 
-static NSString *kFileName = @"MTFontIcon";
-static NSString *kFileExtension = @"plist";
-
 @implementation MTFontIconParser
 
-+ (NSDictionary *)parseFontIcons
++ (NSDictionary *)parseFontIconsFromDictionary:(NSDictionary *)dictionary
 {
-    return [self parseFontIconsFromArray:[self settingsArrayFromDefaultFile]];
+    return [self parseFontIconsFromDictionary:dictionary[MTFontIconIconsKey]];
 }
 
 + (NSDictionary *)parseFontIconsFromArray:(NSArray *)array
@@ -45,18 +42,6 @@ static NSString *kFileExtension = @"plist";
         iconsDict[name] = model;
     }];
     return [NSDictionary dictionaryWithDictionary:iconsDict];
-}
-
-+ (NSArray *)settingsArrayFromDefaultFile
-{
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:kFileName ofType:kFileExtension];
-    if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
-        NSDictionary *settingsDict = [NSDictionary dictionaryWithContentsOfFile:filePath];
-        return settingsDict[MTFontIconIconsKey];
-    } else {
-        // Throw an exception?
-        return nil;
-    }
 }
 
 @end

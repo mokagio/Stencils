@@ -18,9 +18,7 @@ extern NSString *MTFontIconScaleAdjustementKey;
 
 @interface MTFontIconParser : NSObject
 
-+ (NSDictionary *)parseFontIcons;
-
-// Better in an Internals/Private category
++ (NSDictionary *)parseFontIconsFromDictionary:(NSDictionary *)dictionary;
 + (NSDictionary *)parseFontIconsFromArray:(NSArray *)array;
 
 @end

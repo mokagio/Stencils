@@ -41,7 +41,14 @@
 
 - (void)setupIcons
 {
-    self.icons = [MTFontIconParser parseFontIcons];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"MTFontIcon" ofType:@"plist"];
+    NSDictionary *settingsDictionary = nil;
+    if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
+        settingsDictionary = [NSDictionary dictionaryWithContentsOfFile:filePath];
+    } else {
+        // Throw an exception?
+    }
+    self.icons = [MTFontIconParser parseFontIconsFromDictionary:settingsDictionary];
 }
 
 - (MTFontIconView *)iconViewForIconNamed:(NSString *)iconName withSide:(CGFloat)side
