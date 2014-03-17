@@ -16,11 +16,13 @@
 
 /**
  *  Optional adjustement value to compensate an eventual offset of the custom font from the baseline.
- *  This value is multiplied with the requested size of the icon to get the actual size the icon
+ *  This value is multiplied with the requested height of the icon to get the actual size the icon
  *  should have to avoid croppings.
  *  Usually used in combination with `scaleAdjustement`.
  *
  *  Default is 1.
+ *
+ *  Tip: try values > 1.
  *
  *  @see scaleAdjustement
  */
@@ -31,6 +33,8 @@
  *  compensate an eventual offset of the custom font from the baseline.
  *
  *  Default is 1.
+ *
+ *  Tip: since using a `baselineAdjustement` will make the icon bigger, use values < 1.
  *
  *  @see baselineAdjustement
  */
