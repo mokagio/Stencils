@@ -21,7 +21,7 @@ NSString *MTFontIconScaleAdjustementKey = @"scale-adjustement";
 
 + (NSDictionary *)parseFontIconsFromDictionary:(NSDictionary *)dictionary
 {
-    return [self parseFontIconsFromDictionary:dictionary[MTFontIconIconsKey]];
+    return [self parseFontIconsFromArray:dictionary[MTFontIconIconsKey]];
 }
 
 + (NSDictionary *)parseFontIconsFromArray:(NSArray *)array
