@@ -104,7 +104,7 @@
         
         [self addSubview:self.label];
         
-        self.color = [UIColor whiteColor];
+        self.color = nil;
         self.shadowOffset = CGSizeMake(0, 0);
         self.shadowColor = [UIColor clearColor];
     }
@@ -123,6 +123,12 @@
     self.label.transform = CGAffineTransformMakeScale(scaleAdjustement, scaleAdjustement);
     self.label.font = [UIFont fontWithName:self.label.font.fontName
                                       size:self.frame.size.height];
+    
+    if (self.color) {
+        self.label.textColor = self.color;
+    } else {
+        self.label.textColor = self.tintColor;
+    }
 }
 
 #pragma mark - Properties Overrides
@@ -130,7 +136,20 @@
 - (void)setColor:(UIColor *)color
 {
     _color = color;
-    self.label.textColor = color;
+    self.label.textColor = _color;
+}
+
+- (void)setTintColor:(UIColor *)tintColor
+{
+    [super setTintColor:tintColor];
+ 
+    if (!self.color) { self.label.textColor = tintColor; }
+}
+
+- (void)tintColorDidChange
+{
+    [super tintColorDidChange];
+    self.label.textColor = self.tintColor;
 }
 
 - (void)setShadowColor:(UIColor *)shadowColor
