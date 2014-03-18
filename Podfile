@@ -10,3 +10,9 @@ target "MTFontIconTests", :exclusive => true do
   pod "MTFontIcon", :path => "."
   pod "Kiwi/XCTest"
 end
+
+target "IconSettings" do
+  xcodeproj "IconSettings/IconSettings.xcodeproj"
+  pod "MTFontIcon", :path => "."
+end
+
