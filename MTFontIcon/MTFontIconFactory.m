@@ -22,6 +22,10 @@
 @end
 
 
+#pragma mark - 
+
+static NSString *kDefaultConfigurationName = @"MTFontIcon";
+
 @interface MTFontIconFactory ()
 @property (nonatomic, strong) NSDictionary *icons;
 @property (nonatomic, strong) UIFont *font;
@@ -30,18 +34,28 @@
 
 @implementation MTFontIconFactory
 
-- (id)init
+#pragma mark - Init
+
+- (id)initWithConfigurationNamed:(NSString *)configurationName
 {
     self = [super init];
-    if (self) {
-        [self setupIcons];
-    }
+    if (!self) return nil;
+
+    [self setupIconsWithConfigurationNamed:configurationName];
+
     return self;
 }
 
-- (void)setupIcons
+- (id)init
 {
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"MTFontIcon" ofType:@"plist"];
+    return [self initWithConfigurationNamed:kDefaultConfigurationName];
+}
+
+#pragma mark - Icons setup
+
+- (void)setupIconsWithConfigurationNamed:(NSString *)configurationName
+{
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:configurationName ofType:@"plist"];
     NSDictionary *settingsDictionary = nil;
     if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
         settingsDictionary = [NSDictionary dictionaryWithContentsOfFile:filePath];
