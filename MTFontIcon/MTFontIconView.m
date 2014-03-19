@@ -26,6 +26,7 @@
         
         self.baselineAdjustement = model.baselineAdjustement;
         self.scaleAdjustement = model.scaleAdjustement;
+        self.proportionalOffsetTop = 0;
         
         self.label = [[UILabel alloc] initWithFrame:CGRectZero];
         self.label.textAlignment = NSTextAlignmentCenter;
