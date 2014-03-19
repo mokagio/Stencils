@@ -15,6 +15,7 @@
 @property (nonatomic, strong) MTFontIconView *icon;
 @property (nonatomic, strong) UIView *frameView;
 
+@property (nonatomic, strong) UILabel *baselineAdjustementLabel;
 @property (nonatomic, strong) UIStepper *baselineAdjustementStepper;
 @end
 
@@ -41,6 +42,14 @@
     self.baselineAdjustementStepper.stepValue = 0.05;
     [self.baselineAdjustementStepper addTarget:self action:@selector(reloadIcon) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:self.baselineAdjustementStepper];
+    
+    self.baselineAdjustementLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,
+                                                                              0,
+                                                                              self.view.frame.size.width - 40 - self.baselineAdjustementStepper.frame.size.width,
+                                                                              self.baselineAdjustementStepper.frame.size.height)];
+    self.baselineAdjustementLabel.textColor = [UIColor whiteColor];
+    self.baselineAdjustementLabel.adjustsFontSizeToFitWidth = YES;
+    [self.view addSubview:self.baselineAdjustementLabel];
 }
 
 - (void)viewDidLayoutSubviews
@@ -50,10 +59,22 @@
     self.icon.center = self.view.center;
     self.frameView.center = self.view.center;
     
-    self.baselineAdjustementStepper.center = self.view.center;
+    CGRect baselineAdjustementLabelFrame = self.baselineAdjustementLabel.frame;
+    baselineAdjustementLabelFrame.origin.y = CGRectGetMaxY(self.icon.frame) + 10;
+    baselineAdjustementLabelFrame.origin.x = 20;
+    self.baselineAdjustementLabel.frame = baselineAdjustementLabelFrame;
+    
     CGRect baselineAdjustementStepperFrame = self.baselineAdjustementStepper.frame;
-    baselineAdjustementStepperFrame.origin.y = CGRectGetMaxY(self.icon.frame) + 10;
+    baselineAdjustementStepperFrame.origin.y = self.baselineAdjustementLabel.frame.origin.y;
+    baselineAdjustementStepperFrame.origin.x = CGRectGetMaxX(self.baselineAdjustementLabel.frame);
     self.baselineAdjustementStepper.frame = baselineAdjustementStepperFrame;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self reloadIcon];
 }
 
 #pragma mark - Font Icon
@@ -64,6 +85,8 @@
     self.icon.scaleAdjustement = 1.0;
     self.icon.proportionalOffsetTop = 0;
     [self.icon setNeedsLayout];
+    
+    self.baselineAdjustementLabel.text = [NSString stringWithFormat:@"baseline adjustement: %.2f", self.baselineAdjustementStepper.value];
 }
 
 #pragma mark - Status Bar
