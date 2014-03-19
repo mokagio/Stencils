@@ -73,7 +73,7 @@
     [super layoutSubviews];
     
     self.label.frame = CGRectMake(0,
-                                  - (self.frame.size.height * self.baselineAdjustement - self.frame.size.height),
+                                  - (self.frame.size.height * self.baselineAdjustement - self.frame.size.height) + self.frame.size.height * self.proportionalOffsetTop,
                                   self.frame.size.width,
                                   self.frame.size.height * self.baselineAdjustement);
     self.label.transform = CGAffineTransformMakeScale(self.scaleAdjustement, self.scaleAdjustement);
