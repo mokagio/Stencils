@@ -24,6 +24,9 @@
     if (self) {
         self.model = model;
         
+        self.baselineAdjustement = model.baselineAdjustement;
+        self.scaleAdjustement = model.scaleAdjustement;
+        
         self.label = [[UILabel alloc] initWithFrame:CGRectZero];
         self.label.textAlignment = NSTextAlignmentCenter;
         self.label.numberOfLines = 0;
@@ -69,12 +72,11 @@
 {
     [super layoutSubviews];
     
-    CGFloat scaleAdjustement = self.model.scaleAdjustement;
     self.label.frame = CGRectMake(0,
-                                  - (self.frame.size.height * self.model.baselineAdjustement - self.frame.size.height),
+                                  - (self.frame.size.height * self.baselineAdjustement - self.frame.size.height),
                                   self.frame.size.width,
-                                  self.frame.size.height * self.model.baselineAdjustement);
-    self.label.transform = CGAffineTransformMakeScale(scaleAdjustement, scaleAdjustement);
+                                  self.frame.size.height * self.baselineAdjustement);
+    self.label.transform = CGAffineTransformMakeScale(self.scaleAdjustement, self.scaleAdjustement);
     self.label.font = [UIFont fontWithName:self.label.font.fontName
                                       size:self.frame.size.height];
     

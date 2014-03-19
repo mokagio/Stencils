@@ -17,6 +17,9 @@
 @property (nonatomic, strong) UIColor *shadowColor;
 @property (nonatomic, assign) CGSize shadowOffset;
 
+@property (nonatomic, assign) CGFloat baselineAdjustement;
+@property (nonatomic, assign) CGFloat scaleAdjustement;
+
 - (id)initWithFrame:(CGRect)frame model:(MTFontIconModel *)model;
 
 @end
