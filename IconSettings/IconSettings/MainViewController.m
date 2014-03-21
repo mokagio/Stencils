@@ -30,6 +30,8 @@
 
 @property (nonatomic, strong) UIPickerView *iconPicker;
 
+@property (nonatomic, strong) UIButton *applyPreviousIconSettingsButton;
+
 @end
 
 @implementation MainViewController
@@ -112,6 +114,12 @@
     self.iconPicker.delegate = self;
     self.iconPicker.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.iconPicker];
+    
+    self.applyPreviousIconSettingsButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    self.applyPreviousIconSettingsButton.frame = CGRectMake(0, 0, 200, 40);
+    [self.applyPreviousIconSettingsButton setTitle:@"apply previous icon metrics" forState:UIControlStateNormal];
+    [self.applyPreviousIconSettingsButton addTarget:self action:@selector(applyPreviousIconSettings) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.applyPreviousIconSettingsButton];
 }
 
 - (void)viewDidLayoutSubviews
@@ -153,6 +161,11 @@
     offsetTopStepperFrame.origin.y = self.offsetTopLabel.frame.origin.y;
     offsetTopStepperFrame.origin.x = CGRectGetMaxX(self.offsetTopLabel.frame);
     self.offsetTopStepper.frame = offsetTopStepperFrame;
+    
+    self.applyPreviousIconSettingsButton.center = self.view.center;
+    CGRect buttonFrame = self.applyPreviousIconSettingsButton.frame;
+    buttonFrame.origin.y = CGRectGetMaxY(self.offsetTopLabel.frame) + 10;
+    self.applyPreviousIconSettingsButton.frame = buttonFrame;
     
     CGRect pickerFrame = self.iconPicker.frame;
     pickerFrame.origin.y = self.view.frame.size.height - pickerFrame.size.height;
@@ -205,6 +218,16 @@
     self.baselineAdjustementLabel.text = [NSString stringWithFormat:@"baseline adjustement: %.2f", self.baselineAdjustementStepper.value];
     self.scaleAdjustementLabel.text = [NSString stringWithFormat:@"scale adjustement: %.2f", self.scaleAdjustementStepper.value];
     self.offsetTopLabel.text = [NSString stringWithFormat:@"proportional offset top: %.2f", self.offsetTopStepper.value];
+}
+
+- (void)applyPreviousIconSettings
+{
+    if (self.currentIconIndex > 0) {
+        self.baselineAdjustementStepper.value = [self.iconsData[self.currentIconIndex - 1][@"baseline-adjustement"] floatValue];
+        self.scaleAdjustementStepper.value = [self.iconsData[self.currentIconIndex - 1][@"scale-adjustement"] floatValue];
+        
+        [self reloadIconMetrics];
+    }
 }
 
 #pragma mark - Load Fonts
