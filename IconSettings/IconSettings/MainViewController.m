@@ -25,9 +25,6 @@
 @property (nonatomic, strong) UILabel *scaleAdjustementLabel;
 @property (nonatomic, strong) UIStepper *scaleAdjustementStepper;
 
-@property (nonatomic, strong) UILabel *offsetTopLabel;
-@property (nonatomic, strong) UIStepper *offsetTopStepper;
-
 @property (nonatomic, strong) UIPickerView *iconPicker;
 
 @property (nonatomic, strong) UIButton *applyPreviousIconSettingsButton;
@@ -93,22 +90,6 @@
     self.scaleAdjustementLabel.adjustsFontSizeToFitWidth = YES;
     [self.view addSubview:self.scaleAdjustementLabel];
     
-    self.offsetTopStepper = [[UIStepper alloc] init];
-    self.offsetTopStepper.value = 0;
-    self.offsetTopStepper.stepValue = 0.01;
-    self.offsetTopStepper.minimumValue = -1;
-    [self.offsetTopStepper addTarget:self action:@selector(reloadIconMetrics) forControlEvents:UIControlEventValueChanged];
-    self.offsetTopStepper.tintColor = [UIColor whiteColor];
-    [self.view addSubview:self.offsetTopStepper];
-    
-    self.offsetTopLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,
-                                                                    0,
-                                                                    self.view.frame.size.width - 40 - self.offsetTopStepper.frame.size.width,
-                                                                    self.offsetTopStepper.frame.size.height)];
-    self.offsetTopLabel.textColor = [UIColor whiteColor];
-    self.offsetTopLabel.adjustsFontSizeToFitWidth = YES;
-    [self.view addSubview:self.offsetTopLabel];
-    
     self.iconPicker = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 20)];
     self.iconPicker.dataSource = self;
     self.iconPicker.delegate = self;
@@ -152,19 +133,9 @@
     scaleAdjustementStepperFrame.origin.x = CGRectGetMaxX(self.scaleAdjustementLabel.frame);
     self.scaleAdjustementStepper.frame = scaleAdjustementStepperFrame;
     
-    CGRect offsetTopLabelFrame = self.offsetTopLabel.frame;
-    offsetTopLabelFrame.origin.y = CGRectGetMaxY(self.scaleAdjustementLabel.frame) + 10;
-    offsetTopLabelFrame.origin.x = 20;
-    self.offsetTopLabel.frame = offsetTopLabelFrame;
-    
-    CGRect offsetTopStepperFrame = self.offsetTopStepper.frame;
-    offsetTopStepperFrame.origin.y = self.offsetTopLabel.frame.origin.y;
-    offsetTopStepperFrame.origin.x = CGRectGetMaxX(self.offsetTopLabel.frame);
-    self.offsetTopStepper.frame = offsetTopStepperFrame;
-    
     self.applyPreviousIconSettingsButton.center = self.view.center;
     CGRect buttonFrame = self.applyPreviousIconSettingsButton.frame;
-    buttonFrame.origin.y = CGRectGetMaxY(self.offsetTopLabel.frame) + 10;
+    buttonFrame.origin.y = CGRectGetMaxY(self.scaleAdjustementStepper.frame) + 10;
     self.applyPreviousIconSettingsButton.frame = buttonFrame;
     
     CGRect pickerFrame = self.iconPicker.frame;
@@ -212,12 +183,11 @@
     self.iconsData[self.currentIconIndex][@"baseline-adjustement"] = @(self.baselineAdjustementStepper.value);
     self.icon.scaleAdjustement = self.scaleAdjustementStepper.value;;
     self.iconsData[self.currentIconIndex][@"scale-adjustement"] = @(self.scaleAdjustementStepper.value);
-    self.icon.proportionalOffsetTop = self.offsetTopStepper.value;
+
     [self.icon setNeedsLayout];
     
     self.baselineAdjustementLabel.text = [NSString stringWithFormat:@"baseline adjustement: %.2f", self.baselineAdjustementStepper.value];
     self.scaleAdjustementLabel.text = [NSString stringWithFormat:@"scale adjustement: %.2f", self.scaleAdjustementStepper.value];
-    self.offsetTopLabel.text = [NSString stringWithFormat:@"proportional offset top: %.2f", self.offsetTopStepper.value];
 }
 
 - (void)applyPreviousIconSettings
