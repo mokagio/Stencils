@@ -46,8 +46,9 @@
     
     self.baselineAdjustementStepper = [[UIStepper alloc] init];
     self.baselineAdjustementStepper.value = 1.0;
-    self.baselineAdjustementStepper.stepValue = 0.05;
+    self.baselineAdjustementStepper.stepValue = 0.01;
     [self.baselineAdjustementStepper addTarget:self action:@selector(reloadIcon) forControlEvents:UIControlEventValueChanged];
+    self.baselineAdjustementStepper.tintColor = [UIColor whiteColor];
     [self.view addSubview:self.baselineAdjustementStepper];
     
     self.baselineAdjustementLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,
@@ -60,8 +61,9 @@
     
     self.scaleAdjustementStepper = [[UIStepper alloc] init];
     self.scaleAdjustementStepper.value = 1.0;
-    self.scaleAdjustementStepper.stepValue = 0.05;
+    self.scaleAdjustementStepper.stepValue = 0.01;
     [self.scaleAdjustementStepper addTarget:self action:@selector(reloadIcon) forControlEvents:UIControlEventValueChanged];
+    self.scaleAdjustementStepper.tintColor = [UIColor whiteColor];
     [self.view addSubview:self.scaleAdjustementStepper];
     
     self.scaleAdjustementLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,
@@ -77,6 +79,7 @@
     self.offsetTopStepper.stepValue = 0.01;
     self.offsetTopStepper.minimumValue = -1;
     [self.offsetTopStepper addTarget:self action:@selector(reloadIcon) forControlEvents:UIControlEventValueChanged];
+    self.offsetTopStepper.tintColor = [UIColor whiteColor];
     [self.view addSubview:self.offsetTopStepper];
     
     self.offsetTopLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,
