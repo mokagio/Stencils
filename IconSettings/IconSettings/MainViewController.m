@@ -8,10 +8,11 @@
 
 #import "MainViewController.h"
 
+#import <MessageUI/MFMailComposeViewController.h>
 #import <MTFontIconFactory.h>
 #import <MTFontIconView.h>
 
-@interface MainViewController () <UIPickerViewDataSource, UIPickerViewDelegate>
+@interface MainViewController () <UIPickerViewDataSource, UIPickerViewDelegate, MFMailComposeViewControllerDelegate>
 
 @property (nonatomic, strong) NSMutableArray *iconsData;
 @property (nonatomic, assign) NSUInteger currentIconIndex;
@@ -28,6 +29,7 @@
 @property (nonatomic, strong) UIPickerView *iconPicker;
 
 @property (nonatomic, strong) UIButton *applyPreviousIconSettingsButton;
+@property (nonatomic, strong) UIButton *sendViaEmailButton;
 
 @end
 
@@ -101,6 +103,12 @@
     [self.applyPreviousIconSettingsButton setTitle:@"apply previous icon metrics" forState:UIControlStateNormal];
     [self.applyPreviousIconSettingsButton addTarget:self action:@selector(applyPreviousIconSettings) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.applyPreviousIconSettingsButton];
+    
+    self.sendViaEmailButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    self.sendViaEmailButton.frame = CGRectMake(0, 0, 200, 40);
+    [self.sendViaEmailButton setTitle:@"send configurations via email" forState:UIControlStateNormal];
+    [self.sendViaEmailButton addTarget:self action:@selector(sendEmail) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.sendViaEmailButton];
 }
 
 - (void)viewDidLayoutSubviews
@@ -137,6 +145,11 @@
     CGRect buttonFrame = self.applyPreviousIconSettingsButton.frame;
     buttonFrame.origin.y = CGRectGetMaxY(self.scaleAdjustementStepper.frame) + 10;
     self.applyPreviousIconSettingsButton.frame = buttonFrame;
+    
+    self.sendViaEmailButton.center = self.view.center;
+    CGRect emailButtonFrame = self.sendViaEmailButton.frame;
+    emailButtonFrame.origin.y = CGRectGetMaxY(self.applyPreviousIconSettingsButton.frame) + 10;
+    self.sendViaEmailButton.frame = emailButtonFrame;
     
     CGRect pickerFrame = self.iconPicker.frame;
     pickerFrame.origin.y = self.view.frame.size.height - pickerFrame.size.height;
@@ -255,6 +268,36 @@
 {
     self.currentIconIndex = row;
     [self loadCurrentIcon];
+}
+
+#pragma mark - Send Email
+
+- (void)sendEmail
+{
+    if ([MFMailComposeViewController canSendMail]) {
+        MFMailComposeViewController *emailComposerViewController = [[MFMailComposeViewController alloc] init];
+        emailComposerViewController.mailComposeDelegate
+        = self;
+        
+        [emailComposerViewController setSubject:@"MTFontIcon configurations"];
+        
+        NSString *error;
+        NSData *data = [NSPropertyListSerialization dataFromPropertyList:self.iconsData
+                                                                  format:NSPropertyListBinaryFormat_v1_0 errorDescription:&error];
+        [emailComposerViewController addAttachmentData:data mimeType:@"plist" fileName:@"MTFontIcon.plist"];
+        
+        NSString *emailBody = @"Enjoy your icons";
+        [emailComposerViewController setMessageBody:emailBody isHTML:NO];
+        
+        [self presentViewController:emailComposerViewController animated:NO completion:nil];
+    }
+}
+
+#pragma mark - MFMailComposeViewControllerDelegate
+
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - Status Bar

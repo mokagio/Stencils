@@ -56,6 +56,7 @@
 		3F5729F018D8E72500B619C6 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		3F5729F318D8E80E00B619C6 /* icomoon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = icomoon.ttf; sourceTree = "<group>"; };
 		3F5729F418D8E80E00B619C6 /* MTFontIcon.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MTFontIcon.plist; sourceTree = "<group>"; };
+		3FC162BE18DCDDBB0028FFE5 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/MessageUI.framework; sourceTree = DEVELOPER_DIR; };
 		6DC932A68BDB4DF79E1C73BD /* libPods-IconSettings.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IconSettings.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB622DB90E74AD29DC08971 /* Pods-IconSettings.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IconSettings.xcconfig"; path = "../Pods/Pods-IconSettings.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,6 +109,7 @@
 		3F5729C118D8E71400B619C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3FC162BE18DCDDBB0028FFE5 /* MessageUI.framework */,
 				3F5729C218D8E71400B619C6 /* Foundation.framework */,
 				3F5729C418D8E71400B619C6 /* CoreGraphics.framework */,
 				3F5729C618D8E71400B619C6 /* UIKit.framework */,
