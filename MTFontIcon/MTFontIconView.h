@@ -20,8 +20,6 @@
 @property (nonatomic, assign) CGFloat baselineAdjustement;
 @property (nonatomic, assign) CGFloat scaleAdjustement;
 
-@property (nonatomic, assign) CGFloat proportionalOffsetTop;
-
 - (id)initWithFrame:(CGRect)frame model:(MTFontIconModel *)model;
 
 @end
