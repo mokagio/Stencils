@@ -11,9 +11,12 @@
 #import <MTFontIconFactory.h>
 #import <MTFontIconView.h>
 
-@interface MainViewController ()
+@interface MainViewController () <UIPickerViewDataSource, UIPickerViewDelegate>
+
 @property (nonatomic, strong) MTFontIconView *icon;
 @property (nonatomic, strong) UIView *frameView;
+
+@property (nonatomic, strong) NSMutableArray *iconsData;
 
 @property (nonatomic, strong) UILabel *baselineAdjustementLabel;
 @property (nonatomic, strong) UIStepper *baselineAdjustementStepper;
@@ -24,9 +27,24 @@
 @property (nonatomic, strong) UILabel *offsetTopLabel;
 @property (nonatomic, strong) UIStepper *offsetTopStepper;
 
+@property (nonatomic, strong) UIPickerView *iconPicker;
+
 @end
 
 @implementation MainViewController
+
+#pragma mark - Init
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [self loadIconsData];
+    }
+    return self;
+}
+
+#pragma mark - View Lifecycle
 
 - (void)viewDidLoad
 {
@@ -34,10 +52,8 @@
     
     self.view.backgroundColor = [UIColor blueColor];
     
-    MTFontIconFactory *factory = [[MTFontIconFactory alloc] init];
-    self.icon = [factory iconViewForIconNamed:@"pacman" withSide:100];
-    self.icon.color = [UIColor whiteColor];
-    [self.view addSubview:self.icon];
+    NSString *name = [self.iconsData firstObject][@"icon-name"];
+    [self loadIconNamed:name];
     
     self.frameView = [[UIView alloc] initWithFrame:self.icon.frame];
     self.frameView.layer.borderColor = [UIColor grayColor].CGColor;
@@ -89,6 +105,12 @@
     self.offsetTopLabel.textColor = [UIColor whiteColor];
     self.offsetTopLabel.adjustsFontSizeToFitWidth = YES;
     [self.view addSubview:self.offsetTopLabel];
+    
+    self.iconPicker = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 20)];
+    self.iconPicker.dataSource = self;
+    self.iconPicker.delegate = self;
+    self.iconPicker.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:self.iconPicker];
 }
 
 - (void)viewDidLayoutSubviews
@@ -96,10 +118,13 @@
     [super viewDidLayoutSubviews];
     
     self.icon.center = self.view.center;
-    self.frameView.center = self.view.center;
+    CGRect iconFrame = self.icon.frame;
+    iconFrame.origin.y = 80;
+    self.icon.frame = iconFrame;
+    self.frameView.center = self.icon.center;
     
     CGRect baselineAdjustementLabelFrame = self.baselineAdjustementLabel.frame;
-    baselineAdjustementLabelFrame.origin.y = CGRectGetMaxY(self.icon.frame) + 10;
+    baselineAdjustementLabelFrame.origin.y = CGRectGetMaxY(self.icon.frame) + 60;
     baselineAdjustementLabelFrame.origin.x = 20;
     self.baselineAdjustementLabel.frame = baselineAdjustementLabelFrame;
     
@@ -127,6 +152,10 @@
     offsetTopStepperFrame.origin.y = self.offsetTopLabel.frame.origin.y;
     offsetTopStepperFrame.origin.x = CGRectGetMaxX(self.offsetTopLabel.frame);
     self.offsetTopStepper.frame = offsetTopStepperFrame;
+    
+    CGRect pickerFrame = self.iconPicker.frame;
+    pickerFrame.origin.y = self.view.frame.size.height - pickerFrame.size.height;
+    self.iconPicker.frame = pickerFrame;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -138,6 +167,18 @@
 
 #pragma mark - Font Icon
 
+- (void)loadIconNamed:(NSString *)name
+{
+    [self.icon removeFromSuperview];
+    
+    MTFontIconFactory *factory = [[MTFontIconFactory alloc] init];
+    self.icon = [factory iconViewForIconNamed:name withSide:100];
+    self.icon.color = [UIColor whiteColor];
+    [self.view addSubview:self.icon];
+    
+    [self.view setNeedsLayout];
+}
+
 - (void)reloadIcon
 {
     self.icon.baselineAdjustement = self.baselineAdjustementStepper.value;
@@ -148,6 +189,59 @@
     self.baselineAdjustementLabel.text = [NSString stringWithFormat:@"baseline adjustement: %.2f", self.baselineAdjustementStepper.value];
     self.scaleAdjustementLabel.text = [NSString stringWithFormat:@"scale adjustement: %.2f", self.scaleAdjustementStepper.value];
     self.offsetTopLabel.text = [NSString stringWithFormat:@"proportional offset top: %.2f", self.offsetTopStepper.value];
+}
+
+#pragma mark - Load Fonts
+
+- (void)loadIconsData
+{
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"MTFontIcon" ofType:@"plist"];
+    NSDictionary *settingsDictionary = nil;
+    if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
+        settingsDictionary = [NSDictionary dictionaryWithContentsOfFile:filePath];
+    }
+
+    self.iconsData = settingsDictionary[@"font-icons"];
+}
+
+#pragma mark - UIPickerViewDataSource
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    return [self.iconsData count];
+}
+
+#pragma mark - UIPickerViewDelegate
+
+- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view
+{
+    UILabel *label;
+    if (view) {
+        label = (UILabel *)view;
+    } else {
+        label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 40)];
+        label.textAlignment = NSTextAlignmentCenter;
+    }
+    
+    NSString *iconName = self.iconsData[row][@"icon-name"];
+    label.text = iconName;
+    
+    return label;
+}
+
+- (CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component
+{
+    return 40;
+}
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+{
+    [self loadIconNamed:self.iconsData[row][@"icon-name"]];
 }
 
 #pragma mark - Status Bar
