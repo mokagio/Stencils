@@ -13,10 +13,11 @@
 
 @interface MainViewController () <UIPickerViewDataSource, UIPickerViewDelegate>
 
+@property (nonatomic, strong) NSMutableArray *iconsData;
+@property (nonatomic, assign) NSUInteger currentIconIndex;
+
 @property (nonatomic, strong) MTFontIconView *icon;
 @property (nonatomic, strong) UIView *frameView;
-
-@property (nonatomic, strong) NSMutableArray *iconsData;
 
 @property (nonatomic, strong) UILabel *baselineAdjustementLabel;
 @property (nonatomic, strong) UIStepper *baselineAdjustementStepper;
@@ -40,6 +41,7 @@
     self = [super init];
     if (self) {
         [self loadIconsData];
+        self.currentIconIndex = 0;
     }
     return self;
 }
@@ -52,8 +54,7 @@
     
     self.view.backgroundColor = [UIColor blueColor];
     
-    NSString *name = [self.iconsData firstObject][@"icon-name"];
-    [self loadIconNamed:name];
+    [self loadCurrentIcon];
     
     self.frameView = [[UIView alloc] initWithFrame:self.icon.frame];
     self.frameView.layer.borderColor = [UIColor grayColor].CGColor;
@@ -63,7 +64,7 @@
     self.baselineAdjustementStepper = [[UIStepper alloc] init];
     self.baselineAdjustementStepper.value = 1.0;
     self.baselineAdjustementStepper.stepValue = 0.01;
-    [self.baselineAdjustementStepper addTarget:self action:@selector(reloadIcon) forControlEvents:UIControlEventValueChanged];
+    [self.baselineAdjustementStepper addTarget:self action:@selector(reloadIconMetrics) forControlEvents:UIControlEventValueChanged];
     self.baselineAdjustementStepper.tintColor = [UIColor whiteColor];
     [self.view addSubview:self.baselineAdjustementStepper];
     
@@ -78,7 +79,7 @@
     self.scaleAdjustementStepper = [[UIStepper alloc] init];
     self.scaleAdjustementStepper.value = 1.0;
     self.scaleAdjustementStepper.stepValue = 0.01;
-    [self.scaleAdjustementStepper addTarget:self action:@selector(reloadIcon) forControlEvents:UIControlEventValueChanged];
+    [self.scaleAdjustementStepper addTarget:self action:@selector(reloadIconMetrics) forControlEvents:UIControlEventValueChanged];
     self.scaleAdjustementStepper.tintColor = [UIColor whiteColor];
     [self.view addSubview:self.scaleAdjustementStepper];
     
@@ -94,7 +95,7 @@
     self.offsetTopStepper.value = 0;
     self.offsetTopStepper.stepValue = 0.01;
     self.offsetTopStepper.minimumValue = -1;
-    [self.offsetTopStepper addTarget:self action:@selector(reloadIcon) forControlEvents:UIControlEventValueChanged];
+    [self.offsetTopStepper addTarget:self action:@selector(reloadIconMetrics) forControlEvents:UIControlEventValueChanged];
     self.offsetTopStepper.tintColor = [UIColor whiteColor];
     [self.view addSubview:self.offsetTopStepper];
     
@@ -162,27 +163,42 @@
 {
     [super viewWillAppear:animated];
     
-    [self reloadIcon];
+    [self reloadIconMetrics];
 }
 
 #pragma mark - Font Icon
 
-- (void)loadIconNamed:(NSString *)name
+- (void)loadCurrentIcon
 {
     [self.icon removeFromSuperview];
     
     MTFontIconFactory *factory = [[MTFontIconFactory alloc] init];
+    NSString *name = self.iconsData[self.currentIconIndex][@"icon-name"];
     self.icon = [factory iconViewForIconNamed:name withSide:100];
     self.icon.color = [UIColor whiteColor];
     [self.view addSubview:self.icon];
     
+    if (self.iconsData[self.currentIconIndex][@"baseline-adjustement"]) {
+        self.baselineAdjustementStepper.value = [self.iconsData[self.currentIconIndex][@"baseline-adjustement"] floatValue];
+    } else {
+        self.baselineAdjustementStepper.value = 1;
+    }
+    if (self.iconsData[self.currentIconIndex][@"scale-adjustement"]) {
+        self.scaleAdjustementStepper.value = [self.iconsData[self.currentIconIndex][@"scale-adjustement"] floatValue];
+    } else {
+        self.scaleAdjustementStepper.value = 1;
+    }
+    
     [self.view setNeedsLayout];
+    [self reloadIconMetrics];
 }
 
-- (void)reloadIcon
+- (void)reloadIconMetrics
 {
     self.icon.baselineAdjustement = self.baselineAdjustementStepper.value;
+    self.iconsData[self.currentIconIndex][@"baseline-adjustement"] = @(self.baselineAdjustementStepper.value);
     self.icon.scaleAdjustement = self.scaleAdjustementStepper.value;;
+    self.iconsData[self.currentIconIndex][@"scale-adjustement"] = @(self.scaleAdjustementStepper.value);
     self.icon.proportionalOffsetTop = self.offsetTopStepper.value;
     [self.icon setNeedsLayout];
     
@@ -201,7 +217,10 @@
         settingsDictionary = [NSDictionary dictionaryWithContentsOfFile:filePath];
     }
 
-    self.iconsData = settingsDictionary[@"font-icons"];
+    self.iconsData = [NSMutableArray array];
+    [settingsDictionary[@"font-icons"] enumerateObjectsUsingBlock:^(NSDictionary *iconData, NSUInteger idx, BOOL *stop) {
+        [self.iconsData addObject:iconData.mutableCopy];
+    }];
 }
 
 #pragma mark - UIPickerViewDataSource
@@ -241,7 +260,8 @@
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-    [self loadIconNamed:self.iconsData[row][@"icon-name"]];
+    self.currentIconIndex = row;
+    [self loadCurrentIcon];
 }
 
 #pragma mark - Status Bar
