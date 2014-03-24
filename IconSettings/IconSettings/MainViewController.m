@@ -281,8 +281,9 @@
         
         [emailComposerViewController setSubject:@"MTFontIcon configurations"];
         
+        NSDictionary *plist = @{ @"font-icons": self.iconsData };
         NSString *error;
-        NSData *data = [NSPropertyListSerialization dataFromPropertyList:self.iconsData
+        NSData *data = [NSPropertyListSerialization dataFromPropertyList:plist
                                                                   format:NSPropertyListBinaryFormat_v1_0 errorDescription:&error];
         [emailComposerViewController addAttachmentData:data mimeType:@"plist" fileName:@"MTFontIcon.plist"];
         
