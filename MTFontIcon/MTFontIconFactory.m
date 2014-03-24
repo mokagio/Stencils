@@ -18,7 +18,6 @@ static NSString *kDefaultConfigurationName = @"MTFontIcon";
 @property (nonatomic, strong) UIFont *font;
 @end
 
-
 @implementation MTFontIconFactory
 
 #pragma mark - Init
@@ -47,10 +46,13 @@ static NSString *kDefaultConfigurationName = @"MTFontIcon";
     if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
         settingsDictionary = [NSDictionary dictionaryWithContentsOfFile:filePath];
     } else {
+        NSLog(@"ERROR! Cannot find MTFontIcon configuration file at path %@", filePath);
         // Throw an exception?
     }
     self.icons = [MTFontIconParser parseFontIconsFromDictionary:settingsDictionary];
 }
+
+#pragma mark - Icon views generation
 
 - (MTFontIconView *)iconViewForIconNamed:(NSString *)iconName withSide:(CGFloat)side
 {

@@ -35,7 +35,6 @@
         UIFont *font = [UIFont fontWithName:model.fontName size:1];
         if (!font) {
             NSURL *url = [[NSBundle mainBundle] URLForResource:model.fontName withExtension:@"ttf"];
-            // Awesome snippet!
             //http://www.marco.org/2012/12/21/ios-dynamic-font-loading
             NSData *fontData = [NSData dataWithContentsOfURL:url];
             if (fontData) {
@@ -67,6 +66,8 @@
     }
     return self;
 }
+
+#pragma mark - UIView
 
 - (void)layoutSubviews
 {
