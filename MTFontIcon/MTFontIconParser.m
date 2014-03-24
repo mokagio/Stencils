@@ -9,13 +9,13 @@
 #import "MTFontIconParser.h"
 #import "MTFontIconModel.h"
 
-NSString *MTFontIconIconsKey = @"font-icons";
+NSString * const MTFontIconIconsKey = @"font-icons";
 
-NSString *MTFontIconParserFontKey = @"font-name";
-NSString *MTFontIconIconNameKey = @"icon-name";
-NSString *MTFontIconIconCodeKey = @"icon-code";
-NSString *MTFontIconBaselineAdjustementKey = @"baseline-adjustement";
-NSString *MTFontIconScaleAdjustementKey = @"scale-adjustement";
+NSString * const MTFontIconParserFontKey = @"font-name";
+NSString * const MTFontIconIconNameKey = @"icon-name";
+NSString * const MTFontIconIconCodeKey = @"icon-code";
+NSString * const MTFontIconBaselineAdjustementKey = @"baseline-adjustement";
+NSString * const MTFontIconScaleAdjustementKey = @"scale-adjustement";
 
 @implementation MTFontIconParser
 

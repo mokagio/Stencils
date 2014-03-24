@@ -9,13 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "MTFontIconModel.h"
 
-extern NSString *MTFontIconParserFontKey;
-extern NSString *MTFontIconIconsKey;
-extern NSString *MTFontIconIconNameKey;
-extern NSString *MTFontIconIconCodeKey;
-extern NSString *MTFontIconBaselineAdjustementKey;
-extern NSString *MTFontIconScaleAdjustementKey;
-
 @interface MTFontIconParser : NSObject
 
 /**
@@ -29,3 +22,15 @@ extern NSString *MTFontIconScaleAdjustementKey;
 + (NSDictionary *)parseFontIconsFromDictionary:(NSDictionary *)dictionary;
 
 @end
+
+///----------------
+/// @name Constants
+///----------------
+
+extern NSString * const MTFontIconParserFontKey;
+
+extern NSString * const MTFontIconIconsKey;
+extern NSString * const MTFontIconIconNameKey;
+extern NSString * const MTFontIconIconCodeKey;
+extern NSString * const MTFontIconBaselineAdjustementKey;
+extern NSString * const MTFontIconScaleAdjustementKey;
