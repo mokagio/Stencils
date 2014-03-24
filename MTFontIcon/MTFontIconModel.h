@@ -15,7 +15,8 @@
 @property (nonatomic, copy) NSString *fontName;
 
 /**
- *  Optional adjustement value to compensate an eventual offset of the custom font from the baseline.
+ *  Optional adjustement value to compensate an eventual vertical offset of the custom font from 
+ *  the baseline.
  *  This value is multiplied with the requested height of the icon to get the actual size the icon
  *  should have to avoid croppings.
  *  Usually used in combination with `scaleAdjustement`.
