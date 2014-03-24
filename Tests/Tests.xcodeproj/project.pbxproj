@@ -81,6 +81,10 @@
 		3F3B64DF189084DE0010712D /* MTFontIconTests */ = {
 			isa = PBXGroup;
 			children = (
+				3F3B64F118908B350010712D /* MTFontIconParserConstantsSpec.m */,
+				3F3B64F218908B350010712D /* MTFontIconParseSpec.m */,
+				3F3B64F318908B350010712D /* NSStringPlusUnicodeSpec.m */,
+				3FB6E7F318BE8E5F00E20681 /* MTFontIconModelSpec.m */,
 				3F3B64E0189084DE0010712D /* Supporting Files */,
 			);
 			path = MTFontIconTests;
@@ -89,13 +93,9 @@
 		3F3B64E0189084DE0010712D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3F3B64F118908B350010712D /* MTFontIconParserConstantsSpec.m */,
-				3F3B64F218908B350010712D /* MTFontIconParseSpec.m */,
-				3F3B64F318908B350010712D /* NSStringPlusUnicodeSpec.m */,
 				3F3B64E1189084DE0010712D /* MTFontIconTests-Info.plist */,
 				3F3B64E2189084DE0010712D /* InfoPlist.strings */,
 				3F3B64E7189084DE0010712D /* MTFontIconTests-Prefix.pch */,
-				3FB6E7F318BE8E5F00E20681 /* MTFontIconModelSpec.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
