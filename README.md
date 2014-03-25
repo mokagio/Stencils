@@ -1,78 +1,85 @@
-MTFontIcon
+Stencils
 ==========
 
-[![Stories in Ready](https://badge.waffle.io/mokagio/MTFontIcon.png)](http://waffle.io/mokagio/MTFontIcon)
-<br/>
-[![Build Status](https://travis-ci.org/mokagio/MTFontIcon.png)](https://travis-ci.org/mokagio/MTFontIcon.png)
-<br/>
-[![Pod Version](http://cocoapod-badges.herokuapp.com/v/MTFontIcon/badge.png
+[![Build Status](https://travis-ci.org/mokagio/Stencils.png)](https://travis-ci.org/mokagio/Stencils.png)
+[![Stories in Ready](https://badge.waffle.io/mokagio/Stencils.png)](http://waffle.io/mokagio/Stencils)
+[![Pod Version](http://cocoapod-badges.herokuapp.com/v/Stencils/badge.png
 )](http://cocoapod-badges.herokuapp.com/v/$PODNAME/badge.png
 )
-<br/>
-[![Pod Version](http://cocoapod-badges.herokuapp.com/p/MTFontIcon/badge.png
+[![Pod Version](http://cocoapod-badges.herokuapp.com/p/Stencils/badge.png
 )](http://cocoapod-badges.herokuapp.com/p/$PODNAME/badge.png
 )
 
-> Speedup iOS app development with font based icons!
+**Speedup your iOS app development using icon fonts!**
 
-##Install
+Icon fonts are very popular in the web development world. And they are [awesome](https://css-tricks.com/examples/IconFont/). With Stencils you can now access the power and awesomeness of icon fonts in the development of your iOS app, and save a lot of emails with the designer to get the new asset with the shadow 0.5 point more to the left and 3.141592% less opaque.
+
+## Install
 
 Via [CocoaPods](http://cocoapods.org).
 
-	pod 'MTFontIcon'
+	pod 'Stencils'
 
 or
 
-	pod 'MTFontIcon', ~> 'x.x.x'
+	pod 'Stencils', ~> 'x.x.x'
 	
-where `x.x.x` is the version number you want. Latest stable is [![Pod Version](http://cocoapod-badges.herokuapp.com/v/MTFontIcon/badge.png
+where `x.x.x` is the version number you want. Latest stable is [![Pod Version](http://cocoapod-badges.herokuapp.com/v/Stencils/badge.png
 )](http://cocoapod-badges.herokuapp.com/v/$PODNAME/badge.png
 )
 
-##Usage
+## Usage
 
-Add your `.ttf` file to the project, naming it `font-icon.ttf`
+Three simple steps:
 
-Configure the icons-unicode matches in the `MTFontIcon.plist`, which is structured like this
+#### 1. Add your icon font file to the project
 
-	{
-		'font-icons': [
-				{'icon-name' : 'arrow-left', 'icon-code' : 'e000' },
-				{'icon-name' : 'arrow-right', 'icon-code' : 'e001' }
-		]
-	}
-	
-The icon code has to be in the hex format.
+Just add the `.ttf` to the project. No `Info.plist` update needed! And you can even add multiple icon fonts.
 
-In your views use `MTFontIconView`
+#### 2. Define your icons
 
-	#import <MTFontIconFactory.h>
-	
-	MTFontIconFactory *factory = [[MTFontIconFactory alloc] init];
-	MTFontIconView *arrow = [iconFactory iconViewForIconNamed:@'arrow-left' withSide:60.0f];
+Stencils needs to know how to read the font file. Create a configuration file, by default Stencils will look for `Stencils.plist`, in this fashion:
+
+```
+font-icons	Array
+	Item 0	Dictionary
+		font-name				String	The name of the font where the icon is located
+		icon-name				String	The name to use to load the icon
+		icon-code				String	The unicode caracter corresponding to the icon
+										i.e: e001
+		baseline-adjustement	Number	(Optional) A correction value to compensate eventual offset from the baseline
+		scale-adjustement		Number	(Optional) A correction value to change the scale of the icon. Usually used with "baseline-adjustement"
+```
+
+Have a look at the example projects to see how a real configurations `plist` looks like.
+
+#### 3. Load icons using `STIconsFactory` and `STIconView`
+
+```objc
+#import <StencilsFactory.h>
+
+STIconsFactory *factory = [[StencilsFactory alloc] init];
+STIconView *arrow = [iconFactory iconViewForIconNamed:@'arrow-left' withSide:60.0f];
+```
 
 You can customize your icon like this:
 
-	arrow.background = [UIColor white];
-	arrow.color = [UIColor black];
-	arrow.shadowColor = [UIColor gray];
-	arrow.shadowOffset = CGSizeMake(1.0f, 1.0f);
+```objc
+arrow.background = [UIColor white];
+arrow.color = [UIColor black];
+// If no color is set the icon will use the tintColor of it's superview
+arrow.shadowColor = [UIColor gray];
+arrow.shadowOffset = CGSizeMake(1.0f, 1.0f);
+```
 
-###Usage with IcoMoon
+## Where to find icons fonts
 
-[icomoon.io](http://icomoon.io) is a really cool service that lets you aggregate font icons form different sets and your custom SVG as well, all in a single `.ttf`
+* [IcoMoon](http://icomoon.io/)
+* [Fontello](http://fontello.com/)
+* [CSS Tricks](http://css-tricks.com/flat-icons-icon-fonts/)
+* _Know another one? Open a Pull Request!_
 
-Nothing else to say. Just generate your file, add it to the app and follow the instructions at the beginning of this section.
-
-##Roadmap
-
-* Test with other font icon generators, such as [Font Custom](http://fontcustom.com/).
-* Free file name, not fixed to `font-icon.ttf`.
-* Improve `MTFontIconView` using [Core Text](https://developer.apple.com/library/ios/documentation/StringsTextFonts/Conceptual/CoreText_Programming/Introduction/Introduction.html)
-* Helper, Ruby script/gem, to completely automate the setup. See `add_font.rb`, still WIP.
-* Helper to speedup the `MTFontIcon.plist` configuration. _Single page webapp?_
-
-##Contribute
+## Contribute
 
 1. Fork the repo
 2. Checkout a new branch `username/feature_name`
@@ -80,4 +87,4 @@ Nothing else to say. Just generate your file, add it to the app and follow the i
 
 ===
 
-Made with &#x2665; by [@LiquidImage_](https://twitter.com/liquidimage_/) and [@mokagio](https://twitter.com/mokagio)
+Made with &#x2665; by [@mokagio](https://twitter.com/mokagio). Special thanks to [@tancdev](https://twitter.com/tancdev/).
