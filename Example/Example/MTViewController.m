@@ -8,8 +8,8 @@
 
 #import "MTViewController.h"
 
-#import <MTFontIconFactory.h>
-#import <MTFontIconView.h>
+#import <STIconsFactory.h>
+#import <STIconView.h>
 #import <NSString+Unicode.h>
 
 static NSUInteger kNumberOfIcons = 7;
@@ -30,7 +30,7 @@ static CGFloat kMaxSide = 80;
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor blackColor];
     
-    MTFontIconFactory *iconFactory = [[MTFontIconFactory alloc] init];
+    STIconsFactory *iconFactory = [[STIconsFactory alloc] init];
     NSArray *names = @[@"apple", @"pacman", @"bug", @"git"];
 
     self.view.tintColor = [UIColor redColor];
@@ -38,7 +38,7 @@ static CGFloat kMaxSide = 80;
     self.icons = [NSMutableArray arrayWithCapacity:kNumberOfIcons];
     for (int i = 0; i < kNumberOfIcons; i++) {
         CGFloat side = [self randomSide];
-        MTFontIconView *iconView = [iconFactory iconViewForIconNamed:names[arc4random() % [names count]]
+        STIconView *iconView = [iconFactory iconViewForIconNamed:names[arc4random() % [names count]]
                                                             withSide:side];
         CGPoint center = CGPointZero;
         do {

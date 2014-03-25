@@ -9,15 +9,15 @@
 #import "MainViewController.h"
 
 #import <MessageUI/MFMailComposeViewController.h>
-#import <MTFontIconFactory.h>
-#import <MTFontIconView.h>
+#import <STIconsFactory.h>
+#import <STIconView.h>
 
 @interface MainViewController () <UIPickerViewDataSource, UIPickerViewDelegate, MFMailComposeViewControllerDelegate>
 
 @property (nonatomic, strong) NSMutableArray *iconsData;
 @property (nonatomic, assign) NSUInteger currentIconIndex;
 
-@property (nonatomic, strong) MTFontIconView *icon;
+@property (nonatomic, strong) STIconView *icon;
 @property (nonatomic, strong) UIView *frameView;
 
 @property (nonatomic, strong) UILabel *baselineAdjustementLabel;
@@ -169,7 +169,7 @@
 {
     [self.icon removeFromSuperview];
     
-    MTFontIconFactory *factory = [[MTFontIconFactory alloc] init];
+    STIconsFactory *factory = [[STIconsFactory alloc] init];
     NSString *name = self.iconsData[self.currentIconIndex][@"icon-name"];
     self.icon = [factory iconViewForIconNamed:name withSide:100];
     self.icon.color = [UIColor whiteColor];
