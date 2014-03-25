@@ -13,7 +13,7 @@
 @interface STIconsFactory : NSObject
 
 /**
- *  Get a `MTFontIconView` with icon with the given name of the given side.
+ *  Get a `STIconView` with icon with the given name of the given side.
  *
  *  @param iconName The name of the icon to display in the view
  *  @param side     The side of the view, the value that both widht and height will have

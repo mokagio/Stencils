@@ -46,7 +46,7 @@ static NSString *kDefaultConfigurationName = @"Stencils";
     if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
         settingsDictionary = [NSDictionary dictionaryWithContentsOfFile:filePath];
     } else {
-        NSLog(@"ERROR! Cannot find MTFontIcon configuration file at path %@", filePath);
+        NSLog(@"ERROR! Cannot find Stencils configuration file at path %@", filePath);
         // Throw an exception?
     }
     self.icons = [STParser parseFontIconsFromDictionary:settingsDictionary];

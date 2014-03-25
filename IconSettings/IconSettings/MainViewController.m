@@ -217,7 +217,7 @@
 
 - (void)loadIconsData
 {
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"MTFontIcon" ofType:@"plist"];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Stencils" ofType:@"plist"];
     NSDictionary *settingsDictionary = nil;
     if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
         settingsDictionary = [NSDictionary dictionaryWithContentsOfFile:filePath];
