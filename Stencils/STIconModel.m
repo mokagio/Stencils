@@ -1,14 +1,14 @@
 //
-//  MTFontIconModel.m
+//  STIconModel.m
 //  
 //
 //  Created by Gio on 22/01/2014.
 //
 //
 
-#import "MTFontIconModel.h"
+#import "STIconModel.h"
 
-@implementation MTFontIconModel
+@implementation STIconModel
 
 - (id)init
 {

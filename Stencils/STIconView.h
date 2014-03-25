@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@class MTFontIconModel;
+@class STIconModel;
 
-@interface MTFontIconView : UIView
+@interface STIconView : UIView
 
 // If no color is provided falls back to the view tintColor
 @property (nonatomic, strong) UIColor *color;
@@ -20,6 +20,6 @@
 @property (nonatomic, assign) CGFloat baselineAdjustement;
 @property (nonatomic, assign) CGFloat scaleAdjustement;
 
-- (id)initWithFrame:(CGRect)frame model:(MTFontIconModel *)model;
+- (id)initWithFrame:(CGRect)frame model:(STIconModel *)model;
 
 @end

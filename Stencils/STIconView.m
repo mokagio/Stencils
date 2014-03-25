@@ -6,19 +6,19 @@
 //
 //
 
-#import "MTFontIconView.h"
-#import "MTFontIconModel.h"
+#import "STIconView.h"
+#import "STIconModel.h"
 #import "NSString+Unicode.h"
 #import <CoreText/CoreText.h>
 
-@interface MTFontIconView ()
+@interface STIconView ()
 @property (nonatomic, strong) UILabel *label;
-@property (nonatomic, strong) MTFontIconModel *model;
+@property (nonatomic, strong) STIconModel *model;
 @end
 
-@implementation MTFontIconView
+@implementation STIconView
 
-- (id)initWithFrame:(CGRect)frame model:(MTFontIconModel *)model
+- (id)initWithFrame:(CGRect)frame model:(STIconModel *)model
 {
     self = [super initWithFrame:frame];
     if (self) {

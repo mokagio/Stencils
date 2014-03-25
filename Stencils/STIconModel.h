@@ -1,5 +1,5 @@
 //
-//  MTFontIconModel.h
+//  STIconModel.h
 //  
 //
 //  Created by Gio on 22/01/2014.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MTFontIconModel : NSObject
+@interface STIconModel : NSObject
 
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *code;

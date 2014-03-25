@@ -11,9 +11,9 @@
 		3F3B64DC189084DE0010712D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F3B64DB189084DE0010712D /* Foundation.framework */; };
 		3F3B64DE189084DE0010712D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F3B64DD189084DE0010712D /* UIKit.framework */; };
 		3F7BF4C618E22A900074E0E2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3F7BF4BE18E22A900074E0E2 /* InfoPlist.strings */; };
-		3F7BF4C718E22A900074E0E2 /* MTFontIconModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF4C018E22A900074E0E2 /* MTFontIconModelSpec.m */; };
-		3F7BF4C818E22A900074E0E2 /* MTFontIconParserConstantsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF4C118E22A900074E0E2 /* MTFontIconParserConstantsSpec.m */; };
-		3F7BF4C918E22A900074E0E2 /* MTFontIconParseSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF4C218E22A900074E0E2 /* MTFontIconParseSpec.m */; };
+		3F7BF4C718E22A900074E0E2 /* STIconModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF4C018E22A900074E0E2 /* STIconModelSpec.m */; };
+		3F7BF4C818E22A900074E0E2 /* STIconParserConstantsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF4C118E22A900074E0E2 /* STIconParserConstantsSpec.m */; };
+		3F7BF4C918E22A900074E0E2 /* STIconParseSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF4C218E22A900074E0E2 /* STIconParseSpec.m */; };
 		3F7BF4CB18E22A900074E0E2 /* NSStringPlusUnicodeSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF4C518E22A900074E0E2 /* NSStringPlusUnicodeSpec.m */; };
 		6FC08CFD6C754301BB5A566A /* libPods-StencilsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3049598A321744578E6AECC1 /* libPods-StencilsTests.a */; };
 /* End PBXBuildFile section */
@@ -25,9 +25,9 @@
 		3F3B64DB189084DE0010712D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		3F3B64DD189084DE0010712D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		3F7BF4BF18E22A900074E0E2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
-		3F7BF4C018E22A900074E0E2 /* MTFontIconModelSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTFontIconModelSpec.m; sourceTree = "<group>"; };
-		3F7BF4C118E22A900074E0E2 /* MTFontIconParserConstantsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTFontIconParserConstantsSpec.m; sourceTree = "<group>"; };
-		3F7BF4C218E22A900074E0E2 /* MTFontIconParseSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTFontIconParseSpec.m; sourceTree = "<group>"; };
+		3F7BF4C018E22A900074E0E2 /* STIconModelSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STIconModelSpec.m; sourceTree = "<group>"; };
+		3F7BF4C118E22A900074E0E2 /* STIconParserConstantsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STIconParserConstantsSpec.m; sourceTree = "<group>"; };
+		3F7BF4C218E22A900074E0E2 /* STIconParseSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STIconParseSpec.m; sourceTree = "<group>"; };
 		3F7BF4C318E22A900074E0E2 /* StencilsTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "StencilsTests-Info.plist"; sourceTree = "<group>"; };
 		3F7BF4C418E22A900074E0E2 /* StencilsTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "StencilsTests-Prefix.pch"; sourceTree = "<group>"; };
 		3F7BF4C518E22A900074E0E2 /* NSStringPlusUnicodeSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringPlusUnicodeSpec.m; sourceTree = "<group>"; };
@@ -82,9 +82,9 @@
 			isa = PBXGroup;
 			children = (
 				3F7BF4CC18E22B670074E0E2 /* Supporting Files */,
-				3F7BF4C018E22A900074E0E2 /* MTFontIconModelSpec.m */,
-				3F7BF4C118E22A900074E0E2 /* MTFontIconParserConstantsSpec.m */,
-				3F7BF4C218E22A900074E0E2 /* MTFontIconParseSpec.m */,
+				3F7BF4C018E22A900074E0E2 /* STIconModelSpec.m */,
+				3F7BF4C118E22A900074E0E2 /* STIconParserConstantsSpec.m */,
+				3F7BF4C218E22A900074E0E2 /* STIconParseSpec.m */,
 				3F7BF4C518E22A900074E0E2 /* NSStringPlusUnicodeSpec.m */,
 			);
 			path = StencilsTests;
@@ -204,10 +204,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F7BF4C818E22A900074E0E2 /* MTFontIconParserConstantsSpec.m in Sources */,
-				3F7BF4C718E22A900074E0E2 /* MTFontIconModelSpec.m in Sources */,
+				3F7BF4C818E22A900074E0E2 /* STIconParserConstantsSpec.m in Sources */,
+				3F7BF4C718E22A900074E0E2 /* STIconModelSpec.m in Sources */,
 				3F7BF4CB18E22A900074E0E2 /* NSStringPlusUnicodeSpec.m in Sources */,
-				3F7BF4C918E22A900074E0E2 /* MTFontIconParseSpec.m in Sources */,
+				3F7BF4C918E22A900074E0E2 /* STIconParseSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

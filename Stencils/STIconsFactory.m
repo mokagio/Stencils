@@ -6,19 +6,19 @@
 //
 //
 
-#import "MTFontIconFactory.h"
-#import "MTFontIconModel.h"
-#import "MTFontIconParser.h"
-#import "MTFontIconView.h"
+#import "STIconsFactory.h"
+#import "STIconModel.h"
+#import "STParser.h"
+#import "STIconView.h"
 
 static NSString *kDefaultConfigurationName = @"MTFontIcon";
 
-@interface MTFontIconFactory ()
+@interface STIconsFactory ()
 @property (nonatomic, strong) NSDictionary *icons;
 @property (nonatomic, strong) UIFont *font;
 @end
 
-@implementation MTFontIconFactory
+@implementation STIconsFactory
 
 #pragma mark - Init
 
@@ -49,15 +49,15 @@ static NSString *kDefaultConfigurationName = @"MTFontIcon";
         NSLog(@"ERROR! Cannot find MTFontIcon configuration file at path %@", filePath);
         // Throw an exception?
     }
-    self.icons = [MTFontIconParser parseFontIconsFromDictionary:settingsDictionary];
+    self.icons = [STParser parseFontIconsFromDictionary:settingsDictionary];
 }
 
 #pragma mark - Icon views generation
 
-- (MTFontIconView *)iconViewForIconNamed:(NSString *)iconName withSide:(CGFloat)side
+- (STIconView *)iconViewForIconNamed:(NSString *)iconName withSide:(CGFloat)side
 {
-    MTFontIconModel *model = self.icons[iconName];
-    MTFontIconView *iconView = [[MTFontIconView alloc] initWithFrame:CGRectMake(0, 0, side, side)
+    STIconModel *model = self.icons[iconName];
+    STIconView *iconView = [[STIconView alloc] initWithFrame:CGRectMake(0, 0, side, side)
                                                                model:model];
     return iconView;
 }

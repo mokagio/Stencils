@@ -1,5 +1,5 @@
 //
-//  MTFontIconParserConstantsSpec.m
+//  STIconParserConstantsSpec.m
 //  Tests
 //
 //  Created by Gio on 14/08/2013.
@@ -7,18 +7,18 @@
 //
 
 #import <Kiwi.h>
-#import "MTFontIconParser.h"
+#import "STParser.h"
 
-SPEC_BEGIN(MTFontIconParserConstantsSpec)
+SPEC_BEGIN(STIconParserConstantsSpec)
 
-describe(@"MTFontIconParser Constants", ^{
+describe(@"STIconParser Constants", ^{
     
     it(@"should have the font icons key equal to 'font-icons'", ^{
         [[MTFontIconIconsKey should] equal:@"font-icons"];
     });
 
     it(@"should have the font name key equal to 'font-name'", ^{
-        [[MTFontIconParserFontKey should] equal:@"font-name"];
+        [[STIconParserFontKey should] equal:@"font-name"];
     });
     
     it(@"should have the icon name key equal to 'icon-name'", ^{

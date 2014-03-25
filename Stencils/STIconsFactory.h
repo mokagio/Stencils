@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@class MTFontIconView;
+@class STIconView;
 
-@interface MTFontIconFactory : NSObject
+@interface STIconsFactory : NSObject
 
 /**
  *  Get a `MTFontIconView` with icon with the given name of the given side.
@@ -20,6 +20,6 @@
  *
  *  @return The newly created icon view with the requested icon, of the given side
  */
-- (MTFontIconView *)iconViewForIconNamed:(NSString *)iconName withSide:(CGFloat)side;
+- (STIconView *)iconViewForIconNamed:(NSString *)iconName withSide:(CGFloat)side;
 
 @end

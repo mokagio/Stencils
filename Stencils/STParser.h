@@ -1,5 +1,5 @@
 //
-//  MTFontIconParser.h
+//  STIconParser.h
 //  
 //
 //  Created by Gio on 14/08/2013.
@@ -7,17 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MTFontIconModel.h"
+#import "STIconModel.h"
 
-@interface MTFontIconParser : NSObject
+@interface STParser : NSObject
 
 /**
  *  Parse a dictionary containing the configurations for a set of icon returning an dictionary
- *  which keys are the icons names, and the values instances of `MTFontIconModel`
+ *  which keys are the icons names, and the values instances of `STIconModel`
  *
  *  @param dictionary The raw configurations dictionary
  *
- *  @return A dictionary with icon nmaes as keys and `MTFontIconModel` as values
+ *  @return A dictionary with icon nmaes as keys and `STIconModel` as values
  */
 + (NSDictionary *)parseFontIconsFromDictionary:(NSDictionary *)dictionary;
 
@@ -27,7 +27,7 @@
 /// @name Constants
 ///----------------
 
-extern NSString * const MTFontIconParserFontKey;
+extern NSString * const STIconParserFontKey;
 
 extern NSString * const MTFontIconIconsKey;
 extern NSString * const MTFontIconIconNameKey;

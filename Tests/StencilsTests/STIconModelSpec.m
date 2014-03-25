@@ -1,17 +1,17 @@
 
 #import <Kiwi.h>
-#import <MTFontIconModel.h>
+#import <STIconModel.h>
 
-SPEC_BEGIN(MTFontIconModelSpec)
+SPEC_BEGIN(STIconModelSpec)
 
-describe(@"MTFontIconModel", ^{
+describe(@"STIconModel", ^{
     it(@"should init with a paddingLeft of 1", ^{
-        MTFontIconModel *model = [[MTFontIconModel alloc] init];
+        STIconModel *model = [[STIconModel alloc] init];
         [[theValue(model.baselineAdjustement) should] equal:theValue(1)];
     });
     
     it(@"should init with a paddingTop of 1", ^{
-        MTFontIconModel *model = [[MTFontIconModel alloc] init];
+        STIconModel *model = [[STIconModel alloc] init];
         [[theValue(model.scaleAdjustement) should] equal:theValue(1)];
     });
 });
