@@ -1,12 +1,15 @@
+version = "1.0.0"
+git = "https://github.com/mokagio/Stencils"
+
 Pod::Spec.new do |s|
-  s.name         = "MTFontIcon"
-  s.version      = "1.0.1"
+  s.name         = "Stencils"
+  s.version      = version
   s.summary      = "Speedup iOS app development with font based icons."
-  s.homepage     = "https://github.com/mokagio/MTFontIcon"
+  s.homepage     = git
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author       = { "Giovanni Lodi" => "giovanni.lodi42@gmail.com" }
-  s.source       = { :git => "https://github.com/mokagio/MTFontIcon.git", :tag => "1.0.1" }
-  s.source_files = 'MTFontIcon'
+  s.source       = { :git => "#{git}.git", :tag => version }
+  s.source_files = 'Stencils'
   s.platform     = :ios
   s.requires_arc = true
   s.frameworks   = 'CoreText'

@@ -1,18 +1,22 @@
-workspace "MTFontIcon.xcworkspace"
+workspace "Stencils.xcworkspace"
 
-xcodeproj "Example/Example.xcodeproj"
-target "Example" do
-  pod "MTFontIcon", :path => "."
+def stencils_pod 
+  pod "Stencils", :path => "."
 end
 
-target "MTFontIconTests", :exclusive => true do
-  xcodeproj "Tests/Tests.xcodeproj"
-  pod "MTFontIcon", :path => "."
+xcodeproj "Tests/Tests.xcodeproj"
+target :StencilsTests, :exclusive => true do
+  stencils_pod
   pod "Kiwi/XCTest"
 end
 
-target "IconSettings" do
+target :Example do
+  xcodeproj "Example/Example.xcodeproj"
+  stencils_pod
+end
+
+target :IconSettings do
   xcodeproj "IconSettings/IconSettings.xcodeproj"
-  pod "MTFontIcon", :path => "."
+  stencils_pod
 end
 

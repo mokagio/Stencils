@@ -10,28 +10,28 @@
 		3F3B64DA189084DE0010712D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F3B64D9189084DE0010712D /* XCTest.framework */; };
 		3F3B64DC189084DE0010712D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F3B64DB189084DE0010712D /* Foundation.framework */; };
 		3F3B64DE189084DE0010712D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F3B64DD189084DE0010712D /* UIKit.framework */; };
-		3F3B64E4189084DE0010712D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3F3B64E2189084DE0010712D /* InfoPlist.strings */; };
-		3F3B64F418908B350010712D /* MTFontIconParserConstantsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F3B64F118908B350010712D /* MTFontIconParserConstantsSpec.m */; };
-		3F3B64F518908B350010712D /* MTFontIconParseSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F3B64F218908B350010712D /* MTFontIconParseSpec.m */; };
-		3F3B64F618908B350010712D /* NSStringPlusUnicodeSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F3B64F318908B350010712D /* NSStringPlusUnicodeSpec.m */; };
-		3FB6E7F418BE8E5F00E20681 /* MTFontIconModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB6E7F318BE8E5F00E20681 /* MTFontIconModelSpec.m */; };
-		A37706D9846D4AECA90567CA /* libPods-MTFontIconTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1747F2FB4A654A09AEA36C7F /* libPods-MTFontIconTests.a */; };
+		3F7BF4C618E22A900074E0E2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3F7BF4BE18E22A900074E0E2 /* InfoPlist.strings */; };
+		3F7BF4C718E22A900074E0E2 /* MTFontIconModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF4C018E22A900074E0E2 /* MTFontIconModelSpec.m */; };
+		3F7BF4C818E22A900074E0E2 /* MTFontIconParserConstantsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF4C118E22A900074E0E2 /* MTFontIconParserConstantsSpec.m */; };
+		3F7BF4C918E22A900074E0E2 /* MTFontIconParseSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF4C218E22A900074E0E2 /* MTFontIconParseSpec.m */; };
+		3F7BF4CB18E22A900074E0E2 /* NSStringPlusUnicodeSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF4C518E22A900074E0E2 /* NSStringPlusUnicodeSpec.m */; };
+		6FC08CFD6C754301BB5A566A /* libPods-StencilsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3049598A321744578E6AECC1 /* libPods-StencilsTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1747F2FB4A654A09AEA36C7F /* libPods-MTFontIconTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MTFontIconTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		33B12142390A43BFA1253694 /* Pods-MTFontIconTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTFontIconTests.xcconfig"; path = "../Pods/Pods-MTFontIconTests.xcconfig"; sourceTree = "<group>"; };
-		3F3B64D6189084DE0010712D /* MTFontIconTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MTFontIconTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3049598A321744578E6AECC1 /* libPods-StencilsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StencilsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F3B64D6189084DE0010712D /* StencilsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StencilsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F3B64D9189084DE0010712D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		3F3B64DB189084DE0010712D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		3F3B64DD189084DE0010712D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		3F3B64E1189084DE0010712D /* MTFontIconTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MTFontIconTests-Info.plist"; sourceTree = "<group>"; };
-		3F3B64E3189084DE0010712D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		3F3B64E7189084DE0010712D /* MTFontIconTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MTFontIconTests-Prefix.pch"; sourceTree = "<group>"; };
-		3F3B64F118908B350010712D /* MTFontIconParserConstantsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTFontIconParserConstantsSpec.m; sourceTree = "<group>"; };
-		3F3B64F218908B350010712D /* MTFontIconParseSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTFontIconParseSpec.m; sourceTree = "<group>"; };
-		3F3B64F318908B350010712D /* NSStringPlusUnicodeSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringPlusUnicodeSpec.m; sourceTree = "<group>"; };
-		3FB6E7F318BE8E5F00E20681 /* MTFontIconModelSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTFontIconModelSpec.m; sourceTree = "<group>"; };
+		3F7BF4BF18E22A900074E0E2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		3F7BF4C018E22A900074E0E2 /* MTFontIconModelSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTFontIconModelSpec.m; sourceTree = "<group>"; };
+		3F7BF4C118E22A900074E0E2 /* MTFontIconParserConstantsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTFontIconParserConstantsSpec.m; sourceTree = "<group>"; };
+		3F7BF4C218E22A900074E0E2 /* MTFontIconParseSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTFontIconParseSpec.m; sourceTree = "<group>"; };
+		3F7BF4C318E22A900074E0E2 /* StencilsTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "StencilsTests-Info.plist"; sourceTree = "<group>"; };
+		3F7BF4C418E22A900074E0E2 /* StencilsTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "StencilsTests-Prefix.pch"; sourceTree = "<group>"; };
+		3F7BF4C518E22A900074E0E2 /* NSStringPlusUnicodeSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringPlusUnicodeSpec.m; sourceTree = "<group>"; };
+		699EA9F44CAB413C841DD1A2 /* Pods-StencilsTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StencilsTests.xcconfig"; path = "../Pods/Pods-StencilsTests.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +42,7 @@
 				3F3B64DA189084DE0010712D /* XCTest.framework in Frameworks */,
 				3F3B64DE189084DE0010712D /* UIKit.framework in Frameworks */,
 				3F3B64DC189084DE0010712D /* Foundation.framework in Frameworks */,
-				A37706D9846D4AECA90567CA /* libPods-MTFontIconTests.a in Frameworks */,
+				6FC08CFD6C754301BB5A566A /* libPods-StencilsTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,17 +52,17 @@
 		3F3B64CB189084D10010712D = {
 			isa = PBXGroup;
 			children = (
-				3F3B64DF189084DE0010712D /* MTFontIconTests */,
+				3F7BF4BC18E22A400074E0E2 /* StencilsTests */,
 				3F3B64D8189084DE0010712D /* Frameworks */,
 				3F3B64D7189084DE0010712D /* Products */,
-				33B12142390A43BFA1253694 /* Pods-MTFontIconTests.xcconfig */,
+				699EA9F44CAB413C841DD1A2 /* Pods-StencilsTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
 		3F3B64D7189084DE0010712D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3F3B64D6189084DE0010712D /* MTFontIconTests.xctest */,
+				3F3B64D6189084DE0010712D /* StencilsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,29 +73,37 @@
 				3F3B64D9189084DE0010712D /* XCTest.framework */,
 				3F3B64DB189084DE0010712D /* Foundation.framework */,
 				3F3B64DD189084DE0010712D /* UIKit.framework */,
-				1747F2FB4A654A09AEA36C7F /* libPods-MTFontIconTests.a */,
+				3049598A321744578E6AECC1 /* libPods-StencilsTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3F3B64DF189084DE0010712D /* MTFontIconTests */ = {
+		3F7BF4BC18E22A400074E0E2 /* StencilsTests */ = {
 			isa = PBXGroup;
 			children = (
-				3F3B64F118908B350010712D /* MTFontIconParserConstantsSpec.m */,
-				3F3B64F218908B350010712D /* MTFontIconParseSpec.m */,
-				3F3B64F318908B350010712D /* NSStringPlusUnicodeSpec.m */,
-				3FB6E7F318BE8E5F00E20681 /* MTFontIconModelSpec.m */,
-				3F3B64E0189084DE0010712D /* Supporting Files */,
+				3F7BF4CC18E22B670074E0E2 /* Supporting Files */,
+				3F7BF4C018E22A900074E0E2 /* MTFontIconModelSpec.m */,
+				3F7BF4C118E22A900074E0E2 /* MTFontIconParserConstantsSpec.m */,
+				3F7BF4C218E22A900074E0E2 /* MTFontIconParseSpec.m */,
+				3F7BF4C518E22A900074E0E2 /* NSStringPlusUnicodeSpec.m */,
 			);
-			path = MTFontIconTests;
+			path = StencilsTests;
 			sourceTree = "<group>";
 		};
-		3F3B64E0189084DE0010712D /* Supporting Files */ = {
+		3F7BF4BD18E22A900074E0E2 /* en.lproj */ = {
 			isa = PBXGroup;
 			children = (
-				3F3B64E1189084DE0010712D /* MTFontIconTests-Info.plist */,
-				3F3B64E2189084DE0010712D /* InfoPlist.strings */,
-				3F3B64E7189084DE0010712D /* MTFontIconTests-Prefix.pch */,
+				3F7BF4BE18E22A900074E0E2 /* InfoPlist.strings */,
+			);
+			path = en.lproj;
+			sourceTree = "<group>";
+		};
+		3F7BF4CC18E22B670074E0E2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3F7BF4BD18E22A900074E0E2 /* en.lproj */,
+				3F7BF4C318E22A900074E0E2 /* StencilsTests-Info.plist */,
+				3F7BF4C418E22A900074E0E2 /* StencilsTests-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -103,9 +111,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3F3B64D5189084DE0010712D /* MTFontIconTests */ = {
+		3F3B64D5189084DE0010712D /* StencilsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3F3B64E8189084DE0010712D /* Build configuration list for PBXNativeTarget "MTFontIconTests" */;
+			buildConfigurationList = 3F3B64E8189084DE0010712D /* Build configuration list for PBXNativeTarget "StencilsTests" */;
 			buildPhases = (
 				AC485F8DEB184BC788E05E2F /* Check Pods Manifest.lock */,
 				3F3B64D2189084DE0010712D /* Sources */,
@@ -117,9 +125,9 @@
 			);
 			dependencies = (
 			);
-			name = MTFontIconTests;
+			name = StencilsTests;
 			productName = MTFontIconTests;
-			productReference = 3F3B64D6189084DE0010712D /* MTFontIconTests.xctest */;
+			productReference = 3F3B64D6189084DE0010712D /* StencilsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -142,7 +150,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3F3B64D5189084DE0010712D /* MTFontIconTests */,
+				3F3B64D5189084DE0010712D /* StencilsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -152,7 +160,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F3B64E4189084DE0010712D /* InfoPlist.strings in Resources */,
+				3F7BF4C618E22A900074E0E2 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,7 +179,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Pods-MTFontIconTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Pods-StencilsTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AC485F8DEB184BC788E05E2F /* Check Pods Manifest.lock */ = {
@@ -196,20 +204,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F3B64F618908B350010712D /* NSStringPlusUnicodeSpec.m in Sources */,
-				3FB6E7F418BE8E5F00E20681 /* MTFontIconModelSpec.m in Sources */,
-				3F3B64F418908B350010712D /* MTFontIconParserConstantsSpec.m in Sources */,
-				3F3B64F518908B350010712D /* MTFontIconParseSpec.m in Sources */,
+				3F7BF4C818E22A900074E0E2 /* MTFontIconParserConstantsSpec.m in Sources */,
+				3F7BF4C718E22A900074E0E2 /* MTFontIconModelSpec.m in Sources */,
+				3F7BF4CB18E22A900074E0E2 /* NSStringPlusUnicodeSpec.m in Sources */,
+				3F7BF4C918E22A900074E0E2 /* MTFontIconParseSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3F3B64E2189084DE0010712D /* InfoPlist.strings */ = {
+		3F7BF4BE18E22A900074E0E2 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3F3B64E3189084DE0010712D /* en */,
+				3F7BF4BF18E22A900074E0E2 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -231,7 +239,7 @@
 		};
 		3F3B64E9189084DE0010712D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 33B12142390A43BFA1253694 /* Pods-MTFontIconTests.xcconfig */;
+			baseConfigurationReference = 699EA9F44CAB413C841DD1A2 /* Pods-StencilsTests.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
@@ -257,7 +265,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MTFontIconTests/MTFontIconTests-Prefix.pch";
+				GCC_PREFIX_HEADER = "StencilsTests/StencilsTests-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -269,7 +277,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "MTFontIconTests/MTFontIconTests-Info.plist";
+				INFOPLIST_FILE = "StencilsTests/StencilsTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -280,7 +288,7 @@
 		};
 		3F3B64EA189084DE0010712D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 33B12142390A43BFA1253694 /* Pods-MTFontIconTests.xcconfig */;
+			baseConfigurationReference = 699EA9F44CAB413C841DD1A2 /* Pods-StencilsTests.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
@@ -305,14 +313,14 @@
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MTFontIconTests/MTFontIconTests-Prefix.pch";
+				GCC_PREFIX_HEADER = "StencilsTests/StencilsTests-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "MTFontIconTests/MTFontIconTests-Info.plist";
+				INFOPLIST_FILE = "StencilsTests/StencilsTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -333,7 +341,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3F3B64E8189084DE0010712D /* Build configuration list for PBXNativeTarget "MTFontIconTests" */ = {
+		3F3B64E8189084DE0010712D /* Build configuration list for PBXNativeTarget "StencilsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3F3B64E9189084DE0010712D /* Debug */,
