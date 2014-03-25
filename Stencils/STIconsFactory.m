@@ -11,7 +11,7 @@
 #import "STParser.h"
 #import "STIconView.h"
 
-static NSString *kDefaultConfigurationName = @"MTFontIcon";
+static NSString *kDefaultConfigurationName = @"Stencils";
 
 @interface STIconsFactory ()
 @property (nonatomic, strong) NSDictionary *icons;

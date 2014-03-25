@@ -279,13 +279,13 @@
         emailComposerViewController.mailComposeDelegate
         = self;
         
-        [emailComposerViewController setSubject:@"MTFontIcon configurations"];
+        [emailComposerViewController setSubject:@"Stencils configurations"];
         
         NSDictionary *plist = @{ @"font-icons": self.iconsData };
         NSString *error;
         NSData *data = [NSPropertyListSerialization dataFromPropertyList:plist
                                                                   format:NSPropertyListBinaryFormat_v1_0 errorDescription:&error];
-        [emailComposerViewController addAttachmentData:data mimeType:@"plist" fileName:@"MTFontIcon.plist"];
+        [emailComposerViewController addAttachmentData:data mimeType:@"plist" fileName:@"Stencils.plist"];
         
         NSString *emailBody = @"Enjoy your icons";
         [emailComposerViewController setMessageBody:emailBody isHTML:NO];
