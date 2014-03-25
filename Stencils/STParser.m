@@ -9,19 +9,19 @@
 #import "STParser.h"
 #import "STIconModel.h"
 
-NSString * const MTFontIconIconsKey = @"font-icons";
+NSString * const STIconParserIconsKey = @"font-icons";
 
 NSString * const STIconParserFontKey = @"font-name";
-NSString * const MTFontIconIconNameKey = @"icon-name";
-NSString * const MTFontIconIconCodeKey = @"icon-code";
-NSString * const MTFontIconBaselineAdjustementKey = @"baseline-adjustement";
-NSString * const MTFontIconScaleAdjustementKey = @"scale-adjustement";
+NSString * const STIconParserIconNameKey = @"icon-name";
+NSString * const STIconParserIconCodeKey = @"icon-code";
+NSString * const STIconParserBaselineAdjustementKey = @"baseline-adjustement";
+NSString * const STIconParserScaleAdjustementKey = @"scale-adjustement";
 
 @implementation STParser
 
 + (NSDictionary *)parseFontIconsFromDictionary:(NSDictionary *)dictionary
 {
-    return [self parseFontIconsFromArray:dictionary[MTFontIconIconsKey]];
+    return [self parseFontIconsFromArray:dictionary[STIconParserIconsKey]];
 }
 
 + (NSDictionary *)parseFontIconsFromArray:(NSArray *)array
@@ -29,15 +29,15 @@ NSString * const MTFontIconScaleAdjustementKey = @"scale-adjustement";
     NSMutableDictionary *iconsDict = [[NSMutableDictionary alloc] init];
     [array enumerateObjectsUsingBlock:^(NSDictionary *dataDict, NSUInteger idx, BOOL *stop) {
         STIconModel *model = [[STIconModel alloc] init];
-        NSString *name = dataDict[MTFontIconIconNameKey];
+        NSString *name = dataDict[STIconParserIconNameKey];
         model.name = name;
-        model.code = dataDict[MTFontIconIconCodeKey];
+        model.code = dataDict[STIconParserIconCodeKey];
         model.fontName = dataDict[STIconParserFontKey];
-        if (dataDict[MTFontIconBaselineAdjustementKey]) {
-            model.baselineAdjustement = [dataDict[MTFontIconBaselineAdjustementKey] floatValue];
+        if (dataDict[STIconParserBaselineAdjustementKey]) {
+            model.baselineAdjustement = [dataDict[STIconParserBaselineAdjustementKey] floatValue];
         }
-        if (dataDict[MTFontIconScaleAdjustementKey]) {
-            model.scaleAdjustement = [dataDict[MTFontIconScaleAdjustementKey] floatValue];
+        if (dataDict[STIconParserScaleAdjustementKey]) {
+            model.scaleAdjustement = [dataDict[STIconParserScaleAdjustementKey] floatValue];
         }
         iconsDict[name] = model;
     }];

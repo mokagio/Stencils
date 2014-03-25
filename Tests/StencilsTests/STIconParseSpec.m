@@ -19,10 +19,10 @@ describe(@"STIconParser", ^{
     __block CGFloat anyScaleValue = 2.2;
     __block NSDictionary *anIconDict = @{
                                          STIconParserFontKey: anyFontFileName,
-                                         MTFontIconIconNameKey: anyIconName,
-                                         MTFontIconIconCodeKey: anyIconCode,
-                                         MTFontIconBaselineAdjustementKey: @(anyBaselineValue),
-                                         MTFontIconScaleAdjustementKey: @(anyScaleValue),
+                                         STIconParserIconNameKey: anyIconName,
+                                         STIconParserIconCodeKey: anyIconCode,
+                                         STIconParserBaselineAdjustementKey: @(anyBaselineValue),
+                                         STIconParserScaleAdjustementKey: @(anyScaleValue),
                                          };
     __block NSDictionary *settings = @{ @"font-icons": @[ anIconDict ] };
     
@@ -60,8 +60,8 @@ describe(@"STIconParser", ^{
     describe(@"when parsing an icon dictionary without the optional values", ^{
         __block NSDictionary *anIconDictWithoutOptionalValues = @{
                                                                   STIconParserFontKey: anyFontFileName,
-                                                                  MTFontIconIconNameKey: anyIconName,
-                                                                  MTFontIconIconCodeKey: anyIconCode,
+                                                                  STIconParserIconNameKey: anyIconName,
+                                                                  STIconParserIconCodeKey: anyIconCode,
                                                                   };
         __block STIconModel *defaultModel = [[STIconModel alloc] init];
         

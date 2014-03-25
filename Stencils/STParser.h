@@ -29,8 +29,8 @@
 
 extern NSString * const STIconParserFontKey;
 
-extern NSString * const MTFontIconIconsKey;
-extern NSString * const MTFontIconIconNameKey;
-extern NSString * const MTFontIconIconCodeKey;
-extern NSString * const MTFontIconBaselineAdjustementKey;
-extern NSString * const MTFontIconScaleAdjustementKey;
+extern NSString * const STIconParserIconsKey;
+extern NSString * const STIconParserIconNameKey;
+extern NSString * const STIconParserIconCodeKey;
+extern NSString * const STIconParserBaselineAdjustementKey;
+extern NSString * const STIconParserScaleAdjustementKey;

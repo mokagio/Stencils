@@ -14,7 +14,7 @@ SPEC_BEGIN(STIconParserConstantsSpec)
 describe(@"STIconParser Constants", ^{
     
     it(@"should have the font icons key equal to 'font-icons'", ^{
-        [[MTFontIconIconsKey should] equal:@"font-icons"];
+        [[STIconParserIconsKey should] equal:@"font-icons"];
     });
 
     it(@"should have the font name key equal to 'font-name'", ^{
@@ -22,19 +22,19 @@ describe(@"STIconParser Constants", ^{
     });
     
     it(@"should have the icon name key equal to 'icon-name'", ^{
-        [[MTFontIconIconNameKey should] equal:@"icon-name"];
+        [[STIconParserIconNameKey should] equal:@"icon-name"];
     });
     
     it(@"should have the icon code key equal to 'icon-code'", ^{
-        [[MTFontIconIconCodeKey should] equal:@"icon-code"];
+        [[STIconParserIconCodeKey should] equal:@"icon-code"];
     });
     
     it(@"should have the icon padding left key equal to 'baseline-adjustement'", ^{
-        [[MTFontIconBaselineAdjustementKey should] equal:@"baseline-adjustement"];
+        [[STIconParserBaselineAdjustementKey should] equal:@"baseline-adjustement"];
     });
     
     it(@"should have the icon padding left key equal to 'scale-adjustement'", ^{
-        [[MTFontIconScaleAdjustementKey should] equal:@"scale-adjustement"];
+        [[STIconParserScaleAdjustementKey should] equal:@"scale-adjustement"];
     });
 });
 
