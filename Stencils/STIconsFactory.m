@@ -23,7 +23,6 @@
 #import "STIconsFactory.h"
 #import "STIconModel.h"
 #import "STParser.h"
-#import "STIconView.h"
 
 static NSString *kDefaultConfigurationName = @"Stencils";
 

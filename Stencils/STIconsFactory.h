@@ -21,8 +21,7 @@
 //  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-
-@class STIconView;
+#import "STIconView.h"
 
 @interface STIconsFactory : NSObject
 
