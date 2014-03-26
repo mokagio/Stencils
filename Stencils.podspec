@@ -4,7 +4,7 @@ git = "https://github.com/mokagio/Stencils"
 Pod::Spec.new do |s|
   s.name         = "Stencils"
   s.version      = version
-  s.summary      = "Speedup iOS app development with font based icons."
+  s.summary      = "Speedup your iOS app development using icon fonts."
   s.homepage     = git
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author       = { "Giovanni Lodi" => "giovanni.lodi42@gmail.com" }
