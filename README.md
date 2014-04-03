@@ -76,6 +76,7 @@ arrow.shadowOffset = CGSizeMake(1.0f, 1.0f);
 
 * [IcoMoon](http://icomoon.io/)
 * [Fontello](http://fontello.com/)
+* [GitHub Icon Fonts Showcase](https://github.com/showcases/icon-fonts)
 * [CSS Tricks](http://css-tricks.com/flat-icons-icon-fonts/)
 * _Know another one? Open a Pull Request!_
 
