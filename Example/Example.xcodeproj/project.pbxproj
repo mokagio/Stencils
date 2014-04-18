@@ -16,11 +16,9 @@
 		3F03FE1D17BB9F0F001BF43F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F03FE1C17BB9F0F001BF43F /* Default.png */; };
 		3F03FE1F17BB9F0F001BF43F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F03FE1E17BB9F0F001BF43F /* Default@2x.png */; };
 		3F03FE2117BB9F0F001BF43F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F03FE2017BB9F0F001BF43F /* Default-568h@2x.png */; };
-		3F03FE2417BB9F0F001BF43F /* MTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F03FE2317BB9F0F001BF43F /* MTViewController.m */; };
-		3F03FE2717BB9F0F001BF43F /* MTViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F03FE2517BB9F0F001BF43F /* MTViewController_iPhone.xib */; };
-		3F03FE2A17BB9F0F001BF43F /* MTViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F03FE2817BB9F0F001BF43F /* MTViewController_iPad.xib */; };
 		3F03FE3B17BBA015001BF43F /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F03FE3A17BBA015001BF43F /* icomoon.ttf */; };
 		3F03FE3D17BBAC81001BF43F /* Stencils.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F03FE3C17BBAC81001BF43F /* Stencils.plist */; };
+		3FB270AA1901B9DC0073D360 /* IconsExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB270A91901B9DC0073D360 /* IconsExampleViewController.m */; };
 		5C1ACDB1D57844D79451E6D4 /* libPods-Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C170A358FC294A7B9D89B38E /* libPods-Example.a */; };
 /* End PBXBuildFile section */
 
@@ -39,12 +37,10 @@
 		3F03FE1C17BB9F0F001BF43F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		3F03FE1E17BB9F0F001BF43F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		3F03FE2017BB9F0F001BF43F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		3F03FE2217BB9F0F001BF43F /* MTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTViewController.h; sourceTree = "<group>"; };
-		3F03FE2317BB9F0F001BF43F /* MTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTViewController.m; sourceTree = "<group>"; };
-		3F03FE2617BB9F0F001BF43F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MTViewController_iPhone.xib; sourceTree = "<group>"; };
-		3F03FE2917BB9F0F001BF43F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MTViewController_iPad.xib; sourceTree = "<group>"; };
 		3F03FE3A17BBA015001BF43F /* icomoon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = icomoon.ttf; sourceTree = "<group>"; };
 		3F03FE3C17BBAC81001BF43F /* Stencils.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.bplist; path = Stencils.plist; sourceTree = "<group>"; };
+		3FB270A81901B9DC0073D360 /* IconsExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconsExampleViewController.h; sourceTree = "<group>"; };
+		3FB270A91901B9DC0073D360 /* IconsExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconsExampleViewController.m; sourceTree = "<group>"; };
 		C170A358FC294A7B9D89B38E /* libPods-Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -95,14 +91,12 @@
 		3F03FE1017BB9F0F001BF43F /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				3FB270A81901B9DC0073D360 /* IconsExampleViewController.h */,
+				3FB270A91901B9DC0073D360 /* IconsExampleViewController.m */,
 				3F03FE1917BB9F0F001BF43F /* MTAppDelegate.h */,
 				3F03FE1A17BB9F0F001BF43F /* MTAppDelegate.m */,
-				3F03FE2217BB9F0F001BF43F /* MTViewController.h */,
-				3F03FE2317BB9F0F001BF43F /* MTViewController.m */,
-				3F03FE2517BB9F0F001BF43F /* MTViewController_iPhone.xib */,
-				3F03FE2817BB9F0F001BF43F /* MTViewController_iPad.xib */,
-				3F03FE1117BB9F0F001BF43F /* Supporting Files */,
 				3F03FE3917BBA015001BF43F /* Resources */,
+				3F03FE1117BB9F0F001BF43F /* Supporting Files */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -188,8 +182,6 @@
 				3F03FE1D17BB9F0F001BF43F /* Default.png in Resources */,
 				3F03FE1F17BB9F0F001BF43F /* Default@2x.png in Resources */,
 				3F03FE2117BB9F0F001BF43F /* Default-568h@2x.png in Resources */,
-				3F03FE2717BB9F0F001BF43F /* MTViewController_iPhone.xib in Resources */,
-				3F03FE2A17BB9F0F001BF43F /* MTViewController_iPad.xib in Resources */,
 				3F03FE3B17BBA015001BF43F /* icomoon.ttf in Resources */,
 				3F03FE3D17BBAC81001BF43F /* Stencils.plist in Resources */,
 			);
@@ -237,7 +229,7 @@
 			files = (
 				3F03FE1717BB9F0F001BF43F /* main.m in Sources */,
 				3F03FE1B17BB9F0F001BF43F /* MTAppDelegate.m in Sources */,
-				3F03FE2417BB9F0F001BF43F /* MTViewController.m in Sources */,
+				3FB270AA1901B9DC0073D360 /* IconsExampleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,22 +242,6 @@
 				3F03FE1417BB9F0F001BF43F /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		3F03FE2517BB9F0F001BF43F /* MTViewController_iPhone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3F03FE2617BB9F0F001BF43F /* en */,
-			);
-			name = MTViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		3F03FE2817BB9F0F001BF43F /* MTViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3F03FE2917BB9F0F001BF43F /* en */,
-			);
-			name = MTViewController_iPad.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

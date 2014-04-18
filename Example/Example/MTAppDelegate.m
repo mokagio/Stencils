@@ -1,27 +1,15 @@
-//
-//  MTAppDelegate.m
-//  Example
-//
-//  Created by Gio on 14/08/2013.
-//  Copyright (c) 2013 mokagio. All rights reserved.
-//
 
 #import "MTAppDelegate.h"
 
-#import "MTViewController.h"
+#import "IconsExampleViewController.h"
 
 @implementation MTAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        self.viewController = [[MTViewController alloc] initWithNibName:@"MTViewController_iPhone" bundle:nil];
-    } else {
-        self.viewController = [[MTViewController alloc] initWithNibName:@"MTViewController_iPad" bundle:nil];
-    }
-    self.window.rootViewController = self.viewController;
+
+    self.window.rootViewController = [[IconsExampleViewController alloc] init];;
     [self.window makeKeyAndVisible];
     return YES;
 }
