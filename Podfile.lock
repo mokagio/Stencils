@@ -4,11 +4,15 @@ PODS:
   - Kiwi/XCTest (2.2.3):
     - Kiwi/ARC
     - Kiwi/NonARC
+  - OpenSans (1.0.0)
   - Stencils (1.0.0)
+  - UIColor+FlatColors (0.0.1)
 
 DEPENDENCIES:
   - Kiwi/XCTest
+  - OpenSans (= 1.0.0)
   - Stencils (from `.`)
+  - UIColor+FlatColors (= 0.0.1)
 
 EXTERNAL SOURCES:
   Stencils:
@@ -16,6 +20,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Kiwi: 04c51e880831d291748ec702d42c4101f7eb95c9
-  Stencils: 75c97e9ce5128058c985e78f72e892d9ea8ede60
+  OpenSans: ba92552b9df0333c4f4dab5c0105f55594a6cf9c
+  Stencils: 755d226ad423982edf0efaf3348985052ea2bf07
+  UIColor+FlatColors: 417fbe0894c1da0e7ab6505e1409a26052caa75f
 
-COCOAPODS: 0.29.0
+COCOAPODS: 0.32.1

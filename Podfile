@@ -13,6 +13,8 @@ end
 target :Example do
   xcodeproj "Example/Example.xcodeproj"
   stencils_pod
+  pod 'OpenSans', '1.0.0'
+  pod 'UIColor+FlatColors', '0.0.1'
 end
 
 target :IconSettings do

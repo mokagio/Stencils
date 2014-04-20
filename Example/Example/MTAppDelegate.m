@@ -2,6 +2,7 @@
 #import "MTAppDelegate.h"
 
 #import "IconsExampleViewController.h"
+#import "TempViewController.h"
 
 @implementation MTAppDelegate
 
@@ -9,7 +10,8 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
-    self.window.rootViewController = [[IconsExampleViewController alloc] init];;
+//    self.window.rootViewController = [[IconsExampleViewController alloc] init];
+    self.window.rootViewController = [[TempViewController alloc] init];
     [self.window makeKeyAndVisible];
     return YES;
 }

@@ -16,9 +16,12 @@
 		3F03FE1D17BB9F0F001BF43F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F03FE1C17BB9F0F001BF43F /* Default.png */; };
 		3F03FE1F17BB9F0F001BF43F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F03FE1E17BB9F0F001BF43F /* Default@2x.png */; };
 		3F03FE2117BB9F0F001BF43F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F03FE2017BB9F0F001BF43F /* Default-568h@2x.png */; };
-		3F03FE3B17BBA015001BF43F /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F03FE3A17BBA015001BF43F /* icomoon.ttf */; };
-		3F03FE3D17BBAC81001BF43F /* Stencils.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F03FE3C17BBAC81001BF43F /* Stencils.plist */; };
+		3F5E30AF19054DFA00279D8B /* NSArray+Shuffle.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E30AE19054DFA00279D8B /* NSArray+Shuffle.m */; };
 		3FB270AA1901B9DC0073D360 /* IconsExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB270A91901B9DC0073D360 /* IconsExampleViewController.m */; };
+		3FB270AE1901D1D00073D360 /* TempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB270AC1901D1D00073D360 /* TempViewController.m */; };
+		3FB270AF1901D1D00073D360 /* TempViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FB270AD1901D1D00073D360 /* TempViewController.xib */; };
+		3FB9C963190523D200096E57 /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FB9C961190523D200096E57 /* icomoon.ttf */; };
+		3FB9C964190523D200096E57 /* Stencils.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FB9C962190523D200096E57 /* Stencils.plist */; };
 		5C1ACDB1D57844D79451E6D4 /* libPods-Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C170A358FC294A7B9D89B38E /* libPods-Example.a */; };
 /* End PBXBuildFile section */
 
@@ -37,10 +40,15 @@
 		3F03FE1C17BB9F0F001BF43F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		3F03FE1E17BB9F0F001BF43F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		3F03FE2017BB9F0F001BF43F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		3F03FE3A17BBA015001BF43F /* icomoon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = icomoon.ttf; sourceTree = "<group>"; };
-		3F03FE3C17BBAC81001BF43F /* Stencils.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.bplist; path = Stencils.plist; sourceTree = "<group>"; };
+		3F5E30AD19054DFA00279D8B /* NSArray+Shuffle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Shuffle.h"; sourceTree = "<group>"; };
+		3F5E30AE19054DFA00279D8B /* NSArray+Shuffle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Shuffle.m"; sourceTree = "<group>"; };
 		3FB270A81901B9DC0073D360 /* IconsExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconsExampleViewController.h; sourceTree = "<group>"; };
 		3FB270A91901B9DC0073D360 /* IconsExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconsExampleViewController.m; sourceTree = "<group>"; };
+		3FB270AB1901D1D00073D360 /* TempViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TempViewController.h; sourceTree = "<group>"; };
+		3FB270AC1901D1D00073D360 /* TempViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TempViewController.m; sourceTree = "<group>"; };
+		3FB270AD1901D1D00073D360 /* TempViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TempViewController.xib; sourceTree = "<group>"; };
+		3FB9C961190523D200096E57 /* icomoon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = icomoon.ttf; sourceTree = "<group>"; };
+		3FB9C962190523D200096E57 /* Stencils.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Stencils.plist; sourceTree = "<group>"; };
 		C170A358FC294A7B9D89B38E /* libPods-Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -97,6 +105,11 @@
 				3F03FE1A17BB9F0F001BF43F /* MTAppDelegate.m */,
 				3F03FE3917BBA015001BF43F /* Resources */,
 				3F03FE1117BB9F0F001BF43F /* Supporting Files */,
+				3FB270AB1901D1D00073D360 /* TempViewController.h */,
+				3FB270AC1901D1D00073D360 /* TempViewController.m */,
+				3FB270AD1901D1D00073D360 /* TempViewController.xib */,
+				3F5E30AD19054DFA00279D8B /* NSArray+Shuffle.h */,
+				3F5E30AE19054DFA00279D8B /* NSArray+Shuffle.m */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -118,8 +131,8 @@
 		3F03FE3917BBA015001BF43F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3F03FE3A17BBA015001BF43F /* icomoon.ttf */,
-				3F03FE3C17BBAC81001BF43F /* Stencils.plist */,
+				3FB9C961190523D200096E57 /* icomoon.ttf */,
+				3FB9C962190523D200096E57 /* Stencils.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -179,11 +192,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F03FE1517BB9F0F001BF43F /* InfoPlist.strings in Resources */,
+				3FB9C964190523D200096E57 /* Stencils.plist in Resources */,
 				3F03FE1D17BB9F0F001BF43F /* Default.png in Resources */,
 				3F03FE1F17BB9F0F001BF43F /* Default@2x.png in Resources */,
+				3FB9C963190523D200096E57 /* icomoon.ttf in Resources */,
 				3F03FE2117BB9F0F001BF43F /* Default-568h@2x.png in Resources */,
-				3F03FE3B17BBA015001BF43F /* icomoon.ttf in Resources */,
-				3F03FE3D17BBAC81001BF43F /* Stencils.plist in Resources */,
+				3FB270AF1901D1D00073D360 /* TempViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,7 +241,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FB270AE1901D1D00073D360 /* TempViewController.m in Sources */,
 				3F03FE1717BB9F0F001BF43F /* main.m in Sources */,
+				3F5E30AF19054DFA00279D8B /* NSArray+Shuffle.m in Sources */,
 				3F03FE1B17BB9F0F001BF43F /* MTAppDelegate.m in Sources */,
 				3FB270AA1901B9DC0073D360 /* IconsExampleViewController.m in Sources */,
 			);

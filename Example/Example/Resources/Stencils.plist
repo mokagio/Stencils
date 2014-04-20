@@ -1,116 +1,328 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-<key>font-icons</key>
+	<key>font-icons</key>
 	<array>
 		<dict>
-			<key>baseline-adjustement</key>
-			<real>1.1200000000000001</real>
 			<key>font-name</key>
 			<string>icomoon</string>
 			<key>icon-code</key>
-			<string>e000</string>
+			<string>e600</string>
 			<key>icon-name</key>
-			<string>pacman</string>
-			<key>scale-adjustement</key>
-			<real>0.95999999999999996</real>
+			<string>phone</string>
 		</dict>
 		<dict>
-			<key>baseline-adjustement</key>
-			<real>1.1200000047683716</real>
 			<key>font-name</key>
 			<string>icomoon</string>
 			<key>icon-code</key>
-			<string>e001</string>
+			<string>e601</string>
 			<key>icon-name</key>
-			<string>apple</string>
-			<key>scale-adjustement</key>
-			<real>0.95999997854232788</real>
+			<string>mobile</string>
 		</dict>
 		<dict>
-			<key>baseline-adjustement</key>
-			<real>1.1200000047683716</real>
 			<key>font-name</key>
 			<string>icomoon</string>
 			<key>icon-code</key>
-			<string>e002</string>
+			<string>e602</string>
 			<key>icon-name</key>
-			<string>music</string>
-			<key>scale-adjustement</key>
-			<real>0.95999997854232788</real>
+			<string>paperplane</string>
 		</dict>
 		<dict>
-			<key>baseline-adjustement</key>
-			<real>1.1100000047683716</real>
 			<key>font-name</key>
 			<string>icomoon</string>
 			<key>icon-code</key>
-			<string>e003</string>
+			<string>e603</string>
 			<key>icon-name</key>
-			<string>bug</string>
-			<key>scale-adjustement</key>
-			<real>0.95999997854232788</real>
+			<string>pencil</string>
 		</dict>
 		<dict>
-			<key>baseline-adjustement</key>
-			<real>1.1100000143051147</real>
 			<key>font-name</key>
 			<string>icomoon</string>
 			<key>icon-code</key>
-			<string>e004</string>
+			<string>e604</string>
 			<key>icon-name</key>
-			<string>plane</string>
-			<key>scale-adjustement</key>
-			<real>0.95999997854232788</real>
+			<string>reply</string>
 		</dict>
 		<dict>
-			<key>baseline-adjustement</key>
-			<real>1.1200000143051148</real>
 			<key>font-name</key>
 			<string>icomoon</string>
 			<key>icon-code</key>
-			<string>e005</string>
+			<string>e605</string>
 			<key>icon-name</key>
-			<string>smile</string>
-			<key>scale-adjustement</key>
-			<real>0.95999997854232788</real>
+			<string>forward</string>
 		</dict>
 		<dict>
-			<key>baseline-adjustement</key>
-			<real>1.1300000000000001</real>
 			<key>font-name</key>
 			<string>icomoon</string>
 			<key>icon-code</key>
-			<string>e006</string>
+			<string>e606</string>
 			<key>icon-name</key>
-			<string>git</string>
-			<key>scale-adjustement</key>
-			<real>0.96999999999999997</real>
+			<string>user</string>
 		</dict>
 		<dict>
-			<key>baseline-adjustement</key>
-			<real>1.1100000000000001</real>
 			<key>font-name</key>
 			<string>icomoon</string>
 			<key>icon-code</key>
-			<string>e007</string>
+			<string>e607</string>
 			<key>icon-name</key>
-			<string>heart</string>
-			<key>scale-adjustement</key>
-			<real>0.96999999999999997</real>
+			<string>location</string>
 		</dict>
 		<dict>
-			<key>baseline-adjustement</key>
-			<real>1.1100000000000001</real>
 			<key>font-name</key>
 			<string>icomoon</string>
 			<key>icon-code</key>
-			<string>e008</string>
+			<string>e608</string>
 			<key>icon-name</key>
-			<string>terminal</string>
-			<key>scale-adjustement</key>
-			<real>0.97999999999999998</real>
+			<string>share</string>
+		</dict>
+		<dict>
+			<key>font-name</key>
+			<string>icomoon</string>
+			<key>icon-code</key>
+			<string>e609</string>
+			<key>icon-name</key>
+			<string>thumbsup</string>
+		</dict>
+		<dict>
+			<key>font-name</key>
+			<string>icomoon</string>
+			<key>icon-code</key>
+			<string>e60a</string>
+			<key>icon-name</key>
+			<string>thumbsdown</string>
+		</dict>
+		<dict>
+			<key>font-name</key>
+			<string>icomoon</string>
+			<key>icon-code</key>
+			<string>e60b</string>
+			<key>icon-name</key>
+			<string>chat</string>
+		</dict>
+		<dict>
+			<key>font-name</key>
+			<string>icomoon</string>
+			<key>icon-code</key>
+			<string>e60c</string>
+			<key>icon-name</key>
+			<string>bolt</string>
+		</dict>
+		<dict>
+			<key>font-name</key>
+			<string>icomoon</string>
+			<key>icon-code</key>
+			<string>e60d</string>
+			<key>icon-name</key>
+			<string>rocket</string>
+		</dict>
+		<dict>
+			<key>font-name</key>
+			<string>icomoon</string>
+			<key>icon-code</key>
+			<string>e60e</string>
+			<key>icon-name</key>
+			<string>brush</string>
+		</dict>
+		<dict>
+			<key>font-name</key>
+			<string>icomoon</string>
+			<key>icon-code</key>
+			<string>e60f</string>
+			<key>icon-name</key>
+			<string>adjust</string>
+		</dict>
+		<dict>
+			<key>font-name</key>
+			<string>icomoon</string>
+			<key>icon-code</key>
+			<string>e610</string>
+			<key>icon-name</key>
+			<string>lock-open</string>
+		</dict>
+		<dict>
+			<key>font-name</key>
+			<string>icomoon</string>
+			<key>icon-code</key>
+			<string>e611</string>
+			<key>icon-name</key>
+			<string>logout</string>
+		</dict>
+		<dict>
+			<key>font-name</key>
+			<string>icomoon</string>
+			<key>icon-code</key>
+			<string>e612</string>
+			<key>icon-name</key>
+			<string>login</string>
+		</dict>
+		<dict>
+			<key>font-name</key>
+			<string>icomoon</string>
+			<key>icon-code</key>
+			<string>e613</string>
+			<key>icon-name</key>
+			<string>checkmark</string>
+		</dict>
+		<dict>
+			<key>font-name</key>
+			<string>icomoon</string>
+			<key>icon-code</key>
+			<string>e614</string>
+			<key>icon-name</key>
+			<string>cross</string>
+		</dict>
+		<dict>
+			<key>font-name</key>
+			<string>icomoon</string>
+			<key>icon-code</key>
+			<string>e615</string>
+			<key>icon-name</key>
+			<string>minus</string>
+		</dict>
+		<dict>
+			<key>font-name</key>
+			<string>icomoon</string>
+			<key>icon-code</key>
+			<string>e616</string>
+			<key>icon-name</key>
+			<string>plus</string>
+		</dict>
+		<dict>
+			<key>font-name</key>
+			<string>icomoon</string>
+			<key>icon-code</key>
+			<string>e617</string>
+			<key>icon-name</key>
+			<string>info</string>
+		</dict>
+		<dict>
+			<key>font-name</key>
+			<string>icomoon</string>
+			<key>icon-code</key>
+			<string>e618</string>
+			<key>icon-name</key>
+			<string>help</string>
+		</dict>
+		<dict>
+			<key>font-name</key>
+			<string>icomoon</string>
+			<key>icon-code</key>
+			<string>e619</string>
+			<key>icon-name</key>
+			<string>cycle</string>
+		</dict>
+		<dict>
+			<key>font-name</key>
+			<string>icomoon</string>
+			<key>icon-code</key>
+			<string>e61a</string>
+			<key>icon-name</key>
+			<string>shuffle</string>
+		</dict>
+		<dict>
+			<key>font-name</key>
+			<string>icomoon</string>
+			<key>icon-code</key>
+			<string>e61b</string>
+			<key>icon-name</key>
+			<string>text</string>
+		</dict>
+		<dict>
+			<key>font-name</key>
+			<string>icomoon</string>
+			<key>icon-code</key>
+			<string>e61c</string>
+			<key>icon-name</key>
+			<string>docs</string>
+		</dict>
+		<dict>
+			<key>font-name</key>
+			<string>icomoon</string>
+			<key>icon-code</key>
+			<string>e61d</string>
+			<key>icon-name</key>
+			<string>pictures</string>
+		</dict>
+		<dict>
+			<key>font-name</key>
+			<string>icomoon</string>
+			<key>icon-code</key>
+			<string>e61e</string>
+			<key>icon-name</key>
+			<string>cloud</string>
+		</dict>
+		<dict>
+			<key>font-name</key>
+			<string>icomoon</string>
+			<key>icon-code</key>
+			<string>e61f</string>
+			<key>icon-name</key>
+			<string>arrow-left</string>
+		</dict>
+		<dict>
+			<key>font-name</key>
+			<string>icomoon</string>
+			<key>icon-code</key>
+			<string>e620</string>
+			<key>icon-name</key>
+			<string>arrow-down</string>
+		</dict>
+		<dict>
+			<key>font-name</key>
+			<string>icomoon</string>
+			<key>icon-code</key>
+			<string>e621</string>
+			<key>icon-name</key>
+			<string>arrow-up</string>
+		</dict>
+		<dict>
+			<key>font-name</key>
+			<string>icomoon</string>
+			<key>icon-code</key>
+			<string>e622</string>
+			<key>icon-name</key>
+			<string>arrow-right</string>
+		</dict>
+		<dict>
+			<key>font-name</key>
+			<string>icomoon</string>
+			<key>icon-code</key>
+			<string>e623</string>
+			<key>icon-name</key>
+			<string>github</string>
+		</dict>
+		<dict>
+			<key>font-name</key>
+			<string>icomoon</string>
+			<key>icon-code</key>
+			<string>e624</string>
+			<key>icon-name</key>
+			<string>twitter</string>
+		</dict>
+		<dict>
+			<key>font-name</key>
+			<string>icomoon</string>
+			<key>icon-code</key>
+			<string>e625</string>
+			<key>icon-name</key>
+			<string>facebook</string>
+		</dict>
+		<dict>
+			<key>font-name</key>
+			<string>icomoon</string>
+			<key>icon-code</key>
+			<string>e626</string>
+			<key>icon-name</key>
+			<string>dribbble</string>
+		</dict>
+		<dict>
+			<key>font-name</key>
+			<string>icomoon</string>
+			<key>icon-code</key>
+			<string>e627</string>
+			<key>icon-name</key>
+			<string>instagram</string>
 		</dict>
 	</array>
 </dict>
