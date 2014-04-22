@@ -12,6 +12,8 @@ Stencils
 
 **Speedup your iOS app development using icon fonts!**
 
+<img src="https://raw.githubusercontent.com/mokagio/Stencils/master/Screenshots/animated_screenshot.gif" />
+
 Icon fonts are very popular in the web development world. And they are [awesome](https://css-tricks.com/examples/IconFont/). With Stencils you can now access the power and awesomeness of icon fonts in the development of your iOS app, and save a lot of emails with the designer to get the new asset with the shadow 0.5 point more to the left and 3.141592% less opaque.
 
 ## Install
@@ -23,7 +25,7 @@ Via [CocoaPods](http://cocoapods.org).
 or
 
 	pod 'Stencils', ~> 'x.x.x'
-	
+
 where `x.x.x` is the version number you want. Latest stable is [![Pod Version](http://cocoapod-badges.herokuapp.com/v/Stencils/badge.png
 )](http://cocoapod-badges.herokuapp.com/v/$PODNAME/badge.png
 )
