@@ -69,10 +69,16 @@ You can customize your icon like this:
 ```objc
 arrow.background = [UIColor white];
 arrow.color = [UIColor black];
-// If no color is set the icon will use the tintColor of it's superview
+// If no color is set the icon will use the tintColor of its superview
 arrow.shadowColor = [UIColor gray];
 arrow.shadowOffset = CGSizeMake(1.0f, 1.0f);
 ```
+
+### Tuning the icons metrics
+
+It can happen that the icons are rendered _cropped_. This is due to the original font metrics not being _as iOS would like them_. `baseline-adjustement` and `scale-adjustement` are there to compensate this issue.
+
+To help you fine tune those values there's the **IconSettings** app from this repo. You can load your _raw_ `.plist`, launch it on a device, tune each icon, then email yourself the _tuned_ `.plist`. It's a rather sub-optimal approach, but... it works.
 
 ## Where to find icons fonts
 
