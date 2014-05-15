@@ -58,10 +58,10 @@ Have a look at the example projects to see how a real configurations `plist` loo
 #### 3. Load icons using `STIconsFactory` and `STIconView`
 
 ```objc
-#import <StencilsFactory.h>
+#import <STIconsFactory.h>
 
-STIconsFactory *factory = [[StencilsFactory alloc] init];
-STIconView *arrow = [iconFactory iconViewForIconNamed:@'arrow-left' withSide:60.0f];
+STIconsFactory *factory = [[STIconsFactory alloc] init];
+STIconView *arrow = [factory iconViewForIconNamed:@"arrow-left" withSide:60.0f];
 ```
 
 You can customize your icon like this:
