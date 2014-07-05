@@ -58,10 +58,10 @@ Have a look at the example projects to see how a real configurations `plist` loo
 #### 3. Load icons using `STIconsFactory` and `STIconView`
 
 ```objc
-#import <STIconsFactory.h>
+#import <StencilsFactory.h>
 
-STIconsFactory *factory = [[STIconsFactory alloc] init];
-STIconView *arrow = [factory iconViewForIconNamed:@"arrow-left" withSide:60.0f];
+STIconsFactory *factory = [[StencilsFactory alloc] init];
+STIconView *arrow = [iconFactory iconViewForIconNamed:@'arrow-left' withSide:60.0f];
 ```
 
 You can customize your icon like this:
@@ -79,6 +79,14 @@ arrow.shadowOffset = CGSizeMake(1.0f, 1.0f);
 It can happen that the icons are rendered _cropped_. This is due to the original font metrics not being _as iOS would like them_. `baseline-adjustement` and `scale-adjustement` are there to compensate this issue.
 
 To help you fine tune those values there's the **IconSettings** app from this repo. You can load your _raw_ `.plist`, launch it on a device, tune each icon, then email yourself the _tuned_ `.plist`. It's a rather sub-optimal approach, but... it works.
+
+## `.plist` generator script
+
+Use the experimental `plist_generator.rb` script located in the `Scripts` folder to generate the `Stencils.plist` to import together with the `.ttf` font in your app from the `.css` that you would use for the webfont.
+
+Run `plist_generator.rb --help`
+
+**Important note:** the script is _experimental_, that is I cannot guarantee it's gonna work 100% of the times. I tried it only on the css files that [IcoMoon](http://icomoon.io/) and [Fontello](http://fontello.com/) generate.
 
 ## Where to find icons fonts
 
