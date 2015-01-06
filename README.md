@@ -58,19 +58,19 @@ Have a look at the example projects to see how a real configurations `plist` loo
 #### 3. Load icons using `STIconsFactory` and `STIconView`
 
 ```objc
-#import <StencilsFactory.h>
+#import <STIconsFactory.h>
 
-STIconsFactory *factory = [[StencilsFactory alloc] init];
-STIconView *arrow = [iconFactory iconViewForIconNamed:@'arrow-left' withSide:60.0f];
+STIconsFactory *factory = [[STIconsFactory alloc] init];
+STIconView *arrow = [factory iconViewForIconNamed:@"arrow-left" withSide:60.0f];
 ```
 
 You can customize your icon like this:
 
 ```objc
-arrow.background = [UIColor white];
-arrow.color = [UIColor black];
+arrow.backgroundColor = [UIColor whiteColor];
+arrow.color = [UIColor blackColor];
 // If no color is set the icon will use the tintColor of its superview
-arrow.shadowColor = [UIColor gray];
+arrow.shadowColor = [UIColor grayColor];
 arrow.shadowOffset = CGSizeMake(1.0f, 1.0f);
 ```
 
