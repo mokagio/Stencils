@@ -24,7 +24,7 @@
 
 @class STIconModel;
 
-@interface STIconView : UIView
+@interface STIconView : UIControl
 
 // If no color is provided falls back to the view tintColor
 @property (nonatomic, strong) UIColor *color;
