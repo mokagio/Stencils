@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.author       = { "Giovanni Lodi" => "giovanni.lodi42@gmail.com" }
   s.source       = { :git => "#{git}.git", :tag => version }
   s.source_files = 'Stencils'
-  s.platform     = :ios
+  s.platform     = :ios, '12.0'
   s.requires_arc = true
   s.frameworks   = 'CoreText'
 end

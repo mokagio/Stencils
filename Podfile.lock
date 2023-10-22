@@ -1,27 +1,38 @@
 PODS:
-  - Kiwi/ARC (2.2.3)
-  - Kiwi/NonARC (2.2.3)
-  - Kiwi/XCTest (2.2.3):
-    - Kiwi/ARC
-    - Kiwi/NonARC
-  - OpenSans (1.0.0)
+  - Kiwi (3.0.0)
+  - OpenSans (1.0.3)
   - Stencils (1.0.0)
-  - UIColor+FlatColors (0.0.1)
+  - "UIColor+FlatColors (1.0.0)"
 
 DEPENDENCIES:
-  - Kiwi/XCTest
-  - OpenSans (= 1.0.0)
+  - Kiwi
+  - "OpenSans (from `git@github.com:mokagio/OpenSans`, commit `b505071bda9bf8bd21e75e0e3bfeda1b445aa4bc`)"
   - Stencils (from `.`)
-  - UIColor+FlatColors (= 0.0.1)
+  - "UIColor+FlatColors (= 1.0.0)"
+
+SPEC REPOS:
+  trunk:
+    - Kiwi
+    - "UIColor+FlatColors"
 
 EXTERNAL SOURCES:
+  OpenSans:
+    :commit: b505071bda9bf8bd21e75e0e3bfeda1b445aa4bc
+    :git: "git@github.com:mokagio/OpenSans"
   Stencils:
-    :path: .
+    :path: "."
+
+CHECKOUT OPTIONS:
+  OpenSans:
+    :commit: b505071bda9bf8bd21e75e0e3bfeda1b445aa4bc
+    :git: "git@github.com:mokagio/OpenSans"
 
 SPEC CHECKSUMS:
-  Kiwi: 04c51e880831d291748ec702d42c4101f7eb95c9
-  OpenSans: ba92552b9df0333c4f4dab5c0105f55594a6cf9c
-  Stencils: 755d226ad423982edf0efaf3348985052ea2bf07
-  UIColor+FlatColors: 417fbe0894c1da0e7ab6505e1409a26052caa75f
+  Kiwi: fbeafef0f00e4d8f7dcb3420a4930afe70af77f7
+  OpenSans: be59f1f114f10fcf5f76f67406e170a133653b4a
+  Stencils: 1b1b174c03bd852be6aeab67b98d7d99baac9d94
+  "UIColor+FlatColors": 23b11d9273fb0fdec2d2fa3b3a2e1bee5f5bfd6a
 
-COCOAPODS: 0.32.1
+PODFILE CHECKSUM: 7c5d7b986817f4e6615425529ae2c43f0caeca5a
+
+COCOAPODS: 1.13.0

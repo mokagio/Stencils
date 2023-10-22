@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,7 +22,7 @@
 		3F5729F118D8E72500B619C6 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5729F018D8E72500B619C6 /* MainViewController.m */; };
 		3F5729F518D8E80E00B619C6 /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F5729F318D8E80E00B619C6 /* icomoon.ttf */; };
 		3F5729F618D8E80E00B619C6 /* Stencils.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F5729F418D8E80E00B619C6 /* Stencils.plist */; };
-		618A0EB05BB24EAF87A5F0AD /* libPods-IconSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC932A68BDB4DF79E1C73BD /* libPods-IconSettings.a */; };
+		5F18088C4BE0DC2AA1972BE8 /* Pods_IconSettings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4FCC927E559EAC5A3DBCD9B /* Pods_IconSettings.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		359C8F12B60B387212EFB4D0 /* Pods-IconSettings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IconSettings.release.xcconfig"; path = "Target Support Files/Pods-IconSettings/Pods-IconSettings.release.xcconfig"; sourceTree = "<group>"; };
 		3F5729BF18D8E71400B619C6 /* IconSettings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IconSettings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F5729C218D8E71400B619C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3F5729C418D8E71400B619C6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -57,8 +58,8 @@
 		3F5729F318D8E80E00B619C6 /* icomoon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = icomoon.ttf; sourceTree = "<group>"; };
 		3F5729F418D8E80E00B619C6 /* Stencils.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Stencils.plist; sourceTree = "<group>"; };
 		3FC162BE18DCDDBB0028FFE5 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/MessageUI.framework; sourceTree = DEVELOPER_DIR; };
-		6DC932A68BDB4DF79E1C73BD /* libPods-IconSettings.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IconSettings.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEB622DB90E74AD29DC08971 /* Pods-IconSettings.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IconSettings.xcconfig"; path = "../Pods/Pods-IconSettings.xcconfig"; sourceTree = "<group>"; };
+		D11CBA66DB08794DA59A8441 /* Pods-IconSettings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IconSettings.debug.xcconfig"; path = "Target Support Files/Pods-IconSettings/Pods-IconSettings.debug.xcconfig"; sourceTree = "<group>"; };
+		F4FCC927E559EAC5A3DBCD9B /* Pods_IconSettings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IconSettings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +70,7 @@
 				3F5729C518D8E71400B619C6 /* CoreGraphics.framework in Frameworks */,
 				3F5729C718D8E71400B619C6 /* UIKit.framework in Frameworks */,
 				3F5729C318D8E71400B619C6 /* Foundation.framework in Frameworks */,
-				618A0EB05BB24EAF87A5F0AD /* libPods-IconSettings.a in Frameworks */,
+				5F18088C4BE0DC2AA1972BE8 /* Pods_IconSettings.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +87,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0DCBC001610DDFB7F4708C33 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D11CBA66DB08794DA59A8441 /* Pods-IconSettings.debug.xcconfig */,
+				359C8F12B60B387212EFB4D0 /* Pods-IconSettings.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
+			sourceTree = "<group>";
+		};
 		3F5729B418D8E6D900B619C6 = {
 			isa = PBXGroup;
 			children = (
@@ -93,7 +104,7 @@
 				3F5729E118D8E71400B619C6 /* IconSettingsTests */,
 				3F5729C118D8E71400B619C6 /* Frameworks */,
 				3F5729C018D8E71400B619C6 /* Products */,
-				CEB622DB90E74AD29DC08971 /* Pods-IconSettings.xcconfig */,
+				0DCBC001610DDFB7F4708C33 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,7 +125,7 @@
 				3F5729C418D8E71400B619C6 /* CoreGraphics.framework */,
 				3F5729C618D8E71400B619C6 /* UIKit.framework */,
 				3F5729DB18D8E71400B619C6 /* XCTest.framework */,
-				6DC932A68BDB4DF79E1C73BD /* libPods-IconSettings.a */,
+				F4FCC927E559EAC5A3DBCD9B /* Pods_IconSettings.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -178,11 +189,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F5729E918D8E71400B619C6 /* Build configuration list for PBXNativeTarget "IconSettings" */;
 			buildPhases = (
-				FDFBEFEE30A24059A584231E /* Check Pods Manifest.lock */,
+				4473A934B9CB0D2AE15CF58E /* [CP] Check Pods Manifest.lock */,
 				3F5729BB18D8E71400B619C6 /* Sources */,
 				3F5729BC18D8E71400B619C6 /* Frameworks */,
 				3F5729BD18D8E71400B619C6 /* Resources */,
-				294A4EBB677D41D0826D07A6 /* Copy Pods Resources */,
+				30A62E81DD3D5488CF95F32A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -217,7 +228,8 @@
 		3F5729B518D8E6D900B619C6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					3F5729D918D8E71400B619C6 = {
 						TestTargetID = 3F5729BE18D8E71400B619C6;
@@ -229,6 +241,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 3F5729B418D8E6D900B619C6;
@@ -265,34 +278,44 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		294A4EBB677D41D0826D07A6 /* Copy Pods Resources */ = {
+		30A62E81DD3D5488CF95F32A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IconSettings/Pods-IconSettings-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Stencils/Stencils.framework",
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stencils.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Pods-IconSettings-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IconSettings/Pods-IconSettings-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FDFBEFEE30A24059A584231E /* Check Pods Manifest.lock */ = {
+		4473A934B9CB0D2AE15CF58E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
+			inputFileListPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IconSettings-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -349,18 +372,76 @@
 		3F5729B918D8E6D900B619C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Debug;
 		};
 		3F5729BA18D8E6D900B619C6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 			};
 			name = Release;
 		};
 		3F5729EA18D8E71400B619C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CEB622DB90E74AD29DC08971 /* Pods-IconSettings.xcconfig */;
+			baseConfigurationReference = D11CBA66DB08794DA59A8441 /* Pods-IconSettings.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -400,8 +481,9 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "IconSettings/IconSettings-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stencils.ios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = app;
@@ -410,7 +492,7 @@
 		};
 		3F5729EB18D8E71400B619C6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CEB622DB90E74AD29DC08971 /* Pods-IconSettings.xcconfig */;
+			baseConfigurationReference = 359C8F12B60B387212EFB4D0 /* Pods-IconSettings.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -444,7 +526,8 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "IconSettings/IconSettings-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stencils.ios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -492,8 +575,9 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "IconSettingsTests/IconSettingsTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stencils.ios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -535,7 +619,8 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "IconSettingsTests/IconSettingsTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stencils.ios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				TEST_HOST = "$(BUNDLE_LOADER)";

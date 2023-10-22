@@ -15,11 +15,10 @@
 		3F7BF4C818E22A900074E0E2 /* STIconParserConstantsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF4C118E22A900074E0E2 /* STIconParserConstantsSpec.m */; };
 		3F7BF4C918E22A900074E0E2 /* STIconParseSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF4C218E22A900074E0E2 /* STIconParseSpec.m */; };
 		3F7BF4CB18E22A900074E0E2 /* NSStringPlusUnicodeSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF4C518E22A900074E0E2 /* NSStringPlusUnicodeSpec.m */; };
-		6FC08CFD6C754301BB5A566A /* libPods-StencilsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3049598A321744578E6AECC1 /* libPods-StencilsTests.a */; };
+		FB2403ADDA9952444835F063 /* Pods_StencilsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B609FEF30B5B6B59B1D4D0F /* Pods_StencilsTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3049598A321744578E6AECC1 /* libPods-StencilsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StencilsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F3B64D6189084DE0010712D /* StencilsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StencilsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F3B64D9189084DE0010712D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		3F3B64DB189084DE0010712D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -31,7 +30,9 @@
 		3F7BF4C318E22A900074E0E2 /* StencilsTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "StencilsTests-Info.plist"; sourceTree = "<group>"; };
 		3F7BF4C418E22A900074E0E2 /* StencilsTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "StencilsTests-Prefix.pch"; sourceTree = "<group>"; };
 		3F7BF4C518E22A900074E0E2 /* NSStringPlusUnicodeSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringPlusUnicodeSpec.m; sourceTree = "<group>"; };
-		699EA9F44CAB413C841DD1A2 /* Pods-StencilsTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StencilsTests.xcconfig"; path = "../Pods/Pods-StencilsTests.xcconfig"; sourceTree = "<group>"; };
+		6B609FEF30B5B6B59B1D4D0F /* Pods_StencilsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StencilsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7410F8BA6D34E550F72165E7 /* Pods-StencilsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StencilsTests.debug.xcconfig"; path = "Target Support Files/Pods-StencilsTests/Pods-StencilsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F25DD50537F65DB229C76145 /* Pods-StencilsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StencilsTests.release.xcconfig"; path = "Target Support Files/Pods-StencilsTests/Pods-StencilsTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +43,7 @@
 				3F3B64DA189084DE0010712D /* XCTest.framework in Frameworks */,
 				3F3B64DE189084DE0010712D /* UIKit.framework in Frameworks */,
 				3F3B64DC189084DE0010712D /* Foundation.framework in Frameworks */,
-				6FC08CFD6C754301BB5A566A /* libPods-StencilsTests.a in Frameworks */,
+				FB2403ADDA9952444835F063 /* Pods_StencilsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,7 +56,7 @@
 				3F7BF4BC18E22A400074E0E2 /* StencilsTests */,
 				3F3B64D8189084DE0010712D /* Frameworks */,
 				3F3B64D7189084DE0010712D /* Products */,
-				699EA9F44CAB413C841DD1A2 /* Pods-StencilsTests.xcconfig */,
+				A7E9D77C59596EE35205FEF6 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,7 +74,7 @@
 				3F3B64D9189084DE0010712D /* XCTest.framework */,
 				3F3B64DB189084DE0010712D /* Foundation.framework */,
 				3F3B64DD189084DE0010712D /* UIKit.framework */,
-				3049598A321744578E6AECC1 /* libPods-StencilsTests.a */,
+				6B609FEF30B5B6B59B1D4D0F /* Pods_StencilsTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -108,6 +109,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		A7E9D77C59596EE35205FEF6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7410F8BA6D34E550F72165E7 /* Pods-StencilsTests.debug.xcconfig */,
+				F25DD50537F65DB229C76145 /* Pods-StencilsTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -115,11 +126,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F3B64E8189084DE0010712D /* Build configuration list for PBXNativeTarget "StencilsTests" */;
 			buildPhases = (
-				AC485F8DEB184BC788E05E2F /* Check Pods Manifest.lock */,
+				D0FF28AA40469B71C31401CD /* [CP] Check Pods Manifest.lock */,
 				3F3B64D2189084DE0010712D /* Sources */,
 				3F3B64D3189084DE0010712D /* Frameworks */,
 				3F3B64D4189084DE0010712D /* Resources */,
-				1C821197988845EBA500CEA7 /* Copy Pods Resources */,
+				F793033CC18A5567626F080C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -143,6 +154,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 3F3B64CB189084D10010712D;
@@ -167,34 +179,46 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1C821197988845EBA500CEA7 /* Copy Pods Resources */ = {
+		D0FF28AA40469B71C31401CD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
+			inputFileListPaths = (
 			);
-			name = "Copy Pods Resources";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StencilsTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Pods-StencilsTests-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AC485F8DEB184BC788E05E2F /* Check Pods Manifest.lock */ = {
+		F793033CC18A5567626F080C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StencilsTests/Pods-StencilsTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kiwi/Kiwi.framework",
+				"${BUILT_PRODUCTS_DIR}/Stencils/Stencils.framework",
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kiwi.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stencils.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StencilsTests/Pods-StencilsTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -239,7 +263,7 @@
 		};
 		3F3B64E9189084DE0010712D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 699EA9F44CAB413C841DD1A2 /* Pods-StencilsTests.xcconfig */;
+			baseConfigurationReference = 7410F8BA6D34E550F72165E7 /* Pods-StencilsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
@@ -278,7 +302,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "StencilsTests/StencilsTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -288,7 +312,7 @@
 		};
 		3F3B64EA189084DE0010712D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 699EA9F44CAB413C841DD1A2 /* Pods-StencilsTests.xcconfig */;
+			baseConfigurationReference = F25DD50537F65DB229C76145 /* Pods-StencilsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
@@ -321,7 +345,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "StencilsTests/StencilsTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

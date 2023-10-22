@@ -1,6 +1,6 @@
 
 #import "IconsExampleViewController.h"
-#import <STIconsFactory.h>
+@import Stencils;
 
 static NSString *kCellIdentifier = @"CellIdentifier";
 
